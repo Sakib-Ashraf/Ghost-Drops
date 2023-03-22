@@ -1,0 +1,27 @@
+.register-gallery-area {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.gallery-scrollbar::-webkit-scrollbar {
+    width: 20px;
+    background: transparent;
+}
+.resgister-gallery-section {
+    margin-top: 155px;
+    margin-bottom: 22.5px;
+    overflow: hidden;
+}
+
+
+/* responsive */
+@media (max-width: 1199px) {}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {
+    .resgister-gallery-section {
+        display: none;
+    }
+}

@@ -1,0 +1,76 @@
+<section class="form-area">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-sec">
+          <h2>{{section.settings.main_heading}}</h2>
+          
+          <div class="input-space select-arrow">
+                  <select name="" id="">
+                     <option value="" class="others">Select Interest</option>
+                     <option value="" class="others">Option One</option>
+                     <option value="" class="others">Option Two</option>
+                     <option value="" class="others">Option Three</option>
+                  </select>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+               </div>
+          <div class="input-space">
+            <input type="email" placeholder="Enter your Email address" />
+          </div>
+          <div class="input-space">
+                  <textarea  placeholder="Drop us a comnment. We love hearing from our Ghostfam!"></textarea>
+               </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="right-spc desk">
+          <h5>{{section.settings.heading2}}</h5>
+          <a href="{{section.settings.btn_link}}" class="white-btn">{{section.settings.btn_label}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %} 
+  {
+    "name": "Homepage Form",
+    "settings": [
+        
+        
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Main Heading",
+        "default":"Homegrown, award-winning, exceptional. <span>Don't miss out.</span>"
+        },
+        {
+        "id":"heading2",
+        "type":"textarea",
+        "label":"Heading 2",
+		"default":"Join the Ghostfam.<span>Sign up and never miss a drop.</span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Our signature strain. This funky number boasts a big, powerful flower with a taste as funky as its smell. Hunted by Cultivating Happiness and grown by several ultra-premium, hand-selected craft micro-producers, First Class Funk buds are typically large with dense diamond-like trichomes."
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Sign up"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Homepage Form",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,131 @@
+.register-hero-heading {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin: 0;
+}
+.register-hero-subheading {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;    
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 24px;
+}
+.register-hero-button-wrapper {
+    margin-top: 55px;
+}
+.register-hero-btn,
+.label-signup-btn {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;   
+    text-transform: uppercase;    
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.register-hero-btn {
+    position: relative;
+    background: #E62877;
+    border-radius: 50px;
+    width: 203px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 7px #fff;
+    transition: ease-in-out .4s;
+}
+.register-hero-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 transparent;
+}
+
+.icon-signup-btn {
+    margin-right: 19px;
+}
+.resgister-hero-section {
+    padding-top: 110px;
+    overflow: hidden;
+}
+.register-hero-content-block {
+    width: 100%;
+    max-width: 430px;
+    margin-left: 115px;
+    margin-top: 35px;
+}
+.label-mobile {
+    display: none;
+}
+
+/* responsive */
+@media (max-width: 1199px) {
+    .register-hero-content-block {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .register-hero-button-wrapper {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .resgister-hero-section {
+        padding-top: 60px;
+        padding-bottom: 72px;
+    }
+    .register-hero-content-block {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .register-hero-content-block {
+        max-width: 100%;
+        margin-top: 35px;
+    }
+    .register-hero-button-wrapper {
+        margin-top: 40px;
+    }
+    .label-desktop {
+        display: none;
+    }
+    .label-mobile {
+        display: flex;
+        text-transform: none;
+    }
+    .register-hero-heading {
+        font-size: 24px;
+    }
+    .register-hero-subheading {
+        font-size: 18px;
+        margin: 18px 0 0;
+    }
+}
+
+@media (max-width: 601px) {
+    .register-hero-content-block {
+        margin-top: 10px;
+    }
+    .register-hero-button-wrapper {
+        margin-top: 20px;
+    }
+    .register-hero-btn {
+        width: 170px;
+        height: 47px;
+        box-shadow: 7px 7px #fff;
+    }   
+    .register-hero-btn, .label-signup-btn {
+        font-size: 14px;
+    }
+    .icon-signup-btn svg {
+        max-width: 11px;
+    }
+    .resgister-hero-section {
+        padding-top: 35px;
+    }
+}

@@ -1,0 +1,69 @@
+<section class="collectible-three">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 mob-view">
+<div class="gf-animnate">
+<img src="{{section.settings.image | img_url:'master'}}" class="w-100">
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="register-area">
+<h2>{{ section.settings.title }}</h2>
+{{ section.settings.content }}
+<a href="{{ section.settings.btn_link }}" class="primary-btn">{{ section.settings.btn_label }}</a>
+</div>
+</div>
+<div class="col-md-6 dsk-view">
+<div class="gf-animnate">
+<img src="{{section.settings.image | img_url:'master'}}" class="w-100">
+</div>
+</div>
+
+</div>
+</div>
+</section>
+{% schema %}
+  {
+    "name": "Collectibles Hologram",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "339 x461px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Holographic<br>collectible cards"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>Just 1-in-100 collectible cards feature the extra-special Ghost Drops holographic strain name on the image-side of the card. You definitely want to hunt one of these down.  </p><p>Register your holographic card with us and we’ll hook you up with a couple of special bonuses. First, you’ll receive an exclusive Ghost Drops merchandise package complete with clothing, accessories and more. Second, you’ll be added to the draw for our Crypto Drops White List, for a chance to win first access to our cannabis NFT project.</p>"
+      },
+      
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Label",
+        "default": "LEARN MORE"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Collectibles Hologram section"
+    }]
+  }
+{% endschema %}

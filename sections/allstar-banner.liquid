@@ -1,0 +1,92 @@
+<section class="blue-sunshine">
+   {%comment%}<img src="{{'strains.png' | asset_url}}" class="w-100 img-ab dsk-view d-none">
+  <img src="{{'strain-mob.png' | asset_url}}" class="w-100 img-ab mob-view d-none">
+   {%endcomment%}
+   {%if section.settings.video ==blank%}
+   <img src="{{section.settings.bg_desktop | img_url:'master'}}" alt="" class="w-100 dsk-view" />
+   {%endif%}
+   <img src="{{section.settings.bg_mobile | img_url:'master'}}" alt="" class="w-100 mob-view" />
+   {%if section.settings.video !=blank%}
+  	<div class="vid-layer">
+      <video class="d-vid" width="100%" autoplay muted loop>
+        <source src="{{section.settings.video}}" type="video/mp4">
+      </video>
+   </div>
+  {%endif%}
+  <div class="container-fluid all-s">
+    <div class="caption-three">
+      <h1 class="position-relative animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{section.settings.heading_1}}</h1>
+      <h6 class="animate__animated animate__fadeInDown" style="animation-delay: 2s;">{{section.settings.heading_2}}</h6>
+    </div>
+  </div>
+<!--   <img src="{{section.settings.img_desktop | img_url:'1046x1338'}}" alt="" class="img-group dsk-view slide-bottom" />
+   <img src="{{section.settings.img_mobile | img_url:'375x654'}}" alt="" class="img-group mob-view slide-bottom" /> -->
+</section>
+{% schema %}
+  {
+    "name": "All Star Banner",
+    "settings": [
+         {
+        "type": "text",
+        "id": "video",
+        "label": "Desktop Background video"
+		},
+        {
+        "type": "image_picker",
+        "id": "bg_desktop",
+        "label": "Desktop Background Image",
+        "info": "1920 x1090px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Mobile Background Image",
+        "info": "375 x824px recommended"
+        },
+	    {
+        "type": "image_picker",
+        "id": "img_banner_desktop",
+        "label": "Banner Image",
+        "info": "2880 x1400px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_banner_mobile",
+        "label": "Banner Mobile Image",
+        "info": "375 x824px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Cannbies Image desktop",
+        "info": "680 x570px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Cannbies Image Mobile",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"heading_1",
+        "type":"textarea",
+        "label":"Heading 1",
+        "default":"Canadian  <span>all-stars </span> <b>cannabis</b>"
+        },
+        {
+        "id":"heading_2",
+        "type":"textarea",
+        "label":"Heading 2",
+        "default":"WE'RE NOT JUST IN THIS GAME, WE'RE CHANGING THE WAY IT'S PLAYED"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "All Star Banner",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

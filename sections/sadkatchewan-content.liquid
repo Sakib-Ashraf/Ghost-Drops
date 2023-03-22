@@ -1,0 +1,47 @@
+<div class="container-fluid marg-bottom">
+<h2 class="gst-sz text-center">{{section.settings.main_heading}}</h2>
+<h4 class="dis-heading">Dispensary Locator</h4>
+<!-- Start Stockist.co widget -->
+<div data-stockist-widget-tag="u11625">Loading store locator
+from <a href="https://stockist.co">Stockist store locator</a>...</div>
+<script>
+  (function(s,t,o,c,k){c=s.createElement(t);c.src=o;c.async=1;
+  k=s.getElementsByTagName(t)[0];k.parentNode.insertBefore(c,k);
+  })(document,'script','//stockist.co/embed/v1/widget.min.js');
+</script>
+<!-- End Stockist.co widget -->
+  {{section.settings.content}}
+</div>
+
+{% schema %}
+  {
+    "name": "Content",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "main_heading",
+        "label": "Heading",
+        "default": "Here's where you can buy our <br> cannabis products in Saskatchewan"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "<p class='marg-bottom'>We advise you call the dispensary prior to commuting there to ensure they are not sold out of Ghost Drops products.<br><br>Canada's Most Notorious Cannabis Brand <a href='/pages/ghost-drops-launches-into-saskatchewan'><span class='pink'>Ghost Drops is now available in the province of Saskatchewan.</span></a> Our premium indoor flower and high quality cannabis products can be found at dispensaries across the province. From Saskatoon to Regina, Prince Albert to Moose Jaw. First Class Funk and Z-Splitter 3.5g jars and 1g hemp wrap blunts can be purchased by residents of Saskatchewan at licensed and regulated retailers. View our extensive list of Saskatchewan-based cannabis stores above to find the closest shop to you.</p>"
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Buy Banner section"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

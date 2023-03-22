@@ -1,0 +1,56 @@
+<a href="{{section.settings.link}}"> 
+<div class="first-box">
+   
+    <img src="{{section.settings.img_desktop |img_url :'1400x680'}}" alt="" class="img-box-one dsk-view" />
+    <img src="{{section.settings.img_mob |img_url :'327x337'}}" alt="" class="img-box-one mob-view" />
+   
+    <div class="overlay-blk"></div>
+    <div class="clothing-area">
+     <a href="{{section.settings.link}}">
+       <h2 class="heading-bx">
+         {{section.settings.main_heading}}
+      </h2>
+    </a>
+    </div>
+  </div>
+</a>
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+	    
+        {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "1400x680px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Mobile Image",
+        "info": "327 x337px recommended"
+        },
+        
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Explore <br class='mob-view'><span>all</span>Clothing"
+        },
+        {
+        "id":"link",
+        "type":"url",
+        "label":"Heading Link"
+        
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Banner Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

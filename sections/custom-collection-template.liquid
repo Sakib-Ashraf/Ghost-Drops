@@ -1,0 +1,96 @@
+<div class="container-fluid d-none">
+<div class="scp-breadcrumb">
+    <ul class="breadcrumb">
+        <li><a href="#">Ghost Gear</a></li>
+        <li class="active">All Clothings</li>
+     
+    </ul>
+</div>	
+
+<h2 class="main-heading">
+  {{section.setting.col-title}}
+ </h2>	
+</div>	
+<section class="ghost-videoss ghost-cat d-none">
+  <div class="h-cvr-mob"><h1 class="text-flicker-in-glow" style="animation-duration: 3s">
+    <img src="{{'fce-blk.svg' |asset_url}}" class="fce-blk"> {{collection.title}}</h1></div>
+</section>
+<div class="outer-head">
+  <div class="container-fluid">
+      <h1>{{collection.title}}</h1>
+  </div>
+</div>
+<section class="clothing-collection ">
+  {%- for block in section.blocks -%}
+	<div class="container-fluid clearfix">
+		<div class="heading-handler d-none">
+			<div class="row">
+				<div class="col-8">
+                 <h3>{{collection.title}}</h3>
+				</div>
+				<div class="col-4">
+					<a href="{{block.settings.link}}" class="primary-btn fl-rt">{{block.settings.btn-title}}</a>
+				</div>
+			</div>
+		</div>
+		<div class="box-spc">
+			<div class="row">
+              {%- for product in collection.products -%}
+                 {%assign col_url = collection.url%}
+				{% include 'custom-collection-grid', product: product,collection:collection %}
+				{%endfor%}	
+			</div>
+		</div>
+		</div>
+  {%endfor%}
+</section>
+
+
+{% schema %}
+{
+   "name": "Collection Page",
+   "settings": [
+      {
+      "type": "text",
+      "id": "col-title",
+      "default": "See All",
+      "label": "Title"
+      }
+      
+      
+      
+   ],
+   "blocks": [
+      {
+         "type": "collection",
+         "name": "Collection",
+         "limit": 12,
+         "settings": [
+            {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+            },
+            {
+            "type": "text",
+            "id": "btn-title",
+            "default": "See All",
+            "label": "Button Title"
+            },
+            {
+            "type": "url",
+            "id": "link",
+            "label": "see more link"
+            }
+
+         ]
+      }
+   ],
+   "presets": [
+      {
+      "name": "Collection Page",
+      "category": "Carousel Sections"
+      }
+   ]
+}
+{% endschema %}

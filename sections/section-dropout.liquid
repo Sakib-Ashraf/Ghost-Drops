@@ -1,0 +1,62 @@
+<section class="dropped">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 dsk-view">
+				<div class="dpd-img">
+					<img src="{{'wd-small.png' | file_url}}" alt="" class="small-wd" />
+					<img src="{{'wd-big.png' | file_url}}" alt="" class="big-wd" />
+					<img src="{{section.settings.img_desktop | img_url:'680x526'}}" alt="" class="w-100" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="dopped-content">
+					<h4>{{section.settings.heading}}</h4>
+					<a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+				</div>
+			</div>
+			<div class="col-md-6 mob-view">
+				<div class="dpd-img">
+					<img src="{{'wd-small.png' | file_url}}" alt="" class="small-wd" />
+					<img src="{{'wd-big.png' | file_url}}" alt="" class="big-wd" />
+					<img src="{{section.settings.img_desktop | img_url:'680x526'}}" alt="" class="w-100" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Drop out section",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"heading",
+        "type":"text",
+        "label":"Heading",
+        "default":"Drops that have dropped"
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button Label",
+        "default":"Explore our Strains"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button Link"
+        }
+	],
+    "blocks": [
+    ],
+    "presets": [{
+      "name": "Drop out section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

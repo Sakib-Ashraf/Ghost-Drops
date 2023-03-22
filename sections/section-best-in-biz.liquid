@@ -1,0 +1,90 @@
+<section class="born-in-dark pt-0">
+  <div class="container-fluid">
+  <div class="top-spc">
+    <div class="row d-none">
+      <div class="col-md-4">
+        <div class="h-outer">
+          {{section.settings.main_heading}}
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            {{section.settings.paragraph1}}	
+          </div>
+          <div class="col-md-6">
+            {{section.settings.paragraph2}}
+            <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+       <div class="h-outer">
+          {{section.settings.main_heading}}
+        </div>
+  <ul class="img-list clearfix">
+    {% for block in section.blocks %}
+    <li><a href="{{block.settings.btn_link}}"><img src="{{block.settings.logo | img_url:'master'}}" alt="" /></a></li>
+    {%endfor%}
+  </ul>
+    </div>
+</section>
+{% schema %} 
+  {
+    "name": "Section Best in Biz",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"<h2>The best<span>in the biz</span></h2>"
+        },
+        
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"See our All-Star roster"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "blocks": [  
+      {
+      "type": "image",
+      "name": "image",
+      "limit":6,
+      "settings": [
+        
+  		{
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logos",
+        "info": "200x 200px recommended"
+        },
+        {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Logo link"
+      }
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Section Best in Biz",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

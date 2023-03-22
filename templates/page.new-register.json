@@ -1,0 +1,183 @@
+{
+  "sections": {
+    "hero": {
+      "type": "new-register-hero",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/hero.png",
+        "heading": "Members Only Mail-Order Premium Cannabis Club",
+        "subheading": "Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.",
+        "btn": "Sign Up",
+        "btn_mobile": "Let's go",
+        "link": "#register-member"
+      }
+    },
+    "88e28df5-9f62-4edd-b707-a6dec571e999": {
+      "type": "new-register-text-image",
+      "blocks": {
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-0": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/1.png",
+            "heading": "$50 OFF + \nFree Gift",
+            "subheading": "Receive $50 of Ghost Drops products for free when you signup. You'll also receive a free, exclusive gift.",
+            "link": ""
+          }
+        },
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-1": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/2.png",
+            "heading": "Exclusive \nDrops",
+            "subheading": "Access exclusive drops and pricing that can't be found anywhere else. New, small batch, limited edition strains and products.",
+            "link": ""
+          }
+        },
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-2": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/3.png",
+            "heading": "GhostDots \nLoyalty",
+            "subheading": "Earn GhostDots loyalty points and redeem for discounts on cannabis purchases, merchandise items and more.",
+            "link": ""
+          }
+        },
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-3": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4.png",
+            "heading": "Free Fast \nShipping",
+            "subheading": "Free, fast and discreet shipping and delivery. Orders placed before 1pm on weekdays will be shipped out SAME DAY.",
+            "link": ""
+          }
+        },
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-4": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/5.png",
+            "heading": "Legal + Tax \nBenefits",
+            "subheading": "Members may legally carry up to 150 grams. Purchases are covered by some insurance providers and are also tax-deductible.",
+            "link": ""
+          }
+        },
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/5.png",
+            "heading": "Discounts, Deals \n+ Sales",
+            "subheading": "Access Members Only pricing with Ghost Drops MOM. Special discounts, deals and sales that can't be found anywhere else.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-0",
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-1",
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-2",
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-3",
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-4",
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5"
+      ],
+      "settings": {
+        "section_heading": "Benefits"
+      }
+    },
+    "3dfed172-02e6-48a1-ba1b-26dece74717a": {
+      "type": "new-register-member",
+      "settings": {
+        "heading": "Become \na member",
+        "subheading": "<p>No doctor visit or call required. Signup in under 1 minute for a <strong>FREE $50<\/strong> discount.<\/p>",
+        "show_email": true,
+        "login_email": "Continue with Email",
+        "link_email": "",
+        "show_facebook": true,
+        "login_facebook": "Continue with Facebook",
+        "link_facebook": "",
+        "show_google": true,
+        "login_google": "Continue with Google",
+        "link_googlek": "",
+        "show_apple": true,
+        "login_apple": "Continue with Apple",
+        "link_apple": ""
+      }
+    },
+    "dd8d111c-6067-42ba-87ac-8c7b992623e0": {
+      "type": "new-register-img-gallery",
+      "blocks": {
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-0": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/1_21040805-47ed-412e-86a3-18b66b742c0e.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-1": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/2_8ba4bcc8-c8bc-47a8-9631-8f9e1358f2cc.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-2": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/3_ee366470-5ad3-412f-ba4b-c70109e5f9d4.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-3": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/4_01f984c1-e651-4dea-9ad3-e661d0efbf61.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-4": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/5_022b828c-d125-4320-859f-60dde6b7a452.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-5": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/6.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-6": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/7.png",
+            "link": ""
+          }
+        },
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-7": {
+          "type": "gallery",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/8.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-0",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-1",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-2",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-3",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-4",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-5",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-6",
+        "template--16703401099487__dd8d111c-6067-42ba-87ac-8c7b992623e0-1679467189d908e9d3-7"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "88e28df5-9f62-4edd-b707-a6dec571e999",
+    "3dfed172-02e6-48a1-ba1b-26dece74717a",
+    "dd8d111c-6067-42ba-87ac-8c7b992623e0"
+  ]
+}

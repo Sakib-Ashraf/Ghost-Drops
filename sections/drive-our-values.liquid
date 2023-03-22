@@ -1,0 +1,59 @@
+<section class="our-val">
+	<div class="container-fluid">
+		<h2>{{section.settings.heading}}</h2>
+		<div class="row">
+            {%- for block in section.blocks -%}
+			<div class="col-md-4">
+				<div class="adv-val">
+					<b class="pink-bold">{{block.settings.heading1}}</b>
+					<h3>{{block.settings.heading2}}</h3>
+					<p>{{block.settings.content}}</p>
+				</div>
+			</div>
+            {%endfor%}
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Drive Us value section",
+    "settings": [
+	    
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Our <span>values</span>"
+        }
+	],
+    "blocks": [
+     {
+         "type": "text",
+         "name": "text",
+         "limit": 12,
+         "settings": [
+            {
+            "id":"heading1",
+            "type":"textarea",
+            "label":"Heading 1"
+            },
+            {
+            "id":"heading2",
+            "type":"textarea",
+            "label":"Heading 2"
+            },
+            {
+            "id":"content",
+            "type":"textarea",
+            "label":"Content"
+            }
+
+         ]
+      }
+    ],
+    "presets": [{
+      "name": "Drive Us value section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

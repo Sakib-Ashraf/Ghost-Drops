@@ -1,0 +1,60 @@
+<section class="six-plus">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+    <div class="six-content">
+      <h2>{{ section.settings.main_heading }}</h2>
+      <p>{{ section.settings.content }}</p>
+    <a href="{{ section.settings.btn_link }}" class="primary-btn">{{ section.settings.btn_label }}</a>
+    </div>
+    </div>
+    <div class="col-md-6">
+      <div class="donot">
+        <img src="{{section.settings.img | img_url:'master'}}">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+{% schema %} 
+  {
+    "name": "Six Plus",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"6ixDonutz<span>+ More</span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Contents",
+        "default":"Ghost Drops Toronto is located in the adjoining space to 6ixDonutz, a delicious custom mini-donut purveyor. Toronto’s most popular day party, Cold Tea, occurs directly across the street from our shop every Sunday in the summer. Chen Chen’s Nashville Hot Chicken is also located in the adjoining space, providing hot fried chicken sandwiches. "
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Explore Now"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Six Plus",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

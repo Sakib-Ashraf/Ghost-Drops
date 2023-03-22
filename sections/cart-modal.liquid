@@ -1,0 +1,61 @@
+{% if cart.item_count >0 %}
+<div class="modal fade _modal" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="cart-modal-title" aria-hidden="true" data-target="#cart-modal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+<form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
+      <div class="modal-body">
+       <div class="badge-clr">{{ cart.item_count }}</div> 
+        <div class="clearfix"></div>
+        {%- for item in cart.items -%}
+        <ul class="cart-list clearfix">
+          <div class="cart-details" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
+          <li><img class="{% if item.image == null %} hide{% endif %}" src="{{ item | img_url: 'x190' }}" alt="{{ item.image.alt | escape }}" /></li>
+          <li><span>{{ item.title }}</span>
+			<span>QTY {{ item.quantity }}</span>
+          </li>
+           <li><b>{{ item.final_line_price | money }}</b>
+          
+             <a  class="rmv-btn" href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove data-role="product-remove">{{ 'cart.general.remove' | t }}</a>
+          </li>
+          </div> 
+        </ul>
+        {%endfor%}      
+        <hr>
+        <div class="row">
+          <div class="col-6">
+            <div class="text-left"><b>Subtotal:</b></div>
+            
+          </div>
+          <div class="col-6">
+            <b class="text-right">{{ cart.total_price | money }}</b>
+          </div>
+        </div>
+        <div class="text-right">
+<!--         <a href="" class="primary-btn">Checkout</a>   -->
+          <input type="submit" name="checkout" class="cart__submit btn btn--small-wide primary-btn" value="{{ 'cart.general.checkout' | t }}">
+
+      </div>
+</div>
+      </form>
+    </div>
+  </div>
+</div>
+{%else%}
+<div class="modal _modal fade" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="cart-modal-title" aria-hidden="true" data-target="#cart-modal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+      <div class="empty-page-content2 text-center" data-empty-page-content="">
+      <h1>BOO!</h1>
+      <p class="cart--empty-message">Your cart is currently empty. You can change that. Check out our Ghost Gear merch store</p>
+      <div class="cookie-message">
+        <p>Enable cookies to use the shopping cart</p>
+      </div>
+      <a href="/pages/ghost-gear" class="primary-btn">Shop Now <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 20 8"><path d="M15.186.445c.865.944 1.614 1.662 2.246 2.154.631.491 1.227.857 1.787 1.098v.44a9.933 9.933 0 0 0-1.875 1.196c-.606.485-1.328 1.196-2.168 2.134h-.752c.612-1.309 1.253-2.315 1.924-3.018H.77v-.986h15.577c-.495-.632-.84-1.1-1.035-1.406-.196-.306-.486-.843-.87-1.612h.743z" fill="#000" fill-rule="evenodd"></path></svg></a>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

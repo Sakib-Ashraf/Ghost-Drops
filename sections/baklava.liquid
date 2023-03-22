@@ -1,0 +1,300 @@
+<section class="product-detail baklava">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 mob-view">
+        <img src="{{section.settings.img_desktop | img_url:'680x915'}}" alt="" class="w-100" />
+      </div>
+      <div class="col-md-6">
+        <div class="prod-detail">
+          <div class="scp-breadcrumb mt-0 mb-5">
+            <ul class="breadcrumb wht-bdd mt-0">
+              <li><a href="/pages/products">Products</a></li>
+              <li class="active">{{ page.title }}</li>
+            </ul>
+          </div>
+          <h2>{{section.settings.main_heading}}</h2>
+          <ul class="data-ratio">
+            {{section.settings.content1}}
+            {{section.settings.content2}}
+            {{section.settings.content3}}
+            {{section.settings.content4}}
+            {{section.settings.content5}}
+          </ul>
+          <p>{{section.settings.content6}}</p>
+          {{section.settings.content_all}}
+          <hr class="mob-bd">
+          <b class="pink">{{section.settings.available_heading}}</b>
+           <ul class="funk-list clearfix">
+                     <li>
+                        <img src="{{section.settings.img_1 | img_url:'original'}}" alt="" />
+                        <h5>{{section.settings.gram1}}</h5>
+                     </li>
+                     <li>
+                        <img src="{{section.settings.img_2 | img_url:'original'}}" alt="" />
+                        <h5>{{section.settings.gram2}}</h5>
+                     </li>
+                    
+                  </ul>
+         <hr class="mob-bd">
+                  <b class="pink">Lineage</b>
+                  <ul class="tree-area  clearfix">
+                     <li>
+                        <div class="f-child">{{section.settings.main_heading}}</div>
+                        <ul class="branch-one z-sp-b-one clearfix">
+                           <li>
+                              <div class="f-sub-child-one khalifa baklava z-f-child">{{section.settings.item1}}</div>
+                              <ul class="branch-two z-sub-one d-none">
+                                 <li>
+                                    <div class="second-sub-child-one z-first">{{section.settings.item3}}</div>
+                                 </li>
+                                 <li>
+                                    <div class="second-sub-child-two z-second">{{section.settings.item4}}</div>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <div class="f-sub-child-two khalifa z-sep">{{section.settings.item5}}</div>
+                              <ul class="marg-manage branch-two z-sub-two d-none">
+                                 <li>
+                                    <div class="second-sub-child-one z-sep-one">{{section.settings.item2}}</div>
+                                 </li>
+                                 <li>
+                                    <div class="second-sub-child-two z-sep-two">{{section.settings.item6}}</div>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+          <hr class="mob-bd">
+          <div class="partner-logos">
+            <h2>{{section.settings.partner_heading}}</h2>
+            <ul class="logo-sliderzx marg-top">
+             <li>
+                <a href="{{section.settings.logo1_link}}" target="_blank"> <img src="{{section.settings.logo1 | img_url:'original'}}"></a>
+             </li>
+               
+              {% if section.settings.logo4 != blank-%}
+                         <li>
+                          <a href="{{section.settings.logo4_link}}" target="_blank"> <img src="{{section.settings.logo4 | img_url:'original'}}"></a>
+                        </li>
+                        {% endif%}
+            </ul>
+          </div>
+          <a href="{{section.settings.strain_link}}" class="all-strains">See all strains</a>
+        </div>
+      </div>
+      <div class="col-md-6 dsk-view">
+        <img src="{{section.settings.img_desktop | img_url:'680x915'}}" alt="" class="w-100 stick-img" />
+       
+      </div>
+     
+    </div>
+    
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Baklava Page",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "680 x570px recommended"
+        },
+        
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Free Class Funk"
+        },
+        {
+        "id":"content1",
+        "type":"textarea",
+        "label":"Content",
+        "default":"<li><span>Plant</span><h4>Hybrid</h4></li>"
+        },
+        {
+        "id":"content2",
+        "type":"textarea",
+        "label":"Content 2",
+        "default":"<li><span>Terpene %</span><h4>3.5-4.5%</h4></li>"
+        },
+        {
+        "id":"content3",
+        "type":"textarea",
+        "label":"Content 3",
+        "default":"<li><span>TCH</span><h4>23-27%</h4></li>"
+        },
+        {
+        "id":"content4",
+        "type":"textarea",
+        "label":"Content 4",
+        "default":"<li><span>CBD</span><h4>09-1%</h4></li>"
+        },
+        {
+        "id":"content5",
+        "type":"textarea",
+        "label":"Content 5",
+        "default":"<li><span>Dominant Terpenes</span><h4>Limonene, T-Caryophllene, Terpineol, B-Pinene.</h4></li>"
+        },
+        {
+        "id":"content6",
+        "type":"textarea",
+        "label":"Content 6",
+        "default":"The Ghost Drops cut of First Class Funk <b>was hunted by Cultivating Happiness and grown by several ultra-premium,</b> hand-selected craft micro-producers. Our cut was bred by Compound Genetics."
+        },
+        {
+        "id":"content_all",
+        "type":"textarea",
+        "label":"Content All",
+        "default":"<b class='pink'>Appearance</b><p>Buds are typically large, dark green with light green undertones, highlighted with dense diamond-like trichomes. </p><b class='pink'>Smell</b><p>First Class Funk features a heavy dank aroma. Its pungent, funky, <b>creamy fragrance is layered with a dense scent of jet fuel.</b> </p><b class='pink'>Taste</b><p><b>It tastes as funky as it smells,</b> with notes of fermented anise and fennel coupled by a gassy aftertaste. </p>"
+        },
+        {
+        "id":"available_heading",
+        "type":"text",
+        "label":"Available Text",
+        "default":"Available In"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_1",
+        "label": "Cannabies 1",
+        "info": "78 x136px recommended"
+        },
+        {
+        "id":"gram1",
+        "type":"text",
+        "label":"Gram 1",
+        "default":"3.5g"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_2",
+        "label": "Cannabies 2",
+        "info": "27 x136px recommended"
+        },
+        {
+        "id":"gram2",
+        "type":"text",
+        "label":"Gram 2",
+        "default":"0.5g"
+        },
+        {
+        "id":"lineage_heading",
+        "type":"text",
+        "label":"Lineage Heading",
+        "default":"Lineage"
+        },
+        {
+        "id":"item1",
+        "type":"text",
+        "label":"Item 1",
+        "default":"GMO"
+        },
+        {
+        "id":"item2",
+        "type":"text",
+        "label":"Item 2",
+        "default":"Jet Fuel"
+        },
+        {
+        "id":"item3",
+        "type":"text",
+        "label":"Item 3",
+        "default":"Chemdawg"
+        },
+        {
+        "id":"item4",
+        "type":"text",
+        "label":"Item 4",
+        "default":"GSC"
+        },
+        {
+        "id":"item5",
+        "type":"text",
+        "label":"Item 5",
+        "default":"Jet Fuel"
+        },
+        {
+        "id":"item6",
+        "type":"text",
+        "label":"Item 6",
+        "default":"Gelato"
+        },
+        {
+        "id":"partner_heading",
+        "type":"textarea",
+        "label":"Partner Text",
+        "default":"Partners<br> involved in this<br> drop"
+        },
+
+        {
+        "type": "image_picker",
+        "id": "logo1",
+        "label": "Logo 1",
+        "info": "38 x44px recommended"
+        },
+        {
+        "id":"logo1_link",
+        "type":"url",
+        "label":"Logo 1 Link"
+        },
+
+        {
+        "type": "image_picker",
+        "id": "logo2",
+        "label": "Logo 2",
+        "info": "119 x42px recommended"
+        },
+        {
+        "id":"logo2_link",
+        "type":"url",
+        "label":"Logo 2 Link"
+        },
+        {
+        "type": "image_picker",
+        "id": "logo3",
+        "label": "Logo 3",
+        "info": "118 x42px recommended"
+        },
+        {
+        "id":"logo3_link",
+        "type":"url",
+        "label":"Logo 3 Link"
+        },
+        {
+        "type": "image_picker",
+        "id": "logo4",
+        "label": "Logo 4",
+        "info": "118 x42px recommended"
+        },
+        {
+        "id":"logo4_link",
+        "type":"url",
+        "label":"Logo 4 Link"
+        },
+        {
+        "id":"strain_link",
+        "type":"url",
+        "label":"View all strain link"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Baklava Page",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

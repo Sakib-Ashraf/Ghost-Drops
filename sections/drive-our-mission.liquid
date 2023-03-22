@@ -1,0 +1,80 @@
+<section class="our-missiom">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="left-mission">
+					<h2>{{section.settings.heading_1}} </h2>
+					<p>{{section.settings.heading_2}}</p>
+					<h2>{{section.settings.heading_3}}</h2>
+					<p>{{section.settings.heading_4}}</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="mission-img">
+                  <img src="{{section.settings.img_desktop | img_url:'680x500'}}" alt="" class="w-100" />
+              </div>
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Drive Us Mission section",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Image",
+        "info": "680 x500px recommended"
+        },
+        
+        {
+        "id":"heading_1",
+        "type":"textarea",
+        "label":"Heading 1",
+        "default":"Our <span>vision</span>"
+        },
+        {
+        "id":"heading_2",
+        "type":"textarea",
+        "label":"Heading 2",
+        "default":"Passionately crafting cannabis + Proudly building community + Fearlessly challenging opinions<b>= Radically transforming culture.</b>"
+        },
+        {
+        "id":"heading_3",
+        "type":"textarea",
+        "label":"Heading 3",
+        "default":"Our <span>mission</span>"
+        },
+        {
+        "id":"heading_4",
+        "type":"textarea",
+        "label":"Heading 4",
+        "default":"To shape a more equitable and flavourful future for the cannabis community in Canada <b>by innovating, educating, and pushing boundaries.</b> "
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button Label",
+        "default":"Read the Ghost Story"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button Link"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"The best cannabis used to be in the legacy market – <b>not anymore.</b>"
+        }
+	],
+    "blocks": [
+    ],
+    "presets": [{
+      "name": "Drive Us Mission section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

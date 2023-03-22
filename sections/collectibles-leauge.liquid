@@ -1,0 +1,66 @@
+<section class="collectible-two grey">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<div class="gf-animnate">
+<img src="{{section.settings.image | img_url:'master'}}" class="w-100">
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="register-area">
+
+<img src="{{'league-logo.svg' | file_url}}" class="leag-logo">
+<h2>{{ section.settings.title }}</h2>
+<p>{{ section.settings.content }}</p>
+<a href="{{ section.settings.btn_link }}" class="primary-btn bg-transparent">{{ section.settings.btn_label }}</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+{% schema %}
+  {
+    "name": "Collectibles Leauge",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "339 x461px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "The League Collectible Cards"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Ghost Drops presents The League, a brand platform that brings iconic and innovative cannabis brands to the legal market. Each brand launched under The League, and each strain launched under those respective brands, comes with accompanying collectible trading cards. These cards feature unique branding elements and colorways that differ from the signature Ghost Drops capsules. Collect them all!"
+      },
+      
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Label",
+        "default": "LEARN MORE"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Collectibles Leauge section"
+    }]
+  }
+{% endschema %}

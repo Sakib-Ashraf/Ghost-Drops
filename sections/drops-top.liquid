@@ -1,0 +1,49 @@
+<section class="ghost-cat drives">
+  <div class="container-fluid">
+    
+    <div class="scp-breadcrumb mt-0 mb-5">
+      <ul class="breadcrumb wht-bdd mt-0">
+         <li><a href="/pages/ghost-story">Ghost Story</a></li>
+        <li class="active">{{ page.title }}</li>
+      </ul>
+     </div>
+  </div>
+  <h1 class="text-flicker-in-glow">{{section.settings.heading}}</h1>
+  <h5>{{section.settings.heading2}}</h5>
+  <p>{{section.settings.content}}</p>
+</section>
+
+{% schema %}
+  {
+    "name": "Drop top section",
+    "settings": [
+	    
+        {
+        "id":"heading",
+        "type":"text",
+        "label":"Heading",
+        "default":"How our drops work"
+        },
+        {
+        "id":"heading2",
+        "type":"textarea",
+        "label":"Heading 2",
+        "default":"UNIQUE STRAIN DROPS <br class='mob-view'>COMING AT YA"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Paragraph",
+        "default":"Our model<b> = regularly dropping new strains you can’t find anywhere else </b>"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Drop top section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

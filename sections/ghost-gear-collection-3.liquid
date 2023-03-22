@@ -1,0 +1,58 @@
+ <div class="row">
+   {% for block in section.blocks %}
+    <div class="col-md-6">
+      <a href="{{block.settings.btn_link}}">
+      <div class="all-box">
+        <img src="{{block.settings.img_desktop | img_url:'680x320'}}" alt="" class="img-box-one" />
+        <div class="overlay-blk"></div>
+        <div class="clothing-area">
+          <h3 class="heading-bx">
+            {{block.settings.title}}
+          </h3>
+        </div>
+      </div>
+      </a>
+    </div>
+   {%endfor%}
+    
+</div>
+{% schema %}
+  {
+    "name": "Ghost Collection Three",
+    "settings": [
+	 
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "limit":2,
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Collection Desktop Image",
+        "info": "680x320px recommended"
+        },
+        
+  		{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+	  
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Collection link"
+      }
+	  
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Collection Three",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

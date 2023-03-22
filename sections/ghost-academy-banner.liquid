@@ -1,0 +1,26 @@
+<div class="drop-news ghost-academy">
+  <div class="container-fluid">
+    <div class="center-logo">
+      <img src="{{section.settings.banner_logo| img_url:'master'}}"  class="academy-logo">
+      
+    </div>
+      <h1>Ghost <br> Academy</h1>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Ghost Academy Banner",
+    "settings": [
+     {
+        "type": "image_picker",
+        "id": "banner_logo",
+        "label": "Banner Logo",
+        "info": "1024 x595px recommended"
+        }
+	],
+    "presets": [{
+      "name": "Ghost Academy banber",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

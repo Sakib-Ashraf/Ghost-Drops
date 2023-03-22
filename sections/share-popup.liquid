@@ -1,0 +1,15 @@
+<div class="modal fade" id="share-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+  
+      <div class="modal-body">
+                 <div class="share">
+               <h5>SHARE</h5>
+            {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
+
+            </div>
+      </div>
+
+    </div>
+  </div>
+</div>

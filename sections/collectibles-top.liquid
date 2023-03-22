@@ -1,0 +1,24 @@
+<section class="ghost-cat collect-new text-center invst clbt ">
+<h1 class="text-flicker-in-glow" style="animation-duration: 3s">{{section.settings.main_title}}</h1>
+  <p>{{section.settings.content}}</p>
+    <img src="{{'SCN_Package_1.gif' | file_url}}" class="animte-top">
+</section>
+{% schema %}
+  {
+    "name": "Collectibles Top Section",
+    "settings": [
+	  {
+        "id":"main_title",
+        "type":"text",
+        "label":"Main Page Title",
+        "default":"Collectibles"
+     },
+     {
+        "id":"content",
+        "type":"textarea",
+        "label":"Main Page Content",
+        "default":"With every strain drop and every new iteration, we're delivering collectibles"
+     }
+	]
+  }
+{% endschema %}

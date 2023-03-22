@@ -1,0 +1,163 @@
+<style>
+p.form-message.form-message--success.buy{
+    font-size: 14px;
+    position: relative;
+    right: 187px;
+    bottom: 40px;
+}
+</style>
+<section class="form-new">
+<!--    <img src="{{'blue-splash.svg' | asset_url}}" class="sp-b"> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+    <h4>{{section.settings.heading}}</h4>
+  </div>
+         <div class="col-md-6">
+           <p>{{section.settings.content}}</p>
+  </div>
+    </div>
+  {%- assign formId = 'ContactForm' -%}
+      {% form 'contact', id: formId %}
+    <div class="row">
+      <div class="col-md-7">
+      {% include 'form-status', form: form, form_id: formId %}
+      </div>
+      <div class="col-md-5">
+      
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-7">
+      	   <div class="container-small ex-op">
+     
+    <input type="hidden" name="contact[tags]" value = "Want to experience the Ghost in your province?" />
+   
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-fname">First Name</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="contact['First Name']" class="input-c" id="{{ formId }}-fname" required>
+      </div>
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-lname">Last Name</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="contact['Last Name']" class="input-c" id="{{ formId }}-lname" required>
+      </div>
+      <div class="input-max">
+         <div class="palceholder" style="display:block !important">
+            <label for="{{ formId }}-email" >Email</label>
+            <span class="star">*</span>
+           
+         </div>
+        <input
+               type="email"
+               id="{{ formId }}-email" class="input-c"
+               name="contact[email]"
+               autocorrect="off"
+               autocapitalize="off"
+               value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+               aria-required="true"
+               {%- if form.errors contains 'email' -%}
+               class="input--error"
+               aria-invalid="true"
+               aria-describedby="{{ formId }}-email-error"
+               {%- endif -%}
+               >
+
+             </div>
+             <div class="input-max">
+               {%- if form.errors contains 'email' -%}
+               <span id="{{ formId}}-email-error" class="input-error-message">
+                 <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                 {% include 'icon-error' %}
+                 <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+               </span>
+               {%- endif -%}
+             </div> 
+             <div class="input-max sl-arrow">
+               <select name="contact[provinces]">
+                
+                 <option value="Alberta">Alberta </option>
+                  <option value="Manitoba">Manitoba</option>
+                  <option value="New Brunswick">New Brunswick</option>
+                  <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                  <option value="Nova Scotia">Nova Scotia</option>
+                  <option value="Prince Edward Island">Prince Edward Island</option>
+                  <option value="Quebec">Quebec</option>
+                  <option value="Saskatchewan">Saskatchewan</option>
+                  <option value="Northwest Territories">Northwest Territories</option>
+                  <option value="Nunavut">Nunavut</option>
+                  <option value="Yukon">Yukon</option>
+
+               </select> <i class="fa fa-caret-down" aria-hidden="true"></i>
+             </div>
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-message">Message</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="contact['message']" class="input-c" id="{{ formId }}-message" required>
+      </div>
+      <div class="input-max text-center">
+         <input type="submit" class="Submit">
+      </div>
+   </div>
+      </div>
+      <div class="col-md-5">
+        <div class="b-s"> 
+          <img src="{{section.settings.image | img_url:'master'}}">
+        </div>
+      </div>
+      {%endform%}
+    </div>
+  </div>
+  
+  
+</section>
+<section class="drops-footer">
+  <div class="container-fluid">
+      <div class="drop-block drop-white">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="40" data-drop-height="330"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="280"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="220"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="40" data-drop-height="260"></div>
+      </div>    </div>
+</section>
+{% schema %}
+  {
+    "name": "Buy Contact Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "<span>Want to experience</span> the Ghost in your province?"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Let us know where you want to see us expand to next. We're only just getting started, ghostfam. We ain't done dominating yet."
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "504 x503px recommended"
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Buy Contact Section"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,69 @@
+<section class="sml-grl">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-4">
+            <div class="redefine-data">
+               <h2>{{section.settings.main_heading}}</h2>
+               <a href="{{section.settings.btn_link}}" class="primary-btn dsk-view">{{section.settings.btn_label}}</a>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="redefine-data-two">
+               {{section.settings.content1}}
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="redefine-data-cont">
+             {{section.settings.content2}}  
+            </div>
+         </div>
+      </div>
+      <a href="{{section.settings.btn_link}}" class="primary-btn mob-view">{{section.settings.btn_label}}</a>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "Ghost Redefining Section",
+    "settings": [
+	    
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"<span>Redefining</span> the market"
+        },
+        {
+        "id":"content1",
+        "type":"textarea",
+        "label":"Content One",
+        "default":"<b>We have earned our reputation for being expert curators and dropping the absolute hottest products in the market. We’re not growers, we’re a brand house. To deliver our fire, what we do is empower our award-winning grower and breeder partners to hunt and create the most interesting, unique, and potent cannabis in Canada.</b>"
+        },
+        {
+        "id":"content2",
+        "type":"textarea",
+        "label":"Content Two",
+        "default":"<p>Working with our All-Star roster of partners, we develop and scale our legacy strains and bring them to market. Our partners trust us to represent their product, their business, and their brand. And we don’t take credit for others’ work – we happily publicize talent. Our partnerships are what make us. We do right by our partners. Always.</p>"
+        },
+       
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Our All-Star partners"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Ghost Redefining Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

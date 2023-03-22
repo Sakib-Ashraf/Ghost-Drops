@@ -1,0 +1,153 @@
+<div class="container-fluid">
+      <div class="drop-block drop-white">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="36" data-drop-height="160"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="200"></div>
+      </div>
+      <div class="top-spc"></div>
+      <div class="row">
+         <div class="col-md-6">
+            <div class="heading-out t-lft">
+               <h2>
+                {{section.settings.heading}}  
+               </h2>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="og-content">
+               <p>{{section.settings.content}} </p>
+            </div>
+         </div>
+      </div>
+      <ul class="img-lst clearfix">
+         <li>
+           <a href="{{section.settings.link1}}" target="_blank"><img src="{{section.settings.logo1 | img_url:'200x200'}}" alt="" /></a>
+           <a href="{{section.settings.link4}}" target="_blank"><img src="{{section.settings.logo4 | img_url:'200x200'}}" alt="" class="mob-view" /></a>
+         </li>
+         <li>
+           <a href="{{section.settings.link2}}" target="_blank"> <img src="{{section.settings.logo2 | img_url:'200x200'}}" alt="" /></a>
+           <a href="{{section.settings.link5}}" target="_blank"><img src="{{section.settings.logo5 | img_url:'200x200'}}" alt="" class="mob-view" /></a>
+         </li>
+         <li>
+           <a href="{{section.settings.link3}}" target="_blank"><img src="{{section.settings.logo3 | img_url:'200x200'}}" alt="" /></a>
+           <a href="{{section.settings.link6}}" target="_blank"><img src="{{section.settings.logo6 | img_url:'200x200'}}" alt="" class="mob-view" /></a>
+         </li>
+        <li><a href="{{section.settings.link4}}" target="_blank"><img src="{{section.settings.logo4 | img_url:'200x200'}}" alt="" class="dsk-view" /></a></li>
+        <li><a href="{{section.settings.link5}}" target="_blank"><img src="{{section.settings.logo5 | img_url:'200x200'}}" alt="" class="dsk-view" /></a></li>
+        <li><a href="{{section.settings.link6}}" target="_blank"><img src="{{section.settings.logo6 | img_url:'200x200'}}" alt="" class="dsk-view" /></a></li>
+      </ul>
+      <div class="text-center">
+         <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+      </div>
+   </div>
+{% schema %}
+  {
+    "name": "OG Strain Section",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our OG <b>strain</b><span>art</span> "
+       },
+       {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "<b>For those who know, you know.</b> Our legacy strain art was killer. But the viral marketing that made us infamous in the legacy market isn’t allowed under Canadian cannabis regulations in the legal market. <b>So we’re keeping the strain art alive in another way – as limited edition NFTs. Digitally, our OG legacy lives on.</b>"
+       },
+	  {
+        "type": "image_picker",
+        "id": "logo1",
+        "label": "Logo 1",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"link1",
+        "type":"url",
+        "label":"logo link 1"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo2",
+        "label": "Logo 2",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"link2",
+        "type":"url",
+        "label":"logo link 2"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo3",
+        "label": "Logo 3",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"link3",
+        "type":"url",
+        "label":"logo link 3"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo4",
+        "label": "Logo 4",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"link4",
+        "type":"url",
+        "label":"logo link 4"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo5",
+        "label": "Logo 5",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"link5",
+        "type":"url",
+        "label":"logo link 5"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo6",
+        "label": "Logo 6",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"link6",
+        "type":"url",
+        "label":"logo link 6"
+        
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Explore our NFTs"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "OG strain section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

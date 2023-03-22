@@ -1,0 +1,46 @@
+<style>
+section.part-bg {
+  background-image:url('{{ section.settings.img_desktop | img_url:'original' }}') !important;
+}
+</style>
+<!-- text-flicker-in-glow-->
+<section class="part-bg">
+   <div class="container-fluid">
+      <div class="caption-four">
+        <img class="text-flicker-in-glow" src="{{ section.settings.logo | img_url:'original' }}">
+         <h1 class="position-relative">{{section.settings.heading}}</h1>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "All Star Partner Banner",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "1920 x1024px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image",
+        "info": "200px width recommended"
+        },
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Green Karat <span>micro grower</span>"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "All Star Partner Banner",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

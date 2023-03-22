@@ -1,0 +1,48 @@
+meet<section class="ghost-meet">
+  <div class="container-fluid">
+          <div class="drop-block drop-white">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="40" data-drop-height="330"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="280"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="220"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="40" data-drop-height="260"></div>
+      </div>
+    <div class="position-relative">
+    <h3>{{section.settings.heading}}</h3><a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+    </div>
+ </div>
+</section>
+{% schema %}
+  {
+    "name": "Grew Meet Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Meet<br class='mob-view'> the team<br class='mob-view'><br class='dsk-view'> behind<br class='mob-view'> the Ghost"
+      },
+      {
+      "id":"btn_label",
+      "type":"text",
+      "label":"Button text",
+      "default":"The Ghost Grew"
+      },
+      {
+      "id":"btn_link",
+      "type":"url",
+      "label":"Button link"
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Grew Meet Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

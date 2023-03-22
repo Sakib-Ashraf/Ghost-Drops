@@ -1,0 +1,108 @@
+<div class="news-col">
+   <div class="container-fluid">
+     
+      <div class="masonry">
+        {%for block in section.blocks%}
+         <div class="brick">
+           <div class="brick-img-o">
+              <a href="{{block.settings.label_link}}" target="_blank">
+          <div class="overlay-brick"></div>
+           
+              <img src="{{block.settings.image | img_url:'880x560'}}" alt="" class="w-100" /></a>
+             </div>
+            
+            <a href="{{block.settings.label_link}}" target="_blank"><h4>{{block.settings.title}}</h4></a>  
+            </a>
+            <p>{{block.settings.content}}</p>
+            <a href="{{block.settings.label_link}}" target="_blank">{{block.settings.label_read}}</a>
+         </div>
+         {%endfor%}
+        </div>
+     
+   </div>
+</div>
+{% schema %}
+  {
+    "name": "Dropnews blog section",
+    "settings": [
+	  {
+        "type": "textarea",
+        "id": "main_title",
+        "label": "Main Title",
+        "default": "Ghost Drops in the News"
+       },
+       {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Read about our All-Stars"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+       {
+        "type": "textarea",
+        "id": "bottom_heading",
+        "label": "Bottom Heading",
+        "default": "<h3>Meet<br class='mob-view'> the team<br class='mob-view'><br class='dsk-view'> behind<br class='mob-view'> the Ghost</h3><a href='/pages/ghost-crew' class='primary-btn'>The Ghost Grew</a>"
+       },
+       {
+        "type": "url",
+        "id": "prd_link",
+        "label": "Product link"
+      },
+       {
+        "type": "text",
+        "id": "btn_label1",
+        "label": "Bottom Button Text",
+        "default": "The Ghost Grew"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link1",
+        "label": "Bottom Button link"
+      }
+	],
+     "blocks": [
+      {
+         "type": "image",
+         "name": "image",
+         "settings": [
+            
+            {
+            "type": "text",
+            "id": "title",
+            "label": "News Title"
+            },
+            {
+            "type": "textarea",
+            "id": "content",
+            "label": "News Content"
+            },
+            {
+            "type": "text",
+            "id": "label_read",
+            "label": "Read more text",
+            "default":"Read More"
+            },
+            {
+            "type": "url",
+            "id": "label_link",
+            "label": "Read more link"
+            },
+            {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "880x 560px recommended"
+            }
+
+         ]
+      }
+   ]
+  }
+{% endschema %}
+
+

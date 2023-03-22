@@ -1,0 +1,70 @@
+<div class="lg-one">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="born-maxe">
+        <h2>{{section.settings.heading}} </h2>
+        <b>{{section.settings.content1}}</b>
+        <p>{{section.settings.content2}}</p>
+        <h6>{{section.settings.content3}}</h6>
+      </div>
+    </div>
+    <div class="col-lg-6 clearfix">
+      <a href="{{section.settings.btn_link}}"> <img src="{{section.settings.image | img_url:'master'}}" alt="" class="w-100 legacy" /></a>
+    </div>
+  </div>
+ </div>
+{% schema %}
+  {
+    "name": "ghost Left Text Right Img",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Born <span class='d-in'>in the dark</span> "
+       },
+       {
+        "type": "textarea",
+        "id": "content1",
+        "label": "Paragraph One",
+        "default": "Anonymous and hidden, Ghost Drops started in discrete warehouse with one ambition: to shine a light on the most talented people working in the darkest corners of the industry."
+       },
+       {
+        "type": "textarea",
+        "id": "content2",
+        "label": "Paragraph Two",
+        "default": "The Ghost was always something experienced but not seen— discretely dropping the most interesting and innovative cannabis products to the most discerning consumers in the legacy market. Our notoriety grew and each new strain delivery became known on the streets as a “Ghost Drop”."
+       },
+       {
+        "type": "textarea",
+        "id": "content3",
+        "label": "Paragraph Three",
+        "default": "In operation since 2017, we launched into the legal market in Canada in 2021."
+       },
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Read about our All-Stars"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Image link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "680x 500px recommended"
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "ghost Left Text Right Image",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

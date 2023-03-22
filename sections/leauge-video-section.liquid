@@ -1,0 +1,58 @@
+<section class="section" id="section1">
+    <div class="section-content">
+        <div class="video-container dsk-view">
+            <video playsinline autoplay muted id="myVideo">
+                <source src="{{ section.settings.video }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+         <div class="video-container mob-view">
+            <video playsinline autoplay muted id="myVid">
+                <source src="{{ section.settings.video_mob }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="scroll-btn div-hide" id="selectme">
+            <a href="#section2">
+                <span class="mouse">
+                <span>
+                </span>
+                </span> </a>
+                <p>SCROLL</p>
+           
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Video Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "video",
+        "label": "Video Link",
+        "default": "https://cdn.shopify.com/videos/c/o/v/70a7157ff6fb4c9485a36865eb22797a.mp4"
+      },
+      {
+        "type": "text",
+        "id": "video_mob",
+        "label": "Mobile Video Link",
+        "default": "https://cdn.shopify.com/videos/c/o/v/86176633ed474d77b4d48dbdb5184862.mp4"
+      }
+      
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Video Section"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

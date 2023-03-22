@@ -1,0 +1,66 @@
+<div class="lg-one mt-9">
+  <div class="row">
+    <div class="col-lg-6 dsk-view vw-dsk clearfix">
+      <a href="{{section.settings.btn_link}}">  <img src="{{section.settings.image | img_url:'master'}}" alt="" class="w-100 legacy-two" /></a>
+    </div>
+    <div class="col-lg-6">
+      <div class="born-maxe lg-tw-new">
+        <h2>{{section.settings.heading}}</h2>
+        <p>{{section.settings.content1}}</p>
+        <b>{{section.settings.content2}}</b>
+        <b>{{section.settings.content3}}</b>
+      </div>
+    </div>
+    <div class="col-lg-6 mob-view mb-mob clearfix">
+      <a href="{{section.settings.btn_link}}"><img src="{{section.settings.image | img_url:'master'}}" alt="" class="w-100 legacy" /></a>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "ghost Right Text Left Img",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Into <span>the&nbsp;spotlight</span> "
+       },
+       {
+        "type": "textarea",
+        "id": "content1",
+        "label": "Paragraph One",
+        "default": "Now out of the shadows, Ghost Drops is serving up its infamous underground quality and culture to the legal market. With an unrivalled instinct for tastes and trends, the Ghost is delivering the game-changing legacy genetics that legal consumers have previously been denied"
+       },
+       {
+        "type": "textarea",
+        "id": "content2",
+        "label": "Paragraph Two",
+        "default": "And though we’ve transitioned to the legal market, our ambition remains the same as always: we’re still shining a light on the best in the legacy market."
+       },
+       {
+        "type": "textarea",
+        "id": "content3",
+        "label": "Paragraph Three",
+        "default": "<span>We’re out to change the industry. We’ll never stop disrupting the status quo.</span>"
+       },
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "680x 500px recommended"
+      },{
+        "type": "url",
+        "id": "btn_link",
+        "label": "Image link"
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "ghost Right Text Left Image",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

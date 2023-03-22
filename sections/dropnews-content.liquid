@@ -1,0 +1,43 @@
+<div class="drops-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>{{section.settings.heading}}</h2>
+      </div>
+      <div class="col-md-6">
+       {{section.settings.content}} 
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Content Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "When you're making waves, you're making headlines."
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "<p>As you know, we don't shy away from the spotlight - we're out here changing the industry.</p><p>You can find here a sample of news stories about Ghost Drops, our parternships, and our latest developments as we shake up the market.</p>"
+      }
+      
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Content Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+

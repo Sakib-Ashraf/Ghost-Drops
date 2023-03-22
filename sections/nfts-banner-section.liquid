@@ -1,0 +1,201 @@
+<section class="cnd">
+  <div class="container-fluid">
+    <img src="{{section.settings.img_desktop | img_url:'1400x672'}}" alt="" class="img-top-m dsk-view" />
+    <img src="{{section.settings.img_mobile | img_url:'325x405'}}" alt="" class="img-top-m mob-view" />
+    <div class="row">
+      <div class="col-md-8">
+        <h4>{{section.settings.heading_1}}</h4>
+      </div>
+      <div class="col-md-4">
+        <b class="mtt">{{section.settings.heading_2}}</b>
+      </div>
+    </div>
+    <div class="para-ot">
+      <div class="row">
+        {%- for block in section.blocks -%}
+        <div class="col-md-4">
+          <p>{{block.settings.content}}</p>
+        </div>
+        {%endfor%}
+
+      </div>
+    </div>
+    <div class="text-center">
+      <ul class="img-lst clearfix">
+
+        <li>
+          <a href="{{section.settings.logo1_link}}" target="_blank"><img src="{{section.settings.logo1 | img_url:'200x200'}}" alt="" /></a>
+          <a href="{{section.settings.logo4_link}}" target="_blank"><img src="{{section.settings.logo4 | img_url:'200x200'}}" alt="" class="mob-view" /></a>
+        </li>
+        <li>
+          <a href="{{section.settings.logo2_link}}" target="_blank"><img src="{{section.settings.logo2 | img_url:'200x200'}}" alt="" /></a>
+          <a href="{{section.settings.logo5_link}}" target="_blank"><img src="{{section.settings.logo5 | img_url:'200x200'}}" alt="" class="mob-view" /></a>
+        </li>
+        <li>
+          <a href="{{section.settings.logo3_link}}" target="_blank"><img src="{{section.settings.logo3 | img_url:'200x200'}}" alt="" /></a>
+          <a href="{{section.settings.logo6_link}}" target="_blank"><img src="{{section.settings.logo6 | img_url:'200x200'}}" alt="" class="mob-view" /></a>
+        </li>
+        <li>
+          <a href="{{section.settings.logo4_link}}" target="_blank"><img src="{{section.settings.logo4 | img_url:'200x200'}}" alt="" class="dsk-view" /></a></li>
+        <li><a href="{{section.settings.logo5_link}}" target="_blank"><img src="{{section.settings.logo5 | img_url:'200x200'}}" alt="" class="dsk-view" /></a></li>
+        <li><a href="{{section.settings.logo6_link}}" target="_blank"><img src="{{section.settings.logo6 | img_url:'200x200'}}" alt="" class="dsk-view" /></a></li>
+      </ul>
+      <a href="{{section.settings.btn_link}}" class="primary-btn mtt-e" target="_blank">{{section.settings.btn_label}}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "NFTS banner section",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "1400 x672px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Mobile Image",
+        "info": "375 x824px recommended"
+        },
+        {
+        "id":"heading_1",
+        "type":"textarea",
+        "label":"Heading 1",
+        "default":"Own your <br class='dsk-view'> <span>favourite strain art</span>"
+        },
+        {
+        "id":"heading_2",
+        "type":"textarea",
+        "label":"Heading 2",
+        "default":"This art is too good to die – as digital NFTs, the legacy will live on."
+        },
+         
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button Label",
+        "default":"Explore our NFTs"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button Link"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"The best cannabis used to be in the legacy market – <b>not anymore.</b>"
+        },
+        {
+        "type": "image_picker",
+        "id": "logo1",
+        "label": "Logo 1",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"logo1_link",
+        "type":"url",
+        "label":"Logo 1 Link"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo2",
+        "label": "Logo 2",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"logo2_link",
+        "type":"url",
+        "label":"Logo 2 Link"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo3",
+        "label": "Logo 3",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"logo3_link",
+        "type":"url",
+        "label":"Logo 3 Link"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo4",
+        "label": "Logo 4",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"logo4_link",
+        "type":"url",
+        "label":"Logo 4 Link"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo5",
+        "label": "Logo 5",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"logo5_link",
+        "type":"url",
+        "label":"Logo 5 Link"
+        
+      },
+      {
+        "type": "image_picker",
+        "id": "logo6",
+        "label": "Logo 6",
+        "info": "200x 200px recommended"
+      },
+      {
+        "id":"logo6_link",
+        "type":"url",
+        "label":"Logo 6 Link"
+        
+      }
+	],
+    "blocks": [
+     {
+         "type": "text",
+         "name": "text",
+         "limit": 12,
+         "settings": [
+            {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo_desktop",
+              "label": "Desktop Logo",
+              "info": "200 x200px recommended"
+           },
+          
+            {
+              "type": "image_picker",
+              "id": "logo_mobile",
+              "label": "Mobile Logo",
+              "info": "200 x200px recommended"
+           }
+
+         ]
+      }
+    ],
+    "presets": [{
+      "name": "NFTS Banner section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

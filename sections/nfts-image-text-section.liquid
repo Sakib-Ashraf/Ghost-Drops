@@ -1,0 +1,56 @@
+<section class="nft-img">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="nft-content">
+					<h3>{{section.settings.main_heading}}</h3>
+					<b class="b-spc">{{section.settings.content1}}</b>
+					<p>{{section.settings.content2}}</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="nftw">
+					<img src="{{section.settings.img | img_url:'680x500'}}" alt="" class="w-100" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "NTFS image text Section",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680x 500px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"text",
+        "label":"Heading",
+        "default":"What is an NFT?"
+        },
+        {
+        "id":"content1",
+        "type":"textarea",
+        "label":"Content One",
+        "default":"Our NFTs are one-of-a-kind digital artworks <br class='dsk-view'> that can be bought, sold, and collected online."
+        },
+        {
+        "id":"content2",
+        "type":"textarea",
+        "label":"Content Two",
+        "default":"NFT stands for non-fungible token. An NFT is a unit of data – which can represent art, photos, videos, audio and other types of digital files – stored on a digital ledger, called a blockchain. NFTs are certified digital assets that are unique and therefore not interchangeable"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "NTFS image text Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,80 @@
+<style>
+section.ghost-d.position-relative{
+  background:url({{ section.settings.image | img_url :'master' }} ) !important;
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100px 0px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.ghost-d.position-relative {
+  overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 52% 0px !important;
+}
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+  section.ghost-d.position-relative {
+  overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 64% 0px !important;
+}
+  } 
+    @media (min-width: 320px) and (max-width: 767px) {
+section.ghost-d.position-relative {
+    overflow: hidden;
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: 66% 0px !important;
+}
+  } 
+</style>
+<section class="ghost-d position-relative" >
+ <div class=" drop-black">
+ <div class="drop-water drop-two-lines" data-drop="fade-down" data-drop-time="4000" data-drop-width="36" data-drop-height="250"></div>
+ <div class="drop-water drop-three-lines" data-drop="fade-down" data-drop-time="2000" data-drop-width="36" data-drop-height="320"></div>
+</div>
+<div class="skw-bg"></div>
+<div class="ghost-skw">
+
+<h2>{{ section.settings.main_heading }}</h2>
+<p>{{ section.settings.content }} </p>
+
+</div>
+</section>
+{% schema %} 
+  {
+    "name": "Toronto GD",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Ghost Drops<span>Toronto</span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Ghost Drops Toronto is your premier destination for premium cannabis products in Toronto. We offer a wide selection of cannabis strains, edibles, beverages, capsules, oils, 510 vapes, disposable vapes, concentrates, hashish, pre-rolled joints, accessories and more – curated by the Ghost. We are proud to offer products from the best craft brands and micro-cultivators in the country. We carry an extensive line-up of our own Ghost Drops products in addition to a finely curated menu of craft cannabis. Located on Queen Street West, in the creative heart of downtown Toronto. "
+        }
+	],
+    "presets": [{
+      "name": "Toronto GD",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

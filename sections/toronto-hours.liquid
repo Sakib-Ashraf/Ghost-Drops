@@ -1,0 +1,38 @@
+<section class="address-btm">
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-xl-5 col-md-7 col-sm-7">
+  <h3>GHOST DROPS TORONTO</h3>
+  <p>{{ section.settings.address }}</p>
+  </div>
+  <div class="col-xl-7 col-md-5 col-sm-5">
+  <h3>STORE HOURS:</h3>
+  {{ section.settings.content }}
+  </div>
+  </div>
+</div>
+</section>
+
+{% schema %} 
+  {
+    "name": "Toronto Hours",
+    "settings": [
+        {
+        "id":"address",
+        "type":"textarea",
+        "label":"Address",
+        "default":"1184 QUEEN STREET WEST  <br>TORONTO, ON, <br>M6J 1J5, CANADA"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Hours",
+        "default":"<p>MON-THU: 10AM-10PM FRI-SAT: 10AM-11PM<br>SUN: 10AM - 8PM</p> <a href='tel:(647) 345-4444'>(647) 345-4444</a>"
+        }
+	],
+    "presets": [{
+      "name": "Toronto Hours",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

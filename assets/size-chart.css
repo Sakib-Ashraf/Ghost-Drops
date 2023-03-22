@@ -1,0 +1,366 @@
+.size-guide{
+  width: 1000px;
+  max-width: 1000px;
+  z-index: 1000;
+}
+
+div#sizechartmodal {
+    opacity: 1;
+}
+.size-guide .modal-header  .nav-tabs .nav-link{
+  color: #000;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 25px;
+  background: none;
+  font-weight: 500;
+  zoom: 1;
+  font-size: 11px;
+  line-height: 15px;
+  padding: 0;
+  padding-bottom: 2px;
+  border: 0;
+}
+
+.size-guide .modal-header.border-0 {
+  padding: 20px 35px;
+}
+
+.size-guide .modal-header button.close {
+  padding: 0 !important;
+  font-size: 34px;
+}
+
+.modal-header a.nav-item.nav-link.active{
+  border-bottom: 1px solid #000;
+}
+
+.size-guide .table td,.size-guide .table th {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+
+
+.size-guide tr.highlight{
+  background-color: #f2f2f2;
+}
+.size-guide td {
+  text-align: left;
+  padding: 10px 5px;
+  font-weight: 400;
+    color: #000;
+    font-size: 11px;
+}
+
+.size-guide caption{
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+.space-adj{
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px 0px 10px 0px;
+ margin-top: 25px;
+}
+
+.size-chart__container {
+  min-height: 320px;
+}
+
+.mark-sze{
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+}
+
+.mark-sze ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mark-sze img {
+  border-style: none;
+  max-width: 100%;
+  border: 0;
+}
+
+.mark-sze ul li {
+  position: absolute;
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  z-index: 1;
+  color: #000;
+  padding: 0;
+  text-align: center;
+  text-transform: none;
+  width: 37px;
+  font-weight: 400;
+  font-size: 11px;
+}
+/* .mark-sze ul li:first-child {
+  left: 15%;
+  top: 24%;
+}
+
+.mark-sze ul li:nth-child(1){
+  left: 48%;
+  top: 9%;
+}
+
+.mark-sze ul li:nth-child(2){
+  left: 48%;
+  top: 42%;
+}
+.mark-sze ul li:nth-child(3){
+  left: 84%;
+  top: 51%;
+}
+
+.mark-sze ul li:nth-child(3){
+  left: 84%;
+    top: 17%;
+} */
+
+
+#tabs2 a.nav-item.nav-link{
+  width: 75px;
+  height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 24px;
+  border-radius: 0px;
+  float: left;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-weight: 400;
+    color: #000;
+    font-size: 11px;
+  position: relative;
+  z-index: 1;
+}
+
+#tabs2 a.nav-item.nav-link.active {
+  color: #fff;
+  background-color: #000;
+}
+
+div#nav-tab2 {
+  display: table;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-left: 0;
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.in-space-adj{
+  text-align: left;
+  margin-top: 30px;
+}
+
+.inheading{
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 500;
+  font-size: 11px;
+  color: #000;
+  line-height: 15px;
+  border-bottom: 1px solid #777;
+  margin-bottom: 10px;
+}
+
+.model-details{
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+    padding: 0;
+}
+
+.details-shirts{
+  width: 100%;
+}
+
+.part-name{
+  width: 73%;
+  float: left;
+    min-height: 1px;
+    font-size: 9px;
+    line-height: 15px;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+}
+
+.part-size{
+  width: 25%;
+  float: left;
+    min-height: 1px;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+}
+
+.measurements{
+  text-align: left;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  margin: 0;
+  color: #000;
+}
+
+.checklist-radio{
+  list-style: none;
+  margin-left: 0;
+  display: table;
+  content: "";
+  line-height: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 7.5px;
+}
+
+ul.checklist-radio li {
+  display: list-item;
+  width: 40px;
+  float: left;
+  margin: -1px -1px 0 0;
+}
+
+ul.checklist-radio li.disabled ,ul.checklist-radio li.disabled label{
+  z-index: 0;
+  color: #888;
+}
+
+ul.checklist-radio li input{
+display: none;
+}
+
+ul.checklist-radio li label {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  font-weight: 400;
+  color: #000;
+  font-size: 11px;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+ul.checklist-radio li label.active{
+  color: #fff;
+    background-color: #000;
+}
+
+ ul.checklist-radio li.disabled label.active{
+  z-index: 0;
+  color: #888;
+  background-color: transparent;
+}
+
+.size-model{
+  background-color: rgb(255 255 255 / 90%);
+}
+
+.camcel-for-mob,#miseenpageSelector{
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .size-guide {
+    width: 700px;
+    max-width: 700px;
+    z-index: 1000;
+}
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.space-adj{
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px 0px 35px 0px;
+    margin-top: 30px;
+}
+  .size-guide {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    z-index: 1000;
+    height: 100vh;
+
+}
+.size-guide .modal-header,.hide-on-mob{
+  display: none;
+}
+
+.size-guide  .modal-content{
+ 
+  position: relative;
+}
+.camcel-for-mob{
+  display: block;
+ position: sticky;
+  
+  left: 0;bottom:0px;
+  right: 0;
+  width: 100%;border-radius:0px;
+  margin: 0 auto;
+  font-size: 16.15px;
+  height: 55px;
+  border-top: 1px solid #ea1a77;
+  min-height: 40px;
+
+  background: #ea1a77;
+  color: #fff;
+    text-decoration: none;
+}
+
+#miseenpageSelector{
+  display: block;
+  text-transform: uppercase;
+    margin-top: 90px;
+    width: 100%;
+    font-weight: 400;
+    padding: 6.6666666667px 30px;
+    padding-left: 6px;
+    padding-right: 0;
+    text-indent: 0.01px;
+    border: 1px solid #777;
+    outline: none;
+    min-height: 30px;
+    background: transparent url(//res.cloudinary.com/ssenseweb/image/upload/v1422551406/web/dropdow-arrow-2xmargin-right.png) center right no-repeat;
+    background-size: 16px;
+    cursor: pointer;
+    color: #000;
+    font-size: 11px;
+}
+
+
+.size-guide .table td, .size-guide .table th {
+  padding: 2px;
+  vertical-align: top;
+  font-size: 10px;
+}
+}

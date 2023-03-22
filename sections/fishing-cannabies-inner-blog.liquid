@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <h2 class="related-blg text-center">{{section.settings.main_heading}}</h2>
+  <div class="row">
+    {% for block in section.blocks%}
+    <div class="col-md-4 acad-marg-top">
+      <a href="{{block.settings.btn_link}}">
+        <img src="{{block.settings.img  | img_url:'master'}}" alt="" class="shpez">
+      </a>
+      <div class="para-text">
+        <a href="{{block.settings.btn_link}}"> <h6>{{block.settings.description}}</h6></a>
+        <p><a href="{{block.settings.btn_link}}" style="color: #000"><b>{{block.settings.btn_label}}</b></a>.</p>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Related Blog",
+    "settings": [
+     
+	 {
+        "type": "text",
+        "id": "main_heading",
+        "label": "Main Heading",
+        "default": "Related Blog"
+      }
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Desktop Image",
+        "info": "420 x420px recommended"
+        },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "Get ready for Ghost Drops and its plans to bring its iconic brand to the legal market"
+      },
+      
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Read More"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Related Blog",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

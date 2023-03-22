@@ -1,0 +1,135 @@
+{%if template!='customers/login'%}
+<footer {%if template=='page.where-to-buy'%} class="new-space"{%endif%}>
+  <div class="container-fluid">
+    <ul class="footer-list clearfix">
+					<li><a href="{{shop.url}}">
+						<img src="{{ section.settings.logo | img_url: 'original' }}" class="footer-logo">
+						</a>
+					</li>
+                	<li>
+					<h5>{{linklists[section.settings.footer_menu1].title}}</h5>
+					<ul class="list-a">
+                        {% for link in linklists[section.settings.footer_menu1].links %}
+				
+						<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+                       {% endfor %}
+                      </ul>
+					</li>
+                   <li>
+					<h5>{{linklists[section.settings.footer_menu2].title}}</h5>
+					<ul class="list-a">
+                        {% for link in linklists[section.settings.footer_menu2].links %}
+				
+						<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+                       {% endfor %}
+                      </ul>
+					</li>
+                    <li>
+					<h5>{{linklists[section.settings.footer_menu3].title}}</h5>
+					<ul class="list-a">
+                        {% for link in linklists[section.settings.footer_menu3].links %}
+				
+						<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+                       {% endfor %}
+                      </ul>
+					</li>
+                    <li>
+					<h5>{{linklists[section.settings.footer_menu4].title}}</h5>
+					<ul class="list-a">
+                        {% for link in linklists[section.settings.footer_menu4].links %}
+				
+						<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+                       {% endfor %}
+                      </ul>
+					</li>
+             	    <li>
+<!-- 						<h5>Follow us</h5> -->
+						<ul class="social-bar">
+                            <li><a href="{{section.settings.in_link}}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="{{section.settings.yt_link}}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+							<li><a href="{{section.settings.fb_link}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                          	<li  class=""><a href="{{section.settings.tw_link}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li class=""><a href="{{section.settings.li_link}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</li>
+				</ul>
+              <ul class="bottom-links">
+                
+                {% for link in linklists[section.settings.footer_bottom].links %}
+                <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+                {%endfor%}
+               
+                <li>© 2022 Atlas Growers, Inc. &nbsp; &nbsp;All Rights Reserved.</li>
+                <li>A <a href="https://sarocreative.com/">Saro Creative</a> Joint</li>
+ </ul>
+  </div>
+</footer>
+{%endif%}
+{% schema %}
+  {
+    "name": "Footer New",
+    "settings": [
+      {
+        "type": "url",
+        "id": "yt_link",
+        "label": "Youtube link",
+        "info":"https://www.youtube.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "fb_link",
+        "label": "Facebook link",
+        "info":"https://www.facebook.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "in_link",
+        "label": "Instagram link",
+        "info":"https://www.instagram.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "li_link",
+        "label": "Linkedin link",
+        "info":"https://www.linkedin.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "tw_link",
+        "label": "Twitter link",
+        "info":"https://www.twitter.com/shopify"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Site Logo"
+      },
+	  {
+        "type": "link_list",
+        "id": "footer_menu1",
+        "label": "Footer Menu 1"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu2",
+        "label": "Footer Menu 2"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu3",
+        "label": "Footer Menu 3"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu4",
+        "label": "Footer Menu 4"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_bottom",
+        "label": "Footer Bottom Link"
+      }
+      
+    ]
+  }
+{% endschema %}

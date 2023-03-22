@@ -1,0 +1,87 @@
+<div class="row">
+<div class="col-md-6">
+  <div class="h-bd prd">
+    <h3>{{section.settings.main_title}}</h3>
+    {{section.settings.content}}
+    <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+  </div>
+</div> 
+<div class="col-md-6">
+  <div class="bd-lft h-bd">
+    <h3>{{section.settings.hiw_title}}</h3>
+    <p>{{section.settings.hiw_content}}</p>
+    <div class="row">
+      {% for block in section.blocks %}
+      <div class="col-6">
+        <img src="{{block.settings.img | img_url:'master'}}" class="w-100 mb-4">
+      </div>
+      {%endfor%}
+    </div>
+    <img src="{{section.settings.img | img_url:'master'}}" class="lst-img">
+  </div>
+</div>
+</div>
+{% schema %}
+  {
+  "name": "Collectible Register Card",
+  "settings": [
+    {
+    "id":"main_title",
+    "type":"text",
+    "label":"Main Title",
+    "default":"Register your<br> collectible card"
+    },
+    {
+    "id":"content",
+    "type":"textarea",
+    "label":"Content",
+    "default":"<p>Complete this online form to enter our monthly Ghost Drops hoodie giveaway and gain early access to Crypto Drops.</p><p>If you're luck enough to have found one of the ultra-rare hologram cards, there's an extra prize in the registration process.</p>"
+    },
+    {
+    "id":"btn_label",
+    "type":"text",
+    "label":"Button Label",
+    "default":"Let's do this"
+    },
+    {
+    "id":"btn_link",
+    "type":"url",
+    "label":"Button Link"
+    },
+    {
+    "id":"hiw_title",
+    "type":"text",
+    "label":"How it work Title",
+    "default":"Here's how<br> it works"
+    },
+    {
+    "id":"hiw_content",
+    "type":"textarea",
+    "label":"How it work Title",
+    "default":"For every jar you buy, you should receive 1 collectible card from the dispensary you buy from. Two jars = two cards, etcetera. You get the picture."
+    },
+    {
+    "type": "image_picker",
+    "id": "img",
+    "label": "Image",
+    "info": "441x 84px recommended"
+    }
+  ],
+   "blocks": [  
+      {
+      "type": "image",
+      "name": "image",
+      "limit":2,
+      "settings": [
+        
+  		{
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "311x 180px recommended"
+        }
+      ]
+     }
+    ]
+  }
+{% endschema %}

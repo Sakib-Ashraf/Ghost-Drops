@@ -1,0 +1,116 @@
+<div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="ghst-h dsk-view">
+               <h2>{{section.settings.heading}}</h2>
+            </div>
+            <div class="ghst-h mob-view">
+               <h2>{{section.settings.mob_heading}}</h2>
+            </div>
+<!--             <img src="{{'smily-cross.png' | asset_url}}" alt="" class="sml-cros" /> -->
+            <ul class="button-area clearfix dsk-view">
+               <li><a href="#mailing_list" class="white-btn" >{{section.settings.btn_label}}</a></li>
+               <li><a href="{{section.settings.btn_link1}}" class="primary-btn">{{section.settings.btn_label1}}</a></li>
+            </ul>
+         </div>
+         <div class="col-md-6">
+            <div class="ghost-fam-content clearfix">
+               <b class="fst">{{section.settings.heading2}}</b>
+               <ul class="fam-list">
+                 {% for block in section.blocks %}
+                  <li>{{block.settings.text}}</li>
+                 {%endfor%}
+              </ul>
+               <ul class="button-area clearfix mob-view">
+                  <li><a href="#mailing_list" class="primary-btn" >{{section.settings.btn_label1}}</a></li>
+                  <li><a href="{{section.settings.btn_link}}" class="white-btn">{{section.settings.btn_label}}</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+{% schema %}
+  {
+    "name": "Ghostfarm section",
+    "settings": [
+     
+	   {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "What <b>is the</b><span>ghostfam</span>"
+       },
+       {
+        "type": "textarea",
+        "id": "mob_heading",
+        "label": "Mobile Heading",
+        "default": "What <b>is the</b><span>ghostfam</span>"
+       },
+        {
+        "type": "textarea",
+        "id": "heading2",
+        "label": "Right Side Heading",
+        "default": "The Ghostfam = our Ghost Drops family. Our community. They got our back. And we got theirs."
+       },
+
+
+       {
+        "type": "textarea",
+        "id": "content",
+        "label": "paragraph",
+        "default": "Explore our organizational vision, mission, and values."
+       },
+	  {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "680x 500px recommended"
+      },
+      
+      {
+        "type": "text",
+        "id": "btn_label1",
+        "label": "Signup Button Text",
+        "default": "Sign up to the Ghostfam"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link1",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Team behind Button Text",
+        "default": "The Team behind the Ghost"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+	],
+    "blocks": [
+      
+      {
+      "type": "text",
+      "name": "text",
+      "settings": [
+        
+  		{
+        "type": "textarea",
+        "id": "text",
+        "label": "Pargraph"
+        
+      }
+      ]
+     }
+    ],
+
+    "presets": [{
+      "name": "Ghostfarm section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

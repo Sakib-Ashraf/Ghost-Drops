@@ -1,0 +1,53 @@
+<section class="star-partner">
+  <div class="container-fluid position-relative">
+    <div class="drop-block drop-white">
+      <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="200"></div>
+      <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="36" data-drop-height="160"></div>
+      <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="36" data-drop-height="180"></div>
+      <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="30" data-drop-height="260"></div>
+      <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="200"></div>
+    </div>
+    <h4>{{section.settings.heading}}</h4>
+    <img src="{{section.settings.image | img_url:'866x645'}}" alt="" class="partn dsk-view" />
+    <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+    <img src="{{section.settings.image | img_url:'866x645'}}" alt="" class="partn-mb mob-view" />
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Grew Partner Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Read <br class='mob-view'>about our<br class='mob-view'> All-Star<br class='mob-view'> partners"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Desktop Image",
+        "info": "866x 645px recommended"
+     },
+      {
+      "id":"btn_label",
+      "type":"text",
+      "label":"Work us Button text",
+      "default":"Our All-Star partners"
+      },
+      {
+      "id":"btn_link",
+      "type":"url",
+      "label":"Button link"
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Grew Partner Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

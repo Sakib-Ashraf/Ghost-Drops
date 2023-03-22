@@ -1,0 +1,22 @@
+<p class="sz-lrg">{{section.settings.text1}}</p>
+<p class="sz-lrg">{{section.settings.text2}}</p>
+
+{% schema %}
+  {
+    "name": "Collectible Text Section",
+    "settings": [
+	  {
+        "id":"text1",
+        "type":"textarea",
+        "label":"Upper text",
+        "default":"You know we don't **** around. We 're out to do things a little differently. So when we launched into the legal market, we decided to introduce baseball-style collectible cards that carry the info and energy of our killer legacy strains."
+     },
+     {
+        "id":"text2",
+        "type":"textarea",
+        "label":"Lower text",
+        "default":"Every new drop, and every new season, we'll be dropping new cards. Collect this ever-expanding set - and keep an eye out for the extra-special, ultra-limited cards with the holograms on the back."
+     }
+	]
+  }
+{% endschema %}

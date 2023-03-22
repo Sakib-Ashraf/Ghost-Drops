@@ -1,0 +1,54 @@
+ <div class="top-spc"></div>
+      <div class="row">
+         <div class="col-md-7">
+            <h2 class="yellow-heading">{{section.settings.heading}}</h2>
+         </div>
+         <div class="col-md-5">
+            <div class="og-content">
+               <p class="p-size">{{section.settings.content}}</p>
+            </div>
+         </div>
+      </div>
+<div class="middle-text">
+  <img src="{{'click-black.svg' | asset_url}}" alt="" />
+  {{section.settings.logo_text}}
+</div>
+{% schema %}
+  {
+    "name": "All Star Partner Section",
+    "settings": [
+	    
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Heading 1",
+        "default":"Our ecosystem of All-Star partners"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"<b>We only work with the best.</b> The Ghost Drops model is designed to drop products that change the game and influence the industry. We do that thanks to the talents of our <b>award-winning</b> legacy market cultivators and hand-picked legal market micro-cultivators, growers andextractors."
+        },
+        {
+        "id":"logo_text",
+        "type":"textarea",
+        "label":"Partner Text",
+        "default":"Click on partner logos to learn more"
+        },
+        {
+        "id":"link",
+        "type":"url",
+        "label":"Partner link"
+        
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "All Star Partner Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

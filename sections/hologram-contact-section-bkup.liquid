@@ -1,0 +1,136 @@
+ {%- assign formId = 'ContactForm' -%}
+ {% form 'contact', id: formId %}
+<div class="row">
+  <div class="col-md-7">
+    {% include 'form-status', form: form, form_id: formId %}
+  </div>
+  <input type="hidden" name="contact[tags]" value = "Hologram Gift" />
+  <div class="col-md-7">
+    <div class="img-lb">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-max">
+            <div class="palceholder">
+              <label  for="{{ formId }}-fname">First Name</label>
+              <span class="star">*</span>
+            </div>
+            <input type="text" name="contact['First Name']" id="{{ formId }}-fname" class="input-c" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-max">
+            <div class="palceholder">
+              <label  for="{{ formId }}-lname">Last Name</label>
+              <span class="star">*</span>
+            </div>
+            <input type="text" name="contact['Last Name']" class="input-c" id="{{ formId }}-lname" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-max">
+            <div class="palceholder">
+              <label  for="{{ formId }}-email">Email</label>
+              <span class="star">*</span>
+            </div>
+            <input
+               type="email"
+               id="{{ formId }}-email" class="input-c"
+               name="contact[email]"
+               autocorrect="off"
+               autocapitalize="off"
+               value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+               aria-required="true"
+               {%- if form.errors contains 'email' -%}
+               class="input--error"
+               aria-invalid="true"
+               aria-describedby="{{ formId }}-email-error"
+               {%- endif -%}
+               >
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-max">
+            <div class="palceholder">
+              <label for="{{ formId }}-phone">Phone Number</label>
+              <span class="star">*</span>
+            </div>
+            <input type="text" name="contact['phone']" class="input-c" id="{{ formId }}-phone" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-max">
+            <div class="palceholder">
+              <label for="{{ formId }}-address" >Address</label>
+              <span class="star">*</span>
+            </div>
+            <input type="text" name="contact['address']" class="input-c" id="{{ formId }}-address" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-max">
+            <div class="palceholder">
+              <label for="{{ formId }}-zipcode">Postal Code</label>
+              <span class="star">*</span>
+            </div>
+            <input type="text" name="contact['zipcode']" class="input-c" id="{{ formId }}-zipcode" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-max sl-arrow">
+            <select name="contact[provinces]">
+              <option value="Province">Province </option>
+              <option value="Alberta">Alberta </option>  
+              <option value="Alberta">British Columbia</option>
+              <option value="New Brunswick">New Brunswick</option>
+              <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+              <option value="Northwest Territories">Northwest Territories</option>
+              <option value="Nova Scotia">Nova Scotia</option>
+              <option value="Nunavut">Nunavut</option>   
+              <option value="Ontario">Ontario</option>
+              <option value="Prince Edward Island">Prince Edward Island</option>
+              <option value="Quebec">Quebec</option>
+              <option value="Saskatchewan">Saskatchewan</option>
+              <option value="Yukon">Yukon</option>
+            </select>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <img src="{{'poly.svg' | asset_url}}" class="w-100 caret-dwn">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="up-btn">
+      <p>Upload Image of the back of your card, clearly showing hologram, strain, and card ID number *</p>
+      <div class="upload-btn-wrapper">
+        <button class="btnx"><img src="{{'up.svg' | asset_url}}" class="upld"></button>
+        <input type="file" name="contact['myfile']" />
+      </div>
+      <div class="input-max text-center">
+        <input type="submit" class="Submit mb-md-5">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="clr-ghst">
+      <img src="{{'Collec-Banner-r2.png' | asset_url}}" class="upld">
+    </div>
+  </div>
+  {%endform%}
+</div>
+{% schema %}
+  {
+    "name": "Buy Contact Section",
+    "settings": [
+      
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "504 x503px recommended"
+      }
+	],
+    "blocks": [  
+      
+    ]
+  }
+{% endschema %}

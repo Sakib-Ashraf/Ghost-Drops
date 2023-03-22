@@ -1,0 +1,67 @@
+
+<div class="row">
+    {% for block in section.blocks %}
+     <div class="{% if forloop.index==7 %} col-md-12 {% else %} col-md-6 {% endif %} ">
+      <a href="{{block.settings.link}}" target="_blank">
+      <div class="shop-bx {% if forloop.index==3 or forloop.index==4 or forloop.index==5 or forloop.index==6 or forloop.index==7 %} marg-top{%endif%}">
+        <div class="o-blk"></div>
+      	
+          <img src="{{block.settings.image | img_url:'master'}}">
+          <h4>{{block.settings.name}}</h4>
+     
+      </div>   </a>
+    </div>
+    
+    {%endfor%}
+    
+    
+  </div>
+{% schema %}
+  {
+    "name": "Province Section",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "main_heading",
+        "label": "Heading",
+        "default": "Ghost Drops currently available in these provinces"
+      }
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+       "limit":12,
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "680 x320px recommended"
+        },
+        
+	  {
+        "type": "textarea",
+        "id": "name",
+        "label": "name"
+      },
+	  {
+        "type": "url",
+        "id": "link",
+        "label": "link"
+      }
+	 
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Province Section"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

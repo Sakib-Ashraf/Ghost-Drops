@@ -1,0 +1,77 @@
+<section class="hlw">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="hol-para">
+        <h4>{{section.settings.title}}</h4>
+        {{section.settings.content}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="img-nww">
+        <img src="{{section.settings.image | img_url:'master'}}" class="lst-hiw">
+      </div>
+    </div>
+  </div>
+  <div class="clb">
+    <h3>{{section.settings.title2}}</h3>
+    <p>{{section.settings.content2}}</p>
+  </div>
+  <div class="text-center d-none">
+    <a href="{{section.settings.btn_link}}" class="primary-btn mt-5">{{section.settings.btn_label}}</a>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Collectible Hologram",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Holograms"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "<p class='mb-5'><b>These are super rare collectibles. Just 1-in-50 strain collectibles features the extra-special Ghost Drops hologram on the back</b>. You're going to want to find one of these.</p><p>Think of them as your Golden Tickets. The gift that keeps on giving. Register [hyperlink] your holograms with us and find out what else we have in store for you. </p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "339 x461px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "Title Two",
+        "default": "Collectibles gallery"
+      },
+      {
+        "type": "textarea",
+        "id": "content2",
+        "label": "Content two",
+        "default": "Check every past collectible, from every drop and every season. Over-expanding collection features different styles and details on every card. Collect them all."
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Label",
+        "default": "View all"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Collectible Hologram section"
+    }]
+  }
+{% endschema %}

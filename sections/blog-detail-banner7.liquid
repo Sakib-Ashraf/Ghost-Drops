@@ -1,0 +1,31 @@
+<section  class="blog-detail">
+ {% if section.settings.img != blank%}
+  <img src="{{section.settings.img  | img_url:'master'}}">
+  {%endif%}
+</section>
+{% schema %}
+  {
+    "name": "Blog Banner",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x570px recommended"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Blog Banner",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

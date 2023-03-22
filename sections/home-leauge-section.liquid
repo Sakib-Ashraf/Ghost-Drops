@@ -1,0 +1,61 @@
+<section class="home-leauge">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="league-sec">
+    <h3>{{ section.settings.main_heading }}</h3>
+      <img src="{{section.settings.img | img_url:'master'}}" class="league-lg mob-view">
+    <p>{{ section.settings.content }}</p>
+    <a href="{{ section.settings.btn_link }}" class="primary-btn">{{ section.settings.btn_label }}</a>
+    </div>
+    </div>
+    <div class="col-md-6 dsk-view">
+    <img src="{{section.settings.img | img_url:'master'}}" class="league-lg">
+    
+    </div>
+    </div>
+    </div>
+</section>
+
+{% schema %} 
+  {
+    "name": "Home Leauge Section",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"The League"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Ghost Drops presents The League, a brand platform that focuses on bringing iconic and innovative brands to the legal market. We’re bringing together heavyweight players from the illicit market alongside some new, exciting names."
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Learn more"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Home Leauge Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

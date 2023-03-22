@@ -1,0 +1,29 @@
+<section class="ghost-cat text-center invst">
+<h1 class="text-flicker-in-glow" style="animation-duration: 3s">{{section.settings.main_title}}</h1>
+  <p>{{section.settings.content}}</p>
+</section>
+{% schema %}
+  {
+    "name": "Investor top section",
+    "settings": [
+	  {
+        "id":"main_title",
+        "type":"text",
+        "label":"Main Page Title",
+        "default":"Investors"
+     },
+     {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Interested in investing in Ghost Drops or learning more? <br class='dsk-view'> Fill out the form below to request access to our Investor Deck"
+     }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,71 @@
+<section class="contact-form">
+  {%- assign formId = 'ContactForm' -%}
+  {% form 'contact', id: formId %}
+  <div class="container-fluid">
+   <div class="container-small">
+     {% include 'form-status', form: form, form_id: formId %}
+      <input type="hidden" name="contact[subject]" value="Ghost Drop Contact Us" />
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-fname">First Name</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="contact['First Name']" class="input-c" id="{{ formId }}-fname" required>
+      </div>
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-lname">Last Name</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="contact['Last Name']" class="input-c" id="{{ formId }}-lname" required>
+      </div>
+      <div class="input-max">
+         <div class="palceholder" style="display:block !important">
+            <label for="{{ formId }}-email" >Email</label>
+            <span class="star">*</span>
+           
+         </div>
+        <input
+                type="email"
+                id="{{ formId }}-email" class="input-c"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                >
+         
+      </div>
+     <div class="input-max">
+            {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                </span>
+              {%- endif -%}
+     </div> 
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-subject">Subject</label>
+         </div>
+         <input type="text" name="contact['subject']" class="input-c" id="{{ formId }}-subject" required>
+      </div>
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-message">Message</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="contact['message']" class="input-c" id="{{ formId }}-message" required>
+      </div>
+      <div class="input-max">
+         <input type="submit" class="Submit">
+      </div>
+   </div></div>
+  {% endform %}
+</section>

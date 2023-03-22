@@ -1,0 +1,23 @@
+<section class="ghost-cat text-center invst">
+<h1 class="text-flicker-in-glow" style="animation-duration: 3s">{{section.settings.main_title}}</h1>
+  <p>{{section.settings.content}}</p>
+</section>
+{% schema %}
+  {
+    "name": "Where to buy Top Section",
+    "settings": [
+	  {
+        "id":"main_title",
+        "type":"text",
+        "label":"Main Page Title",
+        "default":"Where to Buy"
+     },
+     {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Canada's OG legacy brand is just getting started. Keep your eyes <br class='dsk-view'> peeled as we work to release the Ghost from coast to coast."
+     }
+	]
+  }
+{% endschema %}

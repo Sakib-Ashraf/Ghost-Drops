@@ -1,0 +1,76 @@
+<section class="featured-strain new-style">
+  <img src="{{'white-dr.png' | asset_url}}" class="white-dr"> 
+  <div class="container-fluid">
+    <div class="drop-block drop-white d-none">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="36" data-drop-height="160"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="200"></div>
+      </div>
+    <div class="featured-h">
+      <h2>{{section.settings.main_heading}}</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="max-img">
+          <a href="{{section.settings.btn_link}}"> <img src="{{section.settings.img | img_url:'master'}}" alt="" /></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-content">
+          <h3>{{section.settings.heading2}}</h3>
+          <p>{{section.settings.content}}</p>
+          <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %} 
+  {
+    "name": "Featured Strain Section",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x527px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Main Heading",
+        "default":"Featured <span>strain</span>"
+        },
+        {
+        "id":"heading2",
+        "type":"textarea",
+        "label":"heading Two"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Our signature strain. This funky number boasts a big, powerful flower with a taste as funky as its smell. Hunted by Cultivating Happiness and grown by several ultra-premium, hand-selected craft micro-producers, First Class Funk buds are typically large with dense diamond-like trichomes."
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"See all strains"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Featured Strain Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

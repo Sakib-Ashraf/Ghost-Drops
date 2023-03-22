@@ -1,0 +1,67 @@
+<div class="row">
+  {% for block in section.blocks %}
+    <div class="col-md-6">
+       <a href="{{block.settings.btn_link}}"> 
+      <div class="all-box">
+
+       
+          <img src="{{block.settings.img_desktop | img_url:'680x680'}}" alt="" class="img-box-one dsk-view" />
+        <img src="{{block.settings.img_mobile | img_url: '327x337'}}" alt="" class="img-box-one mob-view" />
+        
+        <div class="overlay-blk"></div>
+        <div class="clothing-area">
+          <h3 class="heading-bx">
+            {{block.settings.title}}
+          </h3>
+        </div>
+      </div>
+      </a>
+    </div>
+  {%endfor%}
+  </div>
+{% schema %}
+  {
+    "name": "Ghost Collection One",
+    "settings": [
+	 
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "limit":2,
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Collection Desktop Image",
+        "info": "800x 700px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Collection Mobile Image",
+        "info": "800x 700px recommended"
+        },
+  		{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+	  
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Collection link"
+      }
+	  
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Collection One",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

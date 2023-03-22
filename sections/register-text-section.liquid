@@ -1,0 +1,41 @@
+<section class="ct-text">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7">
+        <h3>{{section.settings.heading}}</h3>
+      </div>
+      <div class="col-md-5">
+        <p>{{section.settings.content}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Right Text Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "We <span>love hearing</span><br class='dsk-view'> from our cannabis<br class='dsk-view'> community."
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "We're always working hard to deliver the best products on the market. If you've got a question or want to tell us something — whatever it is, we'd love to hear from you."
+      }
+      
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Contact Community Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

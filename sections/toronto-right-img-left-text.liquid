@@ -1,0 +1,70 @@
+  <section class="section-text-left-img-right">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-lg-6  pl-md-0 mob-view">
+            <div class="max-img-right">
+               <a href="{{section.settings.btn_link}}">
+                 <img class="w-100" src="{{section.settings.img | img_url:'master'}}" >
+               </a>
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="born-content right-spc">
+               <div class="h-outer new-wd">
+                  <h2>{{section.settings.main_heading}}
+                  </h2>
+               </div>
+               <p>{{section.settings.content}} </p>
+               <a href="{{section.settings.btn_link}}" class="primary-btn">{{ section.settings.btn_label }}</a>
+            </div>
+         </div>
+         <div class="col-lg-6  pl-md-0 dsk-view">
+            <div class="max-img-right">
+               <a href="{{section.settings.btn_link}}"><img class="w-100" src="{{section.settings.img | img_url:'master'}}" ></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %} 
+  {
+    "name": "Right image left text",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Exclusive<span>Merch + Accessories</span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Our exclusive Ghost Drops apparel and merchandise is only available at our flagship store. Ghost Drops apparel, cannabis grinders, lighters, dab mats, rolling trays, air fresheners, stickers, collectible cards, drawstring bags and more. Our Capsule 1 collection including hoodies, crewnecks, sweatpants, longsleeves and more is available in-store only. "
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Shop Ghost Gear"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Right image left text",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

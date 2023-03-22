@@ -1,0 +1,73 @@
+<div class="row">
+<div class="col-md-6 mob-view">
+<div class="gf-animnate">
+  <img src="{{section.settings.img | img_url:'master'}}" class="w-100">
+</div>
+</div>
+<div class="col-md-6">
+<div class="register-area">
+<h2>{{ section.settings.main_title }} </h2>
+<p>{{ section.settings.content }}</p>
+<a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+</div>
+</div>
+<div class="col-md-6 dsk-view">
+<div class="gf-animnate">
+      <img src="{{section.settings.img | img_url:'master'}}" class="w-100">
+</div>
+</div>
+
+</div>
+{% schema %}
+  {
+  "name": "Collectibles Registr Card",
+  "settings": [
+    {
+    "id":"main_title",
+    "type":"text",
+    "label":"Main Title",
+    "default":"Register your<br> collectible card"
+    },
+    {
+    "id":"content",
+    "type":"textarea",
+    "label":"Content",
+    "default":"<p>Register your Ghost Drops collectible cards using the unique ID number to gain access to a variety of benefits. When you complete the online form below, you are automatically entered into our monthly Ghost Drops hoodie giveaway and will gain early access to Crypto Drops, our cannabis NFT project. If you’re lucky enough to have found one of the ultra-rare holographic cards, there’s an extra prize in the registration process.  </p>"
+    },
+    {
+    "id":"btn_label",
+    "type":"text",
+    "label":"Button Label",
+    "default":"Register Now"
+    },
+    {
+    "id":"btn_link",
+    "type":"url",
+    "label":"Button Link"
+    },
+    {
+    "type": "image_picker",
+    "id": "img",
+    "label": "Image",
+    "info": "441x 84px recommended"
+    }
+    
+  ],
+   "blocks": [  
+      {
+      "type": "image",
+      "name": "image",
+      "limit":2,
+      "settings": [
+        
+  		{
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "311x 180px recommended"
+        }
+      ]
+     }
+    ]
+  }
+{% endschema %}

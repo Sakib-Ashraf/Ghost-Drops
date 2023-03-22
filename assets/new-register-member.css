@@ -1,0 +1,122 @@
+.register-member-subheading {
+    margin-top: 20px;
+    max-width: 320px;
+}
+.register-member-subheading p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;    
+    color: #FFFFFF;
+    margin: 0;
+}
+.register-member-subheading p strong {  
+    color: #E62877;
+}
+.register-member-content {
+    max-width: 470px;
+    margin: 0 auto;
+}
+.resgister-member-section {
+    margin-top: 180px;
+    overflow: hidden;
+}
+.member-login-btn,
+.member-login-btn:hover {
+    font-family: var(--font-stack-body);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;    
+    color: #FFFFFF !important;
+    background: #E62877;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 345px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.member-login-btn:not(:first-child) {
+    margin-top: 25px;
+}
+.btn-facebook,
+.btn-facebook:hover {
+    background: #1877F2;
+}
+.btn-google,
+.btn-google:hover {
+    background: #FFFFFF;
+    color: #000 !important;
+}
+.btn-apple,
+.btn-apple:hover {
+    background: #000000;
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.084), 0px 2px 3px rgba(255, 255, 255, 0.168);
+}
+.login-icon {
+    margin-right: 15px;
+}
+.member-login-area {
+    position: relative;
+    max-width: max-content;
+}
+.member-social-login {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* responsive */
+@media (max-width: 1199px) {}
+
+@media (max-width: 991px) {
+    .member-social-login {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .member-login-btn, .member-login-btn:hover {
+        width: 100%;
+    }
+    .member-login-btn, 
+    .member-login-btn:hover {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .register-member-content {
+        max-width: 100%;
+    }
+    .register-member-subheading p {
+        font-size: 18px;
+    }
+    .register-member-subheading {
+        max-width: 100%;
+        margin-bottom: 36px;
+    }
+    .register-login-img {
+        display: none;
+    }
+    .member-social-login {
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding: 0;
+    }
+    .member-login-area {
+        max-width: 100%;
+    }
+    .resgister-member-section {
+        margin-top: 127px;
+    }
+    .member-login-btn, 
+    .member-login-btn:hover {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 601px) {}

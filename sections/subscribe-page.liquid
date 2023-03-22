@@ -1,0 +1,71 @@
+<div class="drop-news subs d-none">
+  <div class="container-fluid">
+    <h1>{{section.settings.main_heading}}</h1>
+  </div>
+</div>
+
+<section class="subscribe-text insvtwa">
+  <div class="container-fluid">
+<!--           <div class="drop-block drop-black">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="40" data-drop-height="330"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="280"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="220"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="40" data-drop-height="260"></div>
+      </div> -->
+    <div class="row">
+      <div class="col-md-7">
+
+        <h3>{{section.settings.content1}}</h3>
+      </div>
+      <div class="col-md-5">
+        <h5>{{section.settings.content2}}</h5>
+      </div>
+      <div class="col-md-5">
+      <div class="signup-area marg-top">
+<!--         <div class="klaviyo-form-WK6peV"></div> -->
+        <div class="klaviyo-form-SvpwVR"></div>
+      </div>
+    </div>
+      <div class="col-md-3"></div>
+      
+    </div>
+    
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Subscribe Page",
+    "settings": [
+
+        {
+        "id":"main_heading",
+        "type":"text",
+        "label":"Main Heading",
+        "default":"Subscribe"
+        },
+	    {
+        "id":"content1",
+        "type":"textarea",
+        "label":"Content One",
+        "default":"Join the Ghost Gang. <br>Sign up and never <br>miss a drop."
+        },
+        {
+        "id":"content2",
+        "type":"textarea",
+        "label":"Content Two",
+        "default":"Exclusive content and access for subscribers. Be the first-to-know about new flower drops, merchandise releases, events and more news from the ghost."
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Subscribe Page",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

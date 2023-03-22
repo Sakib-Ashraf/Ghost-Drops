@@ -1,0 +1,61 @@
+<section class="born-in-dark position-relative">
+        <img src="{{'dotted-left.png' | asset_url}}" class="dotted-left">
+			<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="max-img">
+                      <a href="{{section.settings.btn_link}}"><img src="{{section.settings.img | img_url:'master'}}" alt="born-in-dark" /></a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="born-content">
+						{{section.settings.main_heading}}
+						<p>{{section.settings.content}}</p>
+						<a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+					</div>
+				</div>
+			</div>
+  </div>
+		</section>
+{% schema %} 
+  {
+    "name": "Left image right text",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"<div class='h-outer'><h2>Born <span>in the dark</span></h2></div>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Ghost Drops started in a nondescript warehouse with one ambition: to shine some light on the legends working in the darkest corners of the cannabis industry."
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Read the Ghost Drops story"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Left image right text",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

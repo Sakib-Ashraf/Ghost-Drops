@@ -1,0 +1,47 @@
+<section class="section" id="section5">
+    <a href="" class="drop-btn"><img src="{{'back-arrowd.svg' | asset_url }}" class="arrow-pos"> Ghost Drops </a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 mob-view" data-aos-duration="2000" data-aos="fade-left" data-aos-mirror="true"><img src="{{section.settings.image | img_url:'master' }}" class="w-100"></div>
+            <div class="col-md-7" data-aos="fade-right" data-aos-duration="2000" data-aos="fade-left" data-aos-mirror="true">
+                <div class="ct-middle">
+                    <h2>{{ section.settings.title }}</h2>
+                    <p>{{ section.settings.content }}</p>
+                </div>
+            </div>
+            <div class="col-md-5 dsk-view" data-aos-duration="2000" data-aos="fade-left" data-aos-mirror="true"><img src="{{section.settings.image | img_url:'master' }}" class="w-100"></div>
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Card Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "339 x461px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "heading",
+        "default": "The League Collectible Cards"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Our first-round draft pick to The League is Hasho, a collaborative brand curated by legendary Toronto-based hash maker Mike ”El Hasho” Imposimato. The first drop under Hasho is GMO, a strain made famous by El Hasho in the illicit market for its abundant trichome production, unique aroma and hash-making potential."
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Card section"
+    }]
+  }
+{% endschema %}

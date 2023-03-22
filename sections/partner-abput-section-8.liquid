@@ -1,0 +1,224 @@
+<section class="abt-bg">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="abt-caption">
+               <h4>{{section.settings.about_heading}}</h4>
+               <p>{{section.settings.about_content}}</p>
+               <div class="pr-one">
+                  {{section.settings.location_heading}}
+                  <img src="{{section.settings.location_img_desktop | img_url:'original'}}" alt="" class="dsk-view" />
+                  <img src="{{section.settings.location_img_mobile | img_url:'original'}}" alt="" class="mob-view" />
+               </div>
+               <div class="pr-one">
+                  {{section.settings.operation_heading}}
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="carft-at">
+               <h4>{{section.settings.craft_heading}}</h4>
+               <ul class="atr">
+                    <li>{%if  section.settings.img1 !=blank%}<img src="{{section.settings.img1 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_1 !=blank%}{{section.settings.heading_1}}{%endif%}</li>
+                   <li>{%if  section.settings.img2 !=blank%}<img src="{{section.settings.img2 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_2 !=blank%}{{section.settings.heading_2}}{%endif%}</li>
+                   <li>{%if  section.settings.img3 !=blank%}<img src="{{section.settings.img3 | img_url:'original'}}" alt="" />{%endif%} {%if  section.settings.heading_3 !=blank%}{{section.settings.heading_3}}{%endif%}</li>
+                 <li>{%if  section.settings.img_four !=blank%}<img src="{{section.settings.img_four | img_url:'original'}}" alt="" />{%endif%} {%if  section.settings.heading_four !=blank%}{{section.settings.heading_four}}{%endif%}</li>
+               </ul>
+               <h4 class="g-mt">{{section.settings.grow_heading}}</h4>
+               <ul class="atr">
+                   <li>{%if  section.settings.img4 !=blank%}<img src="{{section.settings.img4 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_4 !=blank%}{{section.settings.heading_4}}{%endif%}</li>
+                  <li>{%if  section.settings.img5 !=blank%}<img src="{{section.settings.img5 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_5 !=blank%}{{section.settings.heading_5}}{%endif%}</li>
+                  <li>{%if  section.settings.img6 !=blank%}<img src="{{section.settings.img6 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_6 !=blank%}{{section.settings.heading_6}}{%endif%}</li>
+                  <li>{%if  section.settings.img7 !=blank%}<img src="{{section.settings.img7 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_7 !=blank%}{{section.settings.heading_7}}{%endif%}</li>
+				  <li>{%if  section.settings.img8 !=blank%}<img src="{{section.settings.img8 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_8 !=blank%}{{section.settings.heading_8}}{%endif%}</li>
+               </ul>
+               <ul class="drop-detail clearfix">
+                  <li>{{section.settings.heading_drops}}</li>
+                  <li>{{section.settings.no_drops}}</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "All Star about Partner",
+    "settings": [
+	    {
+        "id":"about_heading",
+        "type":"textarea",
+        "label":"About Heading",
+        "default":"About"
+        },
+        {
+        "id":"about_content",
+        "type":"textarea",
+        "label":"About Content",
+        "default":"Gravida cum sociis natoque penatibus et magnis dis parturient. Amet aliquam id diam maecenas. Metus aliquam eleifend mi in nulla posuere sollicitudin. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Purus ut faucibus pulvinar elementum integer enim."
+        },
+        {
+        "id":"location_heading",
+        "type":"textarea",
+        "label":"Location heading",
+        "default":"<b>Location</b><h4>Montreal, QS</h4>"
+        },
+        
+        {
+        "type": "image_picker",
+        "id": "location_img_desktop",
+        "label": "Map Desktop Image",
+        "info": "560 x299px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "location_img_mobile",
+        "label": "Map Mobile Image",
+        "info": "327 x299px recommended"
+        },
+		{
+        "id":"operation_heading",
+        "type":"textarea",
+        "label":"Operation heading",
+        "default":"<b>In Operation</b><h4>Since 2020</h4>"
+        },
+		{
+        "id":"craft_heading",
+        "type":"textarea",
+        "label":"Craft Heading",
+        "default":"Craft Attributes"
+        },
+        {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Image 1",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_1",
+        "type":"text",
+        "label":"Text 1",
+        "default":"HANG DRIED"
+        },
+        {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Image 2",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_2",
+        "type":"text",
+        "label":"Text 2",
+        "default":"HAND TRIMMED"
+        },
+        {
+        "type": "image_picker",
+        "id": "img3",
+        "label": "Image 3",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_3",
+        "type":"text",
+        "label":"Text 3",
+        "default":"HAND SORTED BY SIZE"
+        },
+        {
+        "id":"heading_four",
+        "type":"text",
+        "label":"Text Four"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_four",
+        "label": "Image Four",
+        "info": "72 x72px recommended"
+        },
+		{
+        "id":"grow_heading",
+        "type":"textarea",
+        "label":"Grow  Heading",
+        "default":"Grow Details"
+        },
+        {
+        "id":"heading_4",
+        "type":"textarea",
+        "label":"Text 4",
+        "default":"<b>Grow Medium</b><h5>coco</h5>"
+        },
+        {
+        "type": "image_picker",
+        "id": "img4",
+        "label": "Image 4",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_5",
+        "type":"textarea",
+        "label":"Text 5",
+        "default":"<b>NUTRIENTS</b><h5>FLORAFLEX</h5>"
+        },
+        {
+        "type": "image_picker",
+        "id": "img5",
+        "label": "Image 5",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_6",
+        "type":"textarea",
+        "label":"Text 6",
+        "default":"<b>LIGHTING</b><h5>GAVITA HPS</h5>"
+        },
+        {
+        "type": "image_picker",
+        "id": "img6",
+        "label": "Image 6",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_7",
+        "type":"textarea",
+        "label":"Text 7"
+        },
+        {
+        "type": "image_picker",
+        "id": "img7",
+        "label": "Image 7",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_8",
+        "type":"textarea",
+        "label":"Text 8"
+        },
+        {
+        "type": "image_picker",
+        "id": "img8",
+        "label": "Image 8",
+        "info": "72 x72px recommended"
+        },
+        {
+        "id":"heading_drops",
+        "type":"text",
+        "label":"Ghost Drop text",
+        "default":"Number of Ghost Drops"
+        },
+        {
+        "id":"no_drops",
+        "type":"text",
+        "label":"Ghost Drop Number",
+        "default":"2"
+        }
+
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "All Star about Partner",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

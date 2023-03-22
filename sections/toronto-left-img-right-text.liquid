@@ -1,0 +1,61 @@
+<section class="section-img-left-new-right-text">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-6 pr-md-0">
+  <div class="max-img-new">
+    <a href="{{section.settings.btn_link}}">
+      <img src="{{section.settings.img | img_url:'master'}}" ></a>
+  </div>
+</div>
+<div class="col-lg-6">
+  <div class="left-spcz born-content">
+      <div class="h-outer new-wd">{{section.settings.main_heading}}</div>
+      <p>{{section.settings.content}}</p>
+      <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+  </div>
+</div>
+</div>
+</div>
+</section>
+{% schema %} 
+  {
+    "name": "Left image right text",
+    "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "680 x526px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"<h2>The Best<span>Cannabis Menu In Toronto</span></h2>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Ghost Drops Toronto has the most finely curated cannabis menu in downtown Toronto with a focus on craft micro-producers and high-quality concentrates. We carry our own Ghost Drops line-up including our signature strains such as First Class Funk, Z-Splitter and Khalifa Mints."
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"View Our Menu"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Left image right text",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

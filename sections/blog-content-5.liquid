@@ -1,0 +1,37 @@
+  <div class="lower-content">
+   
+    {{section.settings.content}}
+  </div>
+  {% if section.settings.btn_label !=blank%}
+  <a href="{{section.settings.btn_link}}" class="primary-btn text-center">{{section.settings.btn_label}}</a>
+  {%endif%}
+{% schema %}
+  {
+    "name": "Lower Content",
+    "settings": [
+        {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "info": "680 x570px recommended"
+        },
+	    {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Label"
+        },
+        {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"       
+	   }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Lower Content",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

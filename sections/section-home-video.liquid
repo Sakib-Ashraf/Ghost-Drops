@@ -1,0 +1,56 @@
+<section class="good-sht-slider d-n">
+<div class="good-sht">
+{%if section.settings.video !=blank%}
+  	<div class="vid-layer">
+      <video class="d-vid" width="100%" autoplay muted loop>
+        <source src="{{section.settings.video}}" type="video/mp4">
+      </video>
+   </div>
+  {%endif%}
+  <div class="container">
+      <div class="caption-two">
+         <h1 class="animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{section.settings.main_heading}}</h1>
+         <ul class="content-stack-two">
+            <li class="animate__animated animate__fadeInDown" style="animation-delay: 2s;">
+             {{section.settings.content}}  
+            </li>
+         </ul>
+      </div>
+  </div>
+</div>
+</section>
+<div class="wave-img ex-spc">
+  <img src="{{'white-layer.png' | asset_url}}" class="w-100 resp-img">
+</div>
+{% schema %}
+  {
+    "name": "Homepage Video section",
+    "settings": [
+         {
+        "type": "text",
+        "id": "video",
+        "label": "Background video"
+		},
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"This is  <b>the good</b> <span>shit </span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"<h4>AWARD-WINNING STRAINS WITH BIG-TIME FLAVOUR</h4><p>We scour the country to bring you elite connoisseur Canadian cannabis <b>you simply can’t find anywhere else</b></p>"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Homepage Video section"
+    }]
+  }
+{% endschema %}
+
+

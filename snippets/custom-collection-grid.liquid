@@ -1,0 +1,44 @@
+{% if collection.image %}
+  {%- assign collection_image = collection.image -%}
+{% elsif collection.products.first and collection.products.first.media != empty %}
+  {%- assign collection_image = collection.products.first.featured_media.preview_image -%}
+{% else %}
+  {% assign collection_image = blank %}
+{% endif %}
+{%if forloop.index==2%}
+{%assign product_col = 'col-md-8 col-12' %}
+{%else%}
+{%assign product_col = 'col-md-4 col-6' %}
+{%endif%}
+
+<div class="col-md-4 col-6">
+  <div class="t-box">
+    <a href="{{product.url}}">
+      <div class="badge-outer">
+      {% unless collection_image == blank %}
+      <img src="{{ product.featured_image.src | img_url: "original" }}" alt="" class="w-100" />
+      {%else%}
+      {% if collection == empty %}
+        <div class="collection-grid-item__overlay">
+          {% capture current %}{% cycle 1, 2, 3 %}{% endcapture %}
+          {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {% else %}
+      <img src="{{ product.featured_image.src | img_url: "original" }}" alt="" class="w-100" />
+<!--         <div class="collection-grid-item__overlay" style="background-image: url('{{ collection_image | img_url: '1024x1024' }}')"></div> -->
+      {% endif %}
+    {% endunless %}
+        {% if product.available %}
+        {%else%}
+          <span class="sold-label"><img src="{{'sold-out.svg' | asset_url }}"></span>
+        {%endif%}
+      </div>
+    </a>
+  
+    <ul class="pricing clearfix">
+     <li><a href="{{ product.url}}">{{ product.title }}</a></li>
+     <li><b></b> <span>{{product.price  | money}}</span></li>
+    </ul>
+  </div>
+</div> 
+

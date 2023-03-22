@@ -1,0 +1,64 @@
+<div class="pink-bg">
+<img src="{{ section.settings.logo | img_url :'master' }}">
+<h4>{{ section.settings.main_heading }}</h4>
+<p>{{ section.settings.content }}</p>
+<ul class="v-social">
+ {% for block in section.blocks %} 
+<li><a href="{{ block.settings.link }}" target="_blank">{{ block.settings.title }}</a></li>
+{% endfor %}
+
+
+
+
+</ul>
+</div>
+{% schema %}
+  {
+    "name": "Social Media",
+    "settings": [
+    {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image"
+    },
+	 {
+        "type": "text",
+        "id": "title",
+        "label": "Main Heading",
+        "default": "Ghost Drops"
+      },
+       {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Homegrown, award-winning, exceptional. Don't miss out."
+      }
+      
+	],
+    "blocks": [
+     {
+      "type": "text",
+      "name": "text",
+      "settings": [
+       
+  		{
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Instagram"
+      },
+	  {
+        "type": "url",
+        "id": "link",
+        "label": "Social Link"
+      }
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Social Media",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

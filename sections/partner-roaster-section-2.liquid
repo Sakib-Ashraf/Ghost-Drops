@@ -1,0 +1,38 @@
+<section class="roaster">
+   <div class="container-fluid">
+      {{section.settings.heading}}
+      <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "Partner Roaster Section",
+    "settings": [
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"<h2>See our full Roster<br class='dsk-view'> of All-Stars<br class='dsk-view'> Partners</h2>"
+        },
+        {
+        "id":"btn_label",
+        "type":"textarea",
+        "label":"Button Label",
+        "default":"Learn more"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button Link"
+        
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Partner Roaster Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

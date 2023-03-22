@@ -1,0 +1,60 @@
+<style>
+.notification-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+    background: #3c3c3c;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.notification-top-bar p {
+    font-size:16px;
+    padding: 0;
+    margin: 0;
+    color: #ea1a77;
+    font-family: 'Montserrat';
+}
+.notification-top-bar p a {
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #FFF;
+  color: #1ABC9C;
+  font-weight: bold;
+  text-decoration: none;
+}
+</style> 
+{%if section.settings.text !=blank%}
+<div class="notification-top-bar top-slider">
+  <div class="item">
+  <p>{{section.settings.text}}</p>
+  </div>
+</div>
+{%endif%}
+{% schema %}
+  {
+    "name": "Top Bar Section",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "text",
+        "label": "Top Bar Text",
+        "default": "FREE SHIPPING for all orders until January 2nd - Canada Only"
+      }
+	],
+    "presets": [{
+      "name": "Top Bar Section"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

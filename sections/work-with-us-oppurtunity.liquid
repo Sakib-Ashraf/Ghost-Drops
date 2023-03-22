@@ -1,0 +1,74 @@
+<section class="work-content">
+  <div class="work-op">
+    <div class="container-fluid">
+           <div class="row">
+      <div class="col-md-8">
+        <div class="work-h">
+        <h3>We’re growing. <br class="dsk-view">
+Check back soon for<br class="dsk-view"> upcoming job opportunities.</h3>
+         </div>        </div>
+          <div class="col-md-4">
+            <img src="{{'contact-imgR2.jpg' | asset_url}}" class="max-wd-blk">
+         </div>
+     </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+
+    <div class="row d-none">
+      <div class="col-md-6">
+        <div class="w-ct">
+          <h2>{{section.settings.main_heading}}</h2>
+          {{section.settings.content1}}
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p>{{section.settings.content2}}</p>
+      </div>
+      <div class="col-md-3">
+        <p> <b class="black-colr">{{section.settings.content3}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Oppurtunity Section",
+    "settings": [
+	    
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Current Opportunities"
+        },
+        {
+        "id":"content1",
+        "type":"textarea",
+        "label":"Content One",
+        "default":"<b>Learn the ins-and-outs of the cannabis industry from one of the most innovative, game-changing companies going.</b>"
+        },
+        {
+        "id":"content2",
+        "type":"textarea",
+        "label":"Content Two",
+        "default":"We're out to change the rules, change the quality of cannabis, change stigmas, change opinions ... changine everything. We'd love to hear from you."
+        },
+        {
+        "id":"content3",
+        "type":"textarea",
+        "label":"Content Three",
+        "default":"Click on the opportunities below for more information</b> about current available roles with Ghost Drops."
+        }
+       
+        
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Oppurtunity Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

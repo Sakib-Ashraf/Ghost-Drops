@@ -1,0 +1,98 @@
+ 
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        {% for block in section.blocks %}
+        <div class="col-6">
+           <a href="{{block.settings.btn_link}}">
+          <div class="all-box">
+           
+              <img src="{{block.settings.img_desktop | img_url:'320x320'}}" alt="" class="img-box-one" />
+            
+            <div class="overlay-blk"></div>
+            <div class="clothing-area">
+              <h3 class="heading-bx">
+                {{block.settings.title}}
+              </h3>
+            </div>
+          </div>
+            </a>
+        </div>
+        {%endfor%}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <a href="{{block.settings.btn_link3}}"> 
+      <div class="all-box">
+       
+         <img src="{{section.settings.img_desktop3 | img_url:'680x320'}}" alt="" class="img-box-one" />
+        
+        <div class="overlay-blk"></div>
+        <div class="clothing-area">
+          <h3 class="heading-bx">
+            {{section.settings.title3}}
+          </h3>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+{% schema %}
+  {
+    "name": "Ghost Collection Two",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "img_desktop3",
+        "label": "Collection Desktop Image",
+        "info": "680x 320px recommended"
+        },
+        
+  		{
+        "type": "text",
+        "id": "title3",
+        "label": "Title"
+      },
+	  
+	  {
+        "type": "url",
+        "id": "btn_link3",
+        "label": "Collection link"
+      }
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+       "limit":3,
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Collection Desktop Image",
+        "info": "320x 320px recommended"
+        },
+        
+  		{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+	  
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Collection link"
+      }
+	  
+      ]
+      
+     }
+    ],
+    "presets": [{
+      "name": "Collection Two",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

@@ -1,0 +1,71 @@
+<section class="what-drive top-ex-mrg">
+   <div class="container-fluid">
+      <div class="drop-block drop-white">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="36" data-drop-height="160"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="200"></div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <div class="star-box-new">
+               <h4 class="color-yellow">{{section.settings.heading}}</h4>
+               <p>{{section.settings.content}} </p>
+               <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="pt-img">
+               <img src="{{section.settings.image | img_url:'680x500'}}" alt="" />
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "Drive Section",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "What drives us"
+       },
+       {
+        "type": "textarea",
+        "id": "content",
+        "label": "Paragraph",
+        "default": "Explore our organizational vision, mission, and values."
+       },
+
+ 
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Learn more"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "680x 500px recommended"
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Drive Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

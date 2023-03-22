@@ -1,0 +1,120 @@
+
+<div class="row-product-description product__description">
+  {% assign descriptionparts = product.description | split: '<h5>' %}
+ 
+  {% for description in descriptionparts %}{% assign numbers = forloop.index0 %}{% if numbers > 0 %}{% if description contains '</h5>' %}{% assign partsheading = description | split: '</h5>' %}{% assign partscontent = description | split: '</h5>' %}{% else %}{% assign partsheading = 'Description' %}{% assign partscontent = product.description | split: '<h5>' %}{% endif %}
+  {% if partsheading[0] != blank%}
+  <div class="product__description__item js-accordion" data-component="accordion">
+   
+    <h5 class="product__description__title js-toggle">
+      {% if description contains '</h5>' %}<span class="heading_tab">{{partsheading[0] | capitalize }}{% else %}{{partsheading}}{% endif %}</span>
+      <span class="icon"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+    </h5>
+    
+    <article class="product__description__inner js-content{% if numbers == 1 %}{% endif %}">
+      {% if description contains '</h5>' %}<span class="content_tab">{{ partscontent[1] }}{% else %}{{ partscontent[0] }}{% endif %}</span>
+    </article>
+  </div>
+  {%else%}
+
+  {%endif%}
+  {% endif %}{% endfor %}
+</div>
+
+ 
+<style>
+  span.heading_tab{
+  color: #EA1A77;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform:Capitalize;
+    display: block;
+  }
+  .product__description {
+    margin: 0 0 1rem;
+    max-width: 50rem;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .product__description__item {
+    display: flex;
+    flex-flow: column;
+/*     border-bottom: solid 1px #bfbfbf; */
+    font-size: 1.4rem;
+    padding: 10px 0;
+  }
+
+  .product__description__title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    cursor:pointer;
+  }
+  .product__description__title .icon {
+    color:#EA1A77;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: .5s ease transform;
+  }
+  .product__description__title .icon__line {
+    width: 1em;
+    height: 0.5px;
+    display: block;
+    background: #000;
+    transition: .7s ease transform;
+  }
+  .product__description__title .icon__line:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  .product__description__item.open .product__description__title .icon {
+    transform: rotate(180deg);
+  }
+  .product__description__item.open .product__description__title .icon__line:last-child {
+    transform: translate(-50%, -50%);
+  }
+  .product__description__inner {
+    overflow: hidden;
+    transition: .3s ease all;
+    transition-property: height,padding;
+    padding: 0;
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    font-size: 16px; 
+    margin-top: 20px;
+  }
+  .product__description__item.open .product__description__inner {
+    padding: 0 5px 0 0;
+  }
+  .product__description__inner ul {
+    padding: 0 15px;
+  }
+  .product__description__inner ul li {
+    margin: 0;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $('.js-accordion').click((function() {
+    var i = 0;
+    return function() {
+      $(this).toggleClass('open');
+      $(this).find('.js-content').slideToggle();
+    }
+  })());
+</script>

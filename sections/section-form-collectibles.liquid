@@ -1,0 +1,67 @@
+<div class="purp-frm" >
+  <section class="recent-prod">
+      <div class="container-fluid">
+         <div class="drop-block drop-white">
+         <div class="drop-water drop-init drop-slide" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="200" style="width: 30px; height: 200px; transition: all 4s ease 0s;"></div>
+         <div class="drop-water drop-init drop-slide" data-drop="fade-down" data-drop-time="2000" data-drop-width="36" data-drop-height="160" style="width: 36px; height: 160px; transition: all 2s ease 0s;"></div>
+         <div class="drop-water drop-init drop-slide" data-drop="fade-down" data-drop-time="3000" data-drop-width="36" data-drop-height="180" style="width: 36px; height: 180px; transition: all 3s ease 0s;"></div>
+         <div class="drop-water drop-init drop-slide" data-drop="fade-down" data-drop-time="1000" data-drop-width="30" data-drop-height="260" style="width: 30px; height: 260px; transition: all 1s ease 0s;"></div>
+         <div class="drop-water drop-init drop-slide" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="200" style="width: 30px; height: 200px; transition: all 2s ease 0s;"></div>
+      </div>
+       
+        <div class="form-sec-new">
+          {%- assign formId = 'ContactForm' -%}
+           {% form 'contact', id: formId %}
+          <div class="col-md-7">
+            {% include 'form-status', form: form, form_id: formId %}
+          </div>
+          <div class="col-md-5"></div>
+          <input type="hidden" name="contact[tags]" value = "SIGN UP AND NEVER MISS A DROP" />
+          
+          <div class="row">
+            <div class="col-md-7">
+              <div class="ex-pad">
+               <h2>Homegrown, award-winning, exceptional. <span>Don't miss out.</span></h2>
+              
+              <div class="input-max sl-arrow">
+               <select name="contact['interest']">
+                  <option>Select Interest</option>
+                 <option value="">One</option>
+                 <option value="">Two</option>
+                 <option value="">Three</option>
+               </select> 
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+             </div>
+              
+      <div class="input-max white">
+               <input
+               type="email"
+               id="{{ formId }}-email" placeholder="Enter your email address" class="input-c"
+               name="contact[email]"
+               autocorrect="off"
+               autocapitalize="off"
+               value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+               aria-required="true"
+               {%- if form.errors contains 'email' -%}
+               class="input--error"
+               aria-invalid="true"
+               aria-describedby="{{ formId }}-email-error"
+               {%- endif -%}
+               >
+	     </div>
+       		 <div class="input-max white">
+                <textarea name="contact['body']" placeholder="Drop us a comnment. We love hearing from our Ghostfam!"></textarea>
+              </div>
+           </div>
+            </div>
+            <div class="col-md-5">
+              <div class="rt-text"><h6>Join the Ghostfam.<br>Sign up and never miss a drop.</h6></div>
+              <button class="white-btn" type="submit">Register</button>
+            </div>
+          </div>
+         {%endform%}
+            </div>
+ 
+      </div></section>
+
+</div>

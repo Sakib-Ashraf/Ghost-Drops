@@ -1,0 +1,108 @@
+<div class="drop-news toronto">
+  <div class="container-fluid">
+    <h1>{{section.settings.main_heading}}</h1>
+  </div>
+</div>
+<section class="toronto-text">
+	<div class="container-fluid">
+      <div class="drop-block drop-black">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="40" data-drop-height="330"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="280"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="220"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="40" data-drop-height="260"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6"> 
+          <h5>{{section.settings.content1}}</h5>
+        </div>     
+        <div class="col-md-6 right-sect">
+          <h5>{{section.settings.content2}}</h5>
+        </div>
+        <div class="col-md-6 ">
+          <h5>Ghost Drops flagship store allows visitors to experience the most notorious cannabis brand in Canada in-person</h5>
+          <a href="{{section.settings.link}}" class="primary-btn">{{section.settings.btn_label}}</a> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="outer-img dsk-view">
+          <img src="{{section.settings.img_desktop | img_url:'master'}}">
+          </div>
+          <div class="outer-img mob-view">
+          <img src="{{section.settings.img_mobile | img_url:'master'}}">
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Toronto Page",
+    "settings": [
+
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Main Heading",
+        "default":"Ghost Drops Toronto"
+        },
+	    {
+        "id":"content1",
+        "type":"textarea",
+        "label":"Content One",
+        "default":"<span>GHOST DROPS TORONTO <br></span> 1184 QUEEN STREET WEST <br>TORONTO, ON, <br>M6J 1J5, CANADA"
+        },
+        {
+        "id":"content2",
+        "type":"textarea",
+        "label":"Content Two",
+        "default":"<span>STORE HOURS: </span> <br> MON-THU: 10AM-10PM<br>FRI-SAT: 10AM-11PM <br>SUN: 10AM - 8PM <br><span><br>(647) 345-4444</span>"
+        },
+        {
+        "id":"content3",
+        "type":"textarea",
+        "label":"Content 3",
+        "default":"<li><span>TCH</span><h4>23-27%</h4></li>"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "680 x570px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Mobile Image",
+        "info": "680 x570px recommended"
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button Label",
+         "default":"SHOP NOW"
+        },
+        {
+        "id":"link",
+        "type":"url",
+        "label":"Button Link"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Toronto Page",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

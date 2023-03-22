@@ -1,0 +1,87 @@
+<section class="form-area bg-new" id="mailing_list">
+<!--   <img src="https://cdn.shopify.com/s/files/1/0607/7104/1503/files/smily-cross.png?v=1636621941" alt="" class="white-de"> -->
+   <div class="container-fluid">
+      <div class="drop-block drop-black d-none">
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="36" data-drop-height="180"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="260"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="30" data-drop-height="200"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="1000" data-drop-width="40" data-drop-height="330"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="2000" data-drop-width="30" data-drop-height="280"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="4000" data-drop-width="30" data-drop-height="220"></div>
+         <div class="drop-water" data-drop="fade-down" data-drop-time="3000" data-drop-width="40" data-drop-height="260"></div>
+      </div>
+    
+      <div class="row">
+         <div class="col-md-12">
+            <div class="form-sec">
+               <h2>{{section.settings.main_heading}}</h2>
+              <div class="klaviyo-form-WK6peV"></div>
+              <ul class="address-ot clearfix">
+                <li>
+                
+                </li>
+                <li>
+               <div class="input-space-new d-none">
+                  <input type="email" placeholder="Enter your Email address" />
+               </div>
+                </li>
+                  <li>
+               <div class="input-space-new d-none">
+                  <input type="submit" value="Sign Up" />
+               </div>
+                      </li>
+              </ul>
+            </div>
+         </div>
+         <div class="col-md-6 d-none">
+           <div class="right-spc tp-s">
+               <h5>{{section.settings.heading2}}</h5>
+         
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %} 
+  {
+    "name": "Homepage Form",
+    "settings": [
+        
+        
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Main Heading",
+        "default":"Homegrown, award-winning, exceptional. <span>Don't miss out.</span>"
+        },
+        {
+        "id":"heading2",
+        "type":"textarea",
+        "label":"Heading 2",
+		"default":"Join the Ghostfam.<span>Sign up and never miss a drop.</span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Our signature strain. This funky number boasts a big, powerful flower with a taste as funky as its smell. Hunted by Cultivating Happiness and grown by several ultra-premium, hand-selected craft micro-producers, First Class Funk buds are typically large with dense diamond-like trichomes."
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button text",
+        "default":"Sign up"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        
+        }
+	],
+    "presets": [{
+      "name": "Homepage Form",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

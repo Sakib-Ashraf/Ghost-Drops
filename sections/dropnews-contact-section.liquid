@@ -1,0 +1,63 @@
+<section class="ct-box mt-sz">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="gry-bxy invstr">
+               <h3>{{section.settings.heading}}</h3>
+               <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="blk-str invstr">
+               <h3>Contact Us</h3>
+               <a href="{{section.settings.btn_link1}}" class="primary-btn">{{section.settings.btn_label1}}</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "Contact Section",
+    "settings": [
+	    
+        {
+        "id":"heading",
+        "type":"text",
+        "label":" Heading",
+        "default":"Download investor deck"
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Investor deck Button text",
+        "default":"Download"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        },
+        
+        
+        {
+        "id":"btn_label1",
+        "type":"text",
+        "label":"Contact us Button text",
+        "default":"Contact us"
+        },
+        {
+        "id":"btn_link1",
+        "type":"url",
+        "label":"Contact Button link"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Contact Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,43 @@
+<h2 class="gst-sz text-center">{{section.settings.main_heading}}</h2>
+<p class="p-sz">{{section.settings.content}}</p>
+  <!--<div class="img-a">
+  <img src="{{section.settings.image | img_url:'master'}}">
+  </div>-->
+{% schema %}
+  {
+    "name": "Buy Banner section",
+    "settings": [
+ {
+        "type": "textarea",
+        "id": "main_heading",
+        "label": "Heading",
+        "default": "Ghost Drops currently available in these provinces"
+      },
+{
+        "type": "image_picker",
+        "id": "image",
+        "label": "Banner Image",
+        "info": "1306 x517px recommended"
+        },
+  		{
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Here comes the Ghost. Starting in British Columbia and Ontario, our expansion has only just begun. Shop for our product using the online provincial cannabis stores listed below."
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Buy Banner section"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

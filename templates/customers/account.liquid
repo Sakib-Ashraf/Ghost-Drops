@@ -1,0 +1,84 @@
+<section class="account-table position-relative">
+  <img src="{{'pink-spe.svg' | asset_url}}" alt="" class="img-ctrol" />
+<div class="container-fluid">
+  <div class="bt-spc">
+  <div class="row">
+      <div class="col-md-9">
+  <h3>My account</h3>
+        
+ {% if customer %}
+  <span>Welcome back, {{customer.first_name}} !</span>
+ {%endif%}       
+  </div>
+    <div class="col-md-3"><div class="text-right"><a href="/account/logout" class="primary-btn mt-0">Logout</a></div></div>
+      </div></div>
+    <div class="row">
+            <div class="col-lg-3 m-view">
+       <b>Primary address</b>
+            
+        <ul class="p-address">
+        
+         <li>{{ customer.default_address | format_address }}</li>
+         <li>{{customer.city}} {{customer.province}}</li>
+         <li>{{customer.zipcode}}</li>
+          <li>{{customer.country}}</li>
+        </ul>
+        <a href="" class="edit-btn">Edit addresses</a>
+      </div>
+      <div class="col-lg-9">
+      <div class="r-space">
+   <b>My Orders</b>
+ 
+ <table class="resp">
+
+  <thead>
+    <tr>
+<!--       <th width="7%" scope="col"> </th> -->
+      <th width="17%" scope="col">{{ 'customer.orders.order_number' | t }}</th>
+      <th width="20%" scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+      <th width="25%" scope="col">Tracking Number</th>
+      <th width="17%" scope="col">Amount Paid</th>
+            <th width="13%" scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for order in customer.orders %}
+    <tr>
+<!--       <td data-label="Image">
+       <img src="{{'cart-thumb.jpg' | asset_url}}" alt="" class="img-crt" />
+      </td> -->
+      <td data-label="{{ 'customer.orders.order_number' | t }}"><a href="{{ order.customer_url }}">{{ order.name }}</a></td>
+      <td data-label="Carrier Status">{{ order.financial_status_label }}</td>
+      <td data-label="Tracking Number">
+      {% for line in order.line_items %}
+        {% if line.fulfillment.tracking_number %}
+          <span>{{ line.fulfillment.tracking_number }}</span>
+        {% endif %}
+      {% endfor %}
+      </td>
+      <td data-label="Amount Paid">
+        {%- if settings.currency_code_enabled -%}
+          {{ order.total_price | money_with_currency }}
+          {%- else -%}
+          {{ order.total_price | money }}
+        {%- endif -%}
+      </td>
+      <td data-label=""><a href="/account/addresses" class="primary-btn">Manage</a></td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+</div></div>
+      <div class="col-lg-3 d-view">
+       <b>Primary address</b>
+        <ul class="p-address">
+         <li>{{ customer.default_address | format_address }}</li>
+         <li>{{customer.city}} {{customer.province}}</li>
+         <li>{{customer.zipcode}}</li>
+          <li>{{customer.country}}</li>
+        </ul>
+        <a href="/account/addresses" class="edit-btn">Edit addresses</a>
+      </div>
+      </div>
+  </div>
+  </section>

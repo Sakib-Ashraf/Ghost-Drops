@@ -1,0 +1,81 @@
+<section class="gd-logoz">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+  <ul class="gd-lg-list clearfix">
+      {% for block in section.blocks %}
+      <li><a href="{{block.settings.logo_url}}">
+        <img {% if forloop.index==4 %} class="fourth" {% endif %} src="{{block.settings.logo | img_url :'master'  }}"></a></li>
+      {% endfor %}
+     
+  </ul>
+</div>
+  <div class="col-md-6">
+      <div class="brands-carry">
+      <h2>{{ section.settings.main_heading }}</h2>
+      <p>{{ section.settings.content }} </p>
+      <a href="{{ section.settings.btn_link }}" class="primary-btn">{{ section.settings.btn_label }}</a>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+{% schema %}
+  {
+    "name": "Toronto Logos",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "main_heading",
+        "label": "Main Heading",
+        "default": "Brands<span>We Carry</span>"
+      },
+	  {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content ",
+        "default": "Experience Canada’s Premium Cannabis Brand in-person. Take a photo in front of our notorious drip selfie wall, browse our iconic legacy strain art, learn more about Ghost Drops products and much more. Drop by between 5-8pm daily for Ghost Hour featuring guest budtenders, special pricing on Ghost Drops products and additional surprises! "
+      },
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Explore Now"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logos",
+        "info": "800x 700px recommended"
+       },
+        {
+          "type": "url",
+          "id": "logo_url",
+          "label": "Logo Link"
+        }
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Homepage Slider",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

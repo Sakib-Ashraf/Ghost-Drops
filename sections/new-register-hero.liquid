@@ -1,0 +1,92 @@
+{{ 'new-register-hero.css' | asset_url | stylesheet_tag }}
+
+
+<div class="resgister-hero-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="register-hero-img-block">
+                    <img class="register-hero-img" 
+                        src="{{ section.settings.img | img_url: 'master' }}" 
+                        alt="{{ section.settings.img.alt }}" 
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="register-hero-content-block">                    
+                    {% if section.settings.heading != '' %}
+                    <h2 class="register-hero-heading">{{ section.settings.heading | newline_to_br }}</h2>
+                    {% endif %}
+
+                    {% if section.settings.subheading != '' %}
+                    <p class="register-hero-subheading">{{ section.settings.subheading | newline_to_br }}</p>
+                    {% endif %}
+
+                    {% if section.settings.btn != '' %}
+                    <div class="register-hero-button-wrapper">
+                        <a class="register-hero-btn" href="{{ section.settings.link }}">
+                            <span class="icon-signup-btn">{% render 'icon-signup-btn' %}</span>
+                            <span class="label-signup-btn label-desktop">{{ section.settings.btn }}</span>
+                            <span class="label-signup-btn label-mobile">{{ section.settings.btn_mobile }}</span>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+{% schema %}
+  {
+    "name": "Register - Hero",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Members Only Mail-Order Premium Cannabis Club",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "textarea",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "text",
+            "id": "btn",
+            "label": "Button label - desktop",
+            "default": "Sign Up"
+        },
+        {
+            "type": "text",
+            "id": "btn_mobile",
+            "label": "Button label - mobile",
+            "default": "Let's go"
+        },
+        {
+            "type": "text",
+            "id": "link",
+            "label": "Button link",
+            "default": "#register-member"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Register - Hero"
+        }
+    ]
+  }
+{% endschema %}
+  

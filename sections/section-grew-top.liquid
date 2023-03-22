@@ -1,0 +1,30 @@
+<section class="ghost-cat">
+<h1 class="text-flicker-in-glow" style="animation-duration: 3s">{{section.settings.main_title}}</h1>
+<p>{{section.settings.content}}</p>
+</section>
+
+{% schema %}
+  {
+    "name": "Grew Top Section",
+    "settings": [
+	  {
+        "id":"main_title",
+        "type":"text",
+        "label":"Main Page Title",
+        "default":"Ghost Crew"
+     },
+     {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Meet the the executive team behind Ghost Drops, delivering<br> Canada's finest cannabis from coast to coast."
+     }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

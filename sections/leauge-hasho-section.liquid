@@ -1,0 +1,68 @@
+<section class="section light-blue" id="section4">
+    <a href="" class="drop-btn white-clr"><img src="{{'back-arrowd.svg' | asset_url }}" class="arrow-pos"> Ghost Drops </a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5" data-aos-duration="2000" data-aos="fade-right" data-aos-mirror="true">
+              <img src="{{section.settings.image | img_url:'master' }}" class="w-100"></div>
+            <div class="col-md-7" data-aos-duration="2000" data-aos="fade-left" data-aos-mirror="true">
+                <div class="ct-middle">
+                    <h2>{{ section.settings.title }}</h2>
+                    <p>{{ section.settings.content }}</p>
+                    <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-btn d-none">
+            <a href="#section5">
+                <span class="mouse">
+                <span>
+                </span>
+                </span></a>
+                <p>SCROLL</p>
+            
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Hasho Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "339 x461px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "heading",
+        "default": "First Round Draft Pick: Hasho "
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Read about our All-Stars"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Our first-round draft pick to The League is Hasho, a collaborative brand curated by legendary Toronto-based hash maker Mike ”El Hasho” Imposimato. The first drop under Hasho is GMO, a strain made famous by El Hasho in the illicit market for its abundant trichome production, unique aroma and hash-making potential."
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Hasho section"
+    }]
+  }
+{% endschema %}

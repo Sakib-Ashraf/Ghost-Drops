@@ -1,0 +1,126 @@
+{%if section.settings.text ==blank%}
+<style>
+  nav#dynamic{top:0px !important;}
+</style>
+{%endif%}
+{%if template != 'customers/login' %}
+<nav class="navbar smart-scroll  navbar-expand-lg fixed-top bg-transparent" id="dynamic" >
+  <div class="container-fluid">
+    <a href="{{shop.url}}">
+      <img src="{{ section.settings.logo_trans | img_url: '500x'}}" alt="ghst-logo" class="black-logo" />
+    </a>
+    <a class="navbar-brand lrg-logo" href="{{shop.url}}">
+      <img src="{{ section.settings.logo | img_url: '500x'}}" alt="ghst-logo" class="logo-wd lrg" />
+      <img src="{{ section.settings.logo_trans | img_url: '500x'}}" alt="ghst-logo" class="logo-wd smll d-non" />
+    </a>
+
+    <div class="navbar-header">
+      
+          <ul class="icons-bar mob-icons">
+       <li><a href="javascript:void(0)"  data-toggle="modal" data-target="#search-modal"><img src="{{'search-icon.svg' | asset_url}}" alt="" /></a></li>
+       <li><a href="javascript:void(0)" data-toggle="modal" data-target=".exampleModalCenter-two"><img src="{{'account-icon.svg' | asset_url}}" alt="" /></a></li>
+       <li><a href="javascript:void(0)" data-toggle="modal" data-target="#cart-modal"><img src="{{'cart.svg' | asset_url}}" alt="" /></a></li>
+    </ul>
+      {%include 'mobile-nav'%}
+      <div class="toggle-button dsk-view" id="toggle-old">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </div>
+    </div>
+    
+    <nav class="overlay" id="overlay">
+      <a href="{{shop.url}}">
+        <img src="{{ section.settings.logo_trans | img_url: '500x'}}" alt="ghst-logo" class="white-overlay" />
+      </a>
+      <div class="gap-area">
+        <ul>
+          {% for link in linklists[section.settings.main_menu].links %}
+          <li class="{% if link.active %}active{% endif %}"><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+          {% endfor %} 
+
+        </ul>
+        <b>Follow us</b>
+        <ul class="social-bar top-men">
+          <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>          
+           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mr-auto">
+        {% for link in linklists[section.settings.main_menu].links %}
+        <li class="nav-item"><a class="nav-link{% if link.active %} active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a></li>
+        {% endfor %} 
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <ul class="icons-bar">
+          <li><a href="javascript:void(0)"  data-toggle="modal" data-target="#search-modal"><img src="{{'search-icon.svg' | asset_url}}" alt="" /></a></li>
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target=".exampleModalCenter-two"><img src="{{'account-icon.svg' | asset_url}}" alt="" /></a></li>
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#cart-modal"><img src="{{'cart.svg' | asset_url}}" alt="" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Header New",
+    "settings": [
+      
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Site Logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_trans",
+        "label": "Black Logo"
+      },
+      {
+        "type": "link_list",
+        "id": "main_menu",
+        "label": "Main Menu Left",
+        "default": "main-menu"
+      },
+      {
+        "type": "url",
+        "id": "yt_link",
+        "label": "Youtube link for mobile",
+        "info":"https://www.youtube.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "fb_link",
+        "label": "Facebook link for mobile",
+        "info":"https://www.facebook.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "in_link",
+        "label": "Instagram link for mobile",
+        "info":"https://www.instagram.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "li_link",
+        "label": "Linkedin link for mobile",
+        "info":"https://www.linkedin.com/shopify"
+      },
+      {
+        "type": "url",
+        "id": "tw_link",
+        "label": "Twitter link for mobile",
+        "info":"https://www.twitter.com/shopify"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,56 @@
+<section class="section red" id="section3">
+    <a href="" class="drop-btn white-clr"><img src="{{'back-arrowd.svg' | asset_url }}" class="arrow-pos"> Ghost Drops </a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 mob-view" data-aos-duration="2000" data-aos="fade-left" data-aos-mirror="true"><img src="{{section.settings.image | img_url: 'master' }}" class="w-100"></div>
+            <div class="col-md-7" data-aos-duration="2000" data-aos="fade-right" data-aos-mirror="true">
+                <div class="ct-middle">
+                    <h2>{{ section.settings.title }}</h2>
+                    <p>{{ section.settings.content }}</p>
+                </div>
+            </div>
+            <div class="col-md-5 dsk-view" data-aos-duration="2000" data-aos="fade-left" data-aos-mirror="true"><img src="{{section.settings.image | img_url: 'master' }}" class="w-100"></div>
+        </div>
+        <div class="scroll-btn d-none">
+            <a href="#section4">
+                <span class="mouse">
+                <span>
+                </span> 
+                </span> </a>
+                <p>SCROLL</p>
+           
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "premium Brand Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "339 x461px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "heading",
+        "default": "Canada’s Premium <br>Cannabis Brand House"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Ghost Drops has always been a brand house – a collective, a team. Since pre-legalization, we’ve spotlighted the best producers, hunters and breeders in the Canadian market. Following our historic commitment to transparency and quality, we’re now launching these entities as stand-alone brands under The League with their very own unique product lines and genetics."
+      }
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "premium Brand section"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,29 @@
+<div id="mainz">
+  <div class="accordion" id="faq">
+    {% assign descriptionparts = product.description | split: '<h5>' %}
+      {% for description in descriptionparts %}
+        {% assign numbers = forloop.index0 %}
+        {% if numbers > 0 %}
+          {% if description contains '</h5>' %}
+            {% assign partsheading = description | split: '</h5>' %}
+            {% assign partscontent = description | split: '</h5>' %}
+            {% else %}
+            {% assign partsheading = 'Description' %}
+            {% assign partscontent = product.description | split: '<h5>' %}
+        {% endif %}
+    <div class="card">
+      {% if partsheading[0] != blank%}
+      <div class="card-header" id="faqhead2-{{ forloop.index }}">
+        {% if description contains '</h5>' %}
+          <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2-{{ forloop.index }}" aria-expanded="true" aria-controls="faq2">{{partsheading[0] | capitalize }}{% else %}{{partsheading}}{% endif %}
+          </a>
+      </div>
+      {%  endif %}
+      <div id="faq2-{{ forloop.index }}" class="collapse {% if forloop.index ==2 %}show{% endif %}" aria-labelledby="faqhead2-{{ forloop.index }}" data-parent="#faq">
+        <div class="card-body"> {% if description contains '</h5>' %} {{ partscontent[1] }}{% else %}{{ partscontent[0] }}{% endif %}</div>
+      </div>
+    </div>
+    {% endif %}
+   {% endfor %}
+  </div>
+</div>

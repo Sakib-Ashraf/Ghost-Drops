@@ -1,0 +1,181 @@
+<body class="account-bg">
+  <div class="container-fluid max-sign">
+    <div class="row">
+      <div class="col-lg-5 pl-md-0 mob-view">
+        <div class="wave-cover">
+          <div class="drop-block drop-black">
+            <div class="drop-water one-wav" data-drop="fade-down" data-drop-time="4000" data-drop-width="24" data-drop-height="316"></div>
+            <div class="drop-water two-wav" data-drop="fade-down" data-drop-time="2000" data-drop-width="18" data-drop-height="1500"></div>
+            <div class="drop-water three-wav" data-drop="fade-down" data-drop-time="3000" data-drop-width="24" data-drop-height="200"></div>
+            <div class="drop-water four-wav" data-drop="fade-down" data-drop-time="1000" data-drop-width="24" data-drop-height="320"></div>
+            <div class="drop-water fiv-wav" data-drop="fade-down" data-drop-time="2000" data-drop-width="24" data-drop-height="250"></div>
+            <div class="drop-water six-wav" data-drop="fade-down" data-drop-time="4000" data-drop-width="18" data-drop-height="120"></div>
+
+          </div>
+          <img class="login-bg" src="{{'login-bg.jpg' | asset_url}}">
+          <img class="login-w" src="{{'login-w.png' | asset_url}}">
+        </div> 
+      </div>
+      <div class="col-lg-7 pr-md-0">
+
+       
+
+        <div id="CustomerLoginForm" class="form-vertical">
+
+          <h1 id="LoginHeading" class="text-center d-none">{{ 'customer.login.title' | t }}</h1>
+           <div class="form-message form-message--success hide" id="ResetSuccess" tabindex="-1">
+          {{ 'customer.recover_password.success' | t }}
+        </div>
+          <div class="sign-in">
+            <a href="{{shop.url}}"><div class="top-logo">
+              <img src="https://cdn.shopify.com/s/files/1/0607/7104/1503/files/blk-logo.png?v=1638365439"></div></a>
+            <h6 class="signin-text">Welcome Back</h6>
+            <h1>Sign in</h1>
+            {%- if form.errors -%}
+            <div class="form-message form-message--error">
+              <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+              {{ form.errors | default_errors }}
+            </div>
+            {%- endif -%}
+            {% form 'customer_login', novalidate: 'novalidate' %}
+
+            
+
+
+            <input
+                   placeholder="{{ 'customer.login.email' | t }}"
+                   type="email"
+                   name="customer[email]"
+                   id="CustomerEmail"
+                   autocomplete="email"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   {%- if form.errors contains 'form' -%}
+                   class="input--error"
+                   aria-invalid="true"
+                   {%- endif -%}
+                   >
+
+            {% if form.password_needed %}
+            <input
+                   placeholder="{{ 'customer.login.password' | t }}"
+                   type="password"
+                   value=""
+                   name="customer[password]"
+                   id="CustomerPassword"
+                   {%- if form.errors contains 'form' -%}
+                   class="input--error"
+                   aria-invalid="true"
+                   {%- endif -%}
+                   >
+            {% endif %}
+
+            <div class="btns clearfix">
+              <ul>
+                <li><input type="submit" class="primary-btn" value="Sign in"></li>
+                <li><span>No account?</span><a class="register" href="/account/register" >Register</a></li>
+                {% if form.password_needed %}
+                <li><a href="#recover" id="RecoverPassword">Forgot Password?</a></li>
+                {% endif %}
+              </ul>
+
+
+            </div>
+
+            {% endform %}
+          </div></div>
+
+        <div id="RecoverPasswordForm" class="hide">
+
+           <div class="sign-in">
+            <a href="{{shop.url}}">
+              <div class="top-logo">
+              <img src="https://cdn.shopify.com/s/files/1/0607/7104/1503/files/blk-logo.png?v=1638365439"></div>
+             </a>
+            
+              <h1 class="reset-heading">Reset Password</h1>
+             <div class="">
+                <h6 class="reset-text">{{ 'customer.recover_password.subtext' | t }}</h6>
+             </div>
+
+          <div class="form-vertical">
+            {% form 'recover_customer_password' %}
+
+            {% comment %}
+            Add a hidden span to indicate the form was submitted succesfully.
+            {% endcomment %}
+            {% if form.posted_successfully? %}
+            <span class="hide reset-password-success"></span>
+            {% endif %}
+
+           
+            <input
+                   type="email"
+                   placeholder="{{ 'customer.login.email' | t }}"
+                   value=""
+                   name="email"
+                   id="RecoverEmail"
+                   class="input-full{% if form.errors %} input--error{% endif %}"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   {% if form.errors %}
+                   aria-invalid="true"
+                   aria-describedby="RecoverEmail-email-error"
+                   {%- endif -%}
+                   >
+            {%- if form.errors -%}
+            <span id="RecoverEmail-email-error" class="input-error-message">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% include 'icon-error' %}
+              <span>{{ form.errors.messages['form'] }}</span>
+            </span>
+            {%- endif -%}
+
+            <ul class="buttons-reset">
+              <li><input type="submit" class="primary-btn" value="Reset Password"></li>
+                  <li><a href="#LoginHeading" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</a></li>
+            </ul>
+            {% endform %}
+          </div>
+        </div>
+        </div>
+
+        {% comment %}
+        If accounts are set as optional, the following will be shown as an option
+        during checkout, not on the default /login page.
+        {% endcomment %}
+        {% if shop.checkout.guest_login %}
+        <div class="text-center">
+          <hr class="hr--invisible">
+          <h2>{{ 'customer.login.guest_title' | t }}</h2>
+
+          {% form 'guest_login' %}
+          <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+          {% endform %}
+        </div>
+        {% endif %}
+        <ul class="account-bottom-links">
+          <li><a href="/pages/terms-of-use">Terms of Use</a></li>
+          <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+          <li>© 2021 Ghost Drops. <span>All Rights Reserved.</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-5 pl-0 dsk-view">
+        <div class="wave-cover">
+          <div class="drop-block drop-black">
+            <div class="drop-water one-wav" data-drop="fade-down" data-drop-time="4000" data-drop-width="37" data-drop-height="316"></div>
+            <div class="drop-water two-wav" data-drop="fade-down" data-drop-time="2000" data-drop-width="33" data-drop-height="1500"></div>
+            <div class="drop-water three-wav" data-drop="fade-down" data-drop-time="3000" data-drop-width="37" data-drop-height="400"></div>
+            <div class="drop-water four-wav" data-drop="fade-down" data-drop-time="1000" data-drop-width="37" data-drop-height="480"></div>
+            <div class="drop-water fiv-wav" data-drop="fade-down" data-drop-time="2000" data-drop-width="37" data-drop-height="350"></div>
+            <div class="drop-water six-wav" data-drop="fade-down" data-drop-time="4000" data-drop-width="33" data-drop-height="220"></div>
+
+          </div>
+          <img class="login-bg" src="{{'login-bg.jpg' | asset_url}}">
+          <img class="login-w" src="{{'login-w.png' | asset_url}}">
+        </div> 
+      </div>
+
+    </div>
+  </div>
+</body>

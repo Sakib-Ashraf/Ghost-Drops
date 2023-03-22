@@ -1,0 +1,122 @@
+   .modal-backdrop {
+	display: none !important;
+}
+
+._modal {
+	display: block !important;
+	opacity: 1 !important;
+
+	position: fixed;
+	top: -200vh;
+	left: 0;
+	right: 0;
+	height: 200vh;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	transition: opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+	-webkit-transition: opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+	transition: transform 0.3s 0.1s, opacity 0.3s 0.1s;
+	transition: transform 0.3s 0.1s, opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+	overflow: hidden;
+}
+
+._modal > .wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+	overflow-y: auto;
+	z-index: 2;
+}
+
+._modal > .shape {
+	position: relative;
+	top: 100vh;
+	height: 100vh;
+	z-index: 1;
+}
+
+._modal > .shape svg {
+	fill: #fff;
+}
+
+._modal .modal-content {
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	transform: translateY(50px);
+}
+
+.modal.active .modal-content {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	transition: opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+	-webkit-transition: opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+	transition: transform 0.3s 0.1s, opacity 0.3s 0.1s;
+	transition: transform 0.3s 0.1s, opacity 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+}
+
+button#cross_btn {
+	width: 30px;
+	height: 30px;
+	background: #ea1a77;
+	border-radius: 75%;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 3;
+	padding: 0;
+	border: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+button#cross_btn > span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+button#cross_btn > span:before,
+button#cross_btn > span:after {
+	position: absolute;
+	content: "";
+	width: 14px;
+	height: 2px;
+	background: #fff;
+}
+
+button#cross_btn > span:before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+button#cross_btn > span:after {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}

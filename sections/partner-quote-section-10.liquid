@@ -1,0 +1,42 @@
+<section class="quot">
+   <div class="container-fluid">
+      <div class="position-relative">
+         <img src="{{'com.svg' | asset_url}}" class="quot-h">
+         <span>{{section.settings.heading}}</span>
+         <h3>{{section.settings.paragraph}}</h3>
+         <h6>{{section.settings.name}}</h6>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "Partner Quote Section",
+    "settings": [
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"What should we change about the industry?"
+        },
+        {
+        "id":"paragraph",
+        "type":"textarea",
+        "label":"Paragraph",
+        "default":"We believe there is too much focus placed on TCH potency"
+        },
+        {
+        "id":"name",
+        "type":"text",
+        "label":"Name",
+        "default":"Green Karat"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Partner Quote Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

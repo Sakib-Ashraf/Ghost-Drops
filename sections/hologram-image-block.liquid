@@ -1,0 +1,33 @@
+<div class="row">
+  {% for block in section.blocks %}
+  <div class="col-md-12">
+      <div class="img-bx">
+        <img src="{{block.settings.img | img_url:'master'}}" class="w-100 img-bxw">
+      </div>
+  </div>
+ {%endfor%}   
+  </div>
+{% schema %}
+  {
+    "name": "Hologram Image Block",
+    "settings": [
+        
+	],
+    "blocks": [  
+      {
+      "type": "image",
+      "name": "image",
+      "limit":2,
+      "settings": [
+        
+  		{
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "373x 506px recommended"
+        }
+      ]
+     }
+    ]
+  }
+{% endschema %}

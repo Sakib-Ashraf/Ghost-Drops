@@ -1,0 +1,84 @@
+<section class="cnd">
+	<div class="container-fluid">
+		<img src="{{section.settings.img_desktop | img_url:'master'}}" alt="" class="img-top-m dsk-view" />
+		<img src="{{section.settings.img_mobile | img_url:'master'}}" alt="" class="img-top-m mob-view" />
+		<div class="row">
+			<div class="col-md-6">
+				<h4>{{section.settings.heading_1}}</h4>
+			</div>
+			<div class="col-md-6">
+				<a href="{{section.settings.btn_link}}" class="primary-btn ex-tt dsk-view">{{section.settings.btn_label}}</a>
+			</div>
+		</div>
+		<div class="para-ot">
+			<div class="row">
+              {%- for block in section.blocks -%}
+				<div class="col-md-4">
+					<p>{{block.settings.content}}</p>
+				</div>
+			   {%endfor%}
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Drop work Banner section",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "1400 x672px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Mobile Image",
+        "info": "375 x824px recommended"
+        },
+        {
+        "id":"heading_1",
+        "type":"textarea",
+        "label":"Heading 1",
+        "default":"What exactly is the <span>Ghost dropping?</span>"
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button Label",
+        "default":"Read the Ghost Story"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button Link"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"The best cannabis used to be in the legacy market – <b>not anymore.</b>"
+        }
+	],
+    "blocks": [
+     {
+         "type": "text",
+         "name": "text",
+         "limit": 12,
+         "settings": [
+            {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+            }
+
+         ]
+      }
+    ],
+    "presets": [{
+      "name": "Drop work Banner section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

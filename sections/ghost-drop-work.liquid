@@ -1,0 +1,73 @@
+ <div class="container-fluid mt-ex mt-new">
+      <div class="row">
+         <div class="col-md-6 dsk-view">
+            <div class="pt-img">
+              <a href="{{section.settings.btn_link}}">
+                <img src="{{section.settings.img_desktop | img_url:'master'}}" alt="" />
+              </a>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="star-box-new pl-l">
+               <h4 class="color-yellow">{{section.settings.heading}}</h4>
+               <p>{{section.settings.content}}</p>
+               <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+            </div>
+         </div>
+         <div class="col-md-6 mob-view">
+            <div class="pt-img">
+              <a href="{{section.settings.btn_link}}"> <img src="{{section.settings.img_desktop | img_url:'master'}}" alt="" /></a>
+            </div>
+         </div>
+      </div>
+   </div>
+{% schema %}
+  {
+    "name": "Ghost Drop work section",
+    "settings": [
+	 {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "How our <b class='d-block'>drops work</b>  "
+       },
+       {
+        "type": "textarea",
+        "id": "content",
+        "label": "paragraph",
+        "default": "The journey from pheno-hunting to dispensary shelves."
+       },
+	  {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "680x 500px recommended"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Mobile Image",
+        "info": "329x 327px recommended"
+      },
+      
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Learn more"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Ghost Drop work section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

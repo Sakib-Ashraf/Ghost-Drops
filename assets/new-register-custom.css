@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'rbno3.1black';
+    src: url('rbno3.1-black-webfont.woff2') format('woff2'),
+         url('rbno3.1-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin-top: 110px;
+    background: #000;
+}
+/* .container-fluid {
+    max-width: 1500px;
+} */
+.colored-heading {
+    display: inline-block;
+    font-family: 'rbno3.1black';
+    font-weight: 450;
+    font-size: 90px;
+    line-height: 1;
+	background: linear-gradient(90.01deg, #E62877 0.22%, #9D31B3 46.39%, #00A7CD 99.99%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+/* responsive */
+@media (max-width: 1199px) {
+    body {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .colored-heading {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        margin-top: 70px;
+    }
+    .colored-heading {
+        font-size: 54px;
+    }
+}
+

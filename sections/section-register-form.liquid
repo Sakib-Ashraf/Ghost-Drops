@@ -1,0 +1,104 @@
+<section class="contact-form">
+ 
+   {%- assign formId = 'RegisterForm' -%}
+   {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
+   
+<div class="container-fluid">
+   <div class="container-small">
+     {% include 'form-status', form: form, form_id: formId %}
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-fname">First Name</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="customer['name']" class="input-c" id="{{ formId }}-fname" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+      </div>
+      <div class="input-max">
+         <div class="palceholder">
+            <label for="{{ formId }}-lname">Last Name</label>
+            <span class="star">*</span>
+         </div>
+         <input type="text" name="customer['lname']" class="input-c" id="{{ formId }}-lname" value="{% if form.lname %}{{ form.lname }}{% elsif customer %}{{ customer.lname }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'text' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-text-error"
+                {%- endif -%}>
+      </div>
+      <div class="input-max">
+         <div class="palceholder" style="display:block !important">
+            <label for="{{ formId }}-email" >Email</label>
+            <span class="star">*</span>
+           
+         </div>
+        <input
+                type="email"
+                id="{{ formId }}-email"
+                name="customer[email]" class="input-c"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                >
+         
+      </div>
+     
+      <div class="input-max" >
+         <div class="palceholder" style="display:block !important">
+            <label for="{{ formId }}-password" >Password</label>
+            <span class="star">*</span>
+           
+         </div>
+        
+          <input
+                type="password"
+                id="{{ formId }}-password" class="input-c"
+                name="customer[password]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.password %}{{ form.password }}{% elsif customer %}{{ customer.password }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'password' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-password-error"
+                {%- endif -%}
+                >
+         
+      </div>
+      
+     <div class="input-max">
+        
+       <div class="palceholder" style="display:block !important">
+         <label for="{{ formId }}-password" >Confirm Password</label>
+         <span class="star">*</span>
+       </div>
+          <input
+                type="password" class="input-c"
+                id="{{ formId }}-cpassword"
+                name="customer[password_confirmation]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.password %}{{ form.password }}{% elsif customer %}{{ customer.password }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'password' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-password-error"
+                {%- endif -%}
+                >
+         
+      </div>
+      
+      <div class="input-max">
+         <input type="submit" class="Submit" id="create_customer">
+      </div>
+   </div></div>
+  {%endform%}
+</section>

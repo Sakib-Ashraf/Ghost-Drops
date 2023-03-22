@@ -1,0 +1,103 @@
+<section class="abt-bg-2">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="abt-caption">
+               <h4>{{section.settings.about_heading}}</h4>
+               <p>{{section.settings.about_content}}</p>
+               <div class="pr-one d-none">
+                  {{section.settings.location_heading}}
+                  <img src="{{section.settings.location_img_desktop | img_url:'original'}}" alt="" class="dsk-view" />
+                  <img src="{{section.settings.location_img_mobile | img_url:'original'}}" alt="" class="mob-view" />
+               </div>
+               <div class="pr-one btm-spc">
+                  {{section.settings.operation_heading}}
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+           <div class="pr-one">
+             <div class="abt-caption">
+             {{section.settings.location_heading}}
+             <img src="{{section.settings.location_img_desktop | img_url:'original'}}" alt="" class="dsk-view" />
+             <img src="{{section.settings.location_img_mobile | img_url:'original'}}" alt="" class="mob-view" />
+           </div>
+           </div>
+            <div class="carft-at d-none">
+               <h4>{{section.settings.craft_heading}}</h4>
+               <ul class="atr">
+                    <li>{%if  section.settings.img1 !=blank%}<img src="{{section.settings.img1 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_1 !=blank%}{{section.settings.heading_1}}{%endif%}</li>
+                   <li>{%if  section.settings.img2 !=blank%}<img src="{{section.settings.img2 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_2 !=blank%}{{section.settings.heading_2}}{%endif%}</li>
+                   <li>{%if  section.settings.img3 !=blank%}<img src="{{section.settings.img3 | img_url:'original'}}" alt="" />{%endif%} {%if  section.settings.heading_3 !=blank%}{{section.settings.heading_3}}{%endif%}</li>
+                 <li>{%if  section.settings.img_four !=blank%}<img src="{{section.settings.img_four | img_url:'original'}}" alt="" />{%endif%} {%if  section.settings.heading_four !=blank%}{{section.settings.heading_four}}{%endif%}</li>
+               </ul>
+               <h4 class="g-mt">{{section.settings.grow_heading}}</h4>
+               <ul class="atr">
+                   <li>{%if  section.settings.img4 !=blank%}<img src="{{section.settings.img4 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_4 !=blank%}{{section.settings.heading_4}}{%endif%}</li>
+                  <li>{%if  section.settings.img5 !=blank%}<img src="{{section.settings.img5 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_5 !=blank%}{{section.settings.heading_5}}{%endif%}</li>
+                  <li>{%if  section.settings.img6 !=blank%}<img src="{{section.settings.img6 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_6 !=blank%}{{section.settings.heading_6}}{%endif%}</li>
+                  <li>{%if  section.settings.img7 !=blank%}<img src="{{section.settings.img7 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_7 !=blank%}{{section.settings.heading_7}}{%endif%}</li>
+				  <li>{%if  section.settings.img8 !=blank%}<img src="{{section.settings.img8 | img_url:'original'}}" alt="" />{%endif%}{%if  section.settings.heading_8 !=blank%}{{section.settings.heading_8}}{%endif%}</li>
+               </ul>
+               <ul class="drop-detail clearfix">
+                  <li>{{section.settings.heading_drops}}</li>
+                  <li>{{section.settings.no_drops}}</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "All Star about Partner",
+    "settings": [
+	    {
+        "id":"about_heading",
+        "type":"textarea",
+        "label":"About Heading",
+        "default":"About"
+        },
+        {
+        "id":"about_content",
+        "type":"textarea",
+        "label":"About Content",
+        "default":"Gravida cum sociis natoque penatibus et magnis dis parturient. Amet aliquam id diam maecenas. Metus aliquam eleifend mi in nulla posuere sollicitudin. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Purus ut faucibus pulvinar elementum integer enim."
+        },
+        {
+        "id":"location_heading",
+        "type":"textarea",
+        "label":"Location heading",
+        "default":"<b>Location</b><h4>Montreal, QS</h4>"
+        },
+        
+        {
+        "type": "image_picker",
+        "id": "location_img_desktop",
+        "label": "Map Desktop Image",
+        "info": "560 x299px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "location_img_mobile",
+        "label": "Map Mobile Image",
+        "info": "327 x299px recommended"
+        },
+		{
+        "id":"operation_heading",
+        "type":"textarea",
+        "label":"Operation heading",
+        "default":"<b>In Operation</b><h4>Since 2020</h4>"
+        }
+
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "All Star about Partner",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

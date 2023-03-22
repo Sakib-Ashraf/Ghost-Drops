@@ -1,0 +1,66 @@
+<section class="fq mt-5 mb-4">
+  <div class="container-fluid">
+    <h3 class="mb-5">{{ section.settings.heading }}</h3>
+    <div id="accordion" class="page-faqs-retail-partners">
+      <div class="row">
+        <div class="col-md-12 div-accordion">
+          {% for block in section.blocks %}
+          <div class="card">
+            <div class="card-header nw">
+              <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapse-{{ forloop.index }}">{{ block.settings.title }}</a>
+            </div>
+            <div id="collapse-{{ forloop.index }}" class="collapse" data-parent="#accordion">
+              <div class="card-body nw">{{ block.settings.content }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Section Faqs",
+    "settings": [
+     {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently Asked <span>Questions</span>"
+     }
+    ],
+    "blocks": [
+     {
+      "type": "faqs",
+      "name": "Faqs",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "What provinces are your products available in?"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Lorem ipsum..<\/p>"
+        }
+      ]
+     }
+    ],
+    "presets": [
+     {
+      "name": "Faqs",
+      "category": "Text",
+      "blocks": [
+        { "type": "faqs" },
+        { "type": "faqs" },
+        { "type": "faqs" }
+      ]
+    }
+  ]
+}
+{% endschema %}

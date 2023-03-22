@@ -1,0 +1,42 @@
+<section class="meet-area">
+	<div class="container-fluid">
+		<h2>
+          {{section.settings.heading}}
+		</h2>
+		<a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Drive meet area section",
+    "settings": [
+	    
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"<h2>Meet the team <br class='dsk-view'> making sure Ghost<br class='dsk-view'> Drops stays true<br class='dsk-view'> to&nbsp;its values</h2>"
+        },
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Button Label",
+        "default":"The Ghost Grew"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button Link"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Drive meet area section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+

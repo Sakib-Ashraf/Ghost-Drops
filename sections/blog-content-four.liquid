@@ -1,0 +1,52 @@
+<div class="upper-content">
+   <ul class="breadcrumb gh-academy">
+      <li><a href="/pages/ghost-academy">Ghost Academy</a></li>
+      <li><a href="#">The Best Cannabis Stores in Toronto</a></li>
+    </ul>
+    {{section.settings.content}}
+  
+    {%if section.settings.video ==blank %}
+    {%if section.settings.img !=blank %}<img src="{{section.settings.img | img_url:'master'}}" class="mt-md-5 mb-md-5">{%endif%}
+     {%else if section.settings.video !=blank%}
+  	<div class="vid-layer">
+      <video class="d-vid mt-md-5 mb-md-5" width="100%" autoplay muted loop>
+        <source src="{{section.settings.video}}" type="video/mp4">
+      </video>
+   </div>
+  
+  {%endif%}
+  </div>
+
+{% schema %}
+  {
+    "name": "Upper Content",
+    "settings": [
+        {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "info": "680 x570px recommended"
+        },
+        {
+        "type": "text",
+        "id": "video",
+        "label": "Desktop Background video",
+        "info":"Choose video or image"
+		 },
+	    {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "Choose video or image"
+            
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Upper Content",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

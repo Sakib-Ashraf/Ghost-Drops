@@ -1,0 +1,77 @@
+<section class="clothing-collection">
+  {%- for block in section.blocks -%}
+	<div class="container-fluid clearfix">
+		<div class="heading-handler">
+			<div class="row">
+				<div class="col-8">
+<!--                   {%- for block in section.blocks -%}
+                 <h3>{{ collections[block.settings.collection].title }}</h3>
+                  {%endfor%} -->
+				</div>
+				
+			</div>
+		</div>
+		<div class="box-spc">
+			<div class="row">
+             {%- for block in section.blocks -%}
+                 {%- for product in collections[block.settings.collection].products -%}
+                 {%assign col_url = collection.url%}
+				{% include 'custom-collection-grid', product: product,collection:collection %}
+				{%endfor%}	
+              {%endfor%}	
+
+			</div>
+		</div>
+		</div>
+  {%endfor%}
+</section>
+
+
+{% schema %}
+{
+   "name": "Collection Page",
+   "settings": [
+      {
+      "type": "text",
+      "id": "col-title",
+      "default": "See All",
+      "label": "Title"
+      }
+      
+      
+      
+   ],
+   "blocks": [
+      {
+         "type": "collection",
+         "name": "Collection",
+         "limit": 12,
+         "settings": [
+            {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+            },
+            {
+            "type": "text",
+            "id": "btn-title",
+            "default": "See All",
+            "label": "Button Title"
+            },
+            {
+            "type": "url",
+            "id": "link",
+            "label": "see more link"
+            }
+
+         ]
+      }
+   ],
+   "presets": [
+      {
+      "name": "Collection Page",
+      "category": "Carousel Sections"
+      }
+   ]
+}
+{% endschema %}

@@ -1,0 +1,86 @@
+<section class="ghost-story-bg">
+ {%comment%} <img src="//cdn.shopify.com/s/files/1/0607/7104/1503/files/ghost-banner-resize.png?v=1638170046" class="w-100 img-ab dsk-view">
+  <img src="{{'ghost-story-mb.png' | asset_url}}" class="w-100 img-ab mob-view">{%endcomment%}
+  {%if section.settings.video ==blank%}
+   <img src="{{section.settings.bg_desktop | img_url:'master'}}" alt="" class="w-100 img-ab dsk-view" />
+  {%endif%}
+   <img src="{{section.settings.bg_mobile | img_url:'master'}}" alt="" class="w-100 img-ab mob-view" />
+  {%if section.settings.video !=blank%}
+  	<div class="vid-layer">
+      <video class="d-vid" width="100%" autoplay muted loop>
+        <source src="{{section.settings.video}}" type="video/mp4">
+      </video>
+   </div>
+  {%endif%}
+  <div class="container-fluid cap-top">
+      <h1 class="animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{section.settings.heading_1}}</h1>
+      <h5 class="animate__animated animate__fadeInDown" style="animation-delay: 2s;">{{section.settings.heading_2}}</h5>
+      <p class="animate__animated animate__fadeInDown" style="animation-delay: 2s;">{{section.settings.content}}</p>
+   </div>
+</section>
+<div class="wave-img">
+  <img src="{{'white-layer.png' | asset_url}}" class="w-100 resp-img">
+</div>
+{% schema %}
+  {
+    "name": "Ghost Story Banner",
+    "settings": [
+         {
+        "type": "text",
+        "id": "video",
+        "label": "Desktop Background video"
+		 },
+         {
+        "type": "image_picker",
+        "id": "bg_desktop",
+        "label": "Desktop Background Image",
+        "info": "1920 x1090px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Mobile Background Image",
+        "info": "375 x824px recommended"
+        },
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Desktop Image",
+        "info": "2880 x1400px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_mobile",
+        "label": "Mobile Image",
+        "info": "375 x824px recommended"
+        },
+        {
+        "id":"heading_1",
+        "type":"textarea",
+        "label":"Heading 1",
+        "default":"Ghost <b>Story</b>"
+        },
+        {
+        "id":"heading_2",
+        "type":"textarea",
+        "label":"Heading 2",
+        "default":"CANADA’S LEGACY<span> BRAND HOUSE</span>"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"The best cannabis used to be in the legacy market – <b>not anymore.</b>"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Ghost Story Banner",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+

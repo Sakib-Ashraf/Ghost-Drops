@@ -1,0 +1,129 @@
+<div id="demo" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators mob-view">
+            {% for block in section.blocks %}
+          		<li data-target="#demo" data-slide-to="{{forloop.index0}}" class="{%if forloop.index==1%}active{%else%}{%endif%}"></li>
+            {%endfor%}
+
+ 		 </ul>
+			<div class="carousel-inner ">
+              {% for block in section.blocks %}
+              
+				{%if forloop.index==1%}<div class="carousel-item active">{%else%}<div class="carousel-item">{%endif%}
+			  <img src="{{block.settings.bg_desktop | img_url:'master'}}" alt="" class="d-block w-100 dskt-view" />
+   			  <img src="{{block.settings.bg_mobile | img_url:'master'}}" alt="" class="d-block w-100 mob-view" />
+              
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="caption">
+                      <h1 class="animate__animated animate__fadeInDown" style="animation-delay: 1s;">{{block.settings.main_heading}}</h1>
+                      <ul class="content-stack">
+                        <li>
+                          <h4 class="animate__animated animate__fadeInDown" style="animation-delay: 2s;">{{block.settings.content2}}</h4>
+                          <p class="animate__animated animate__fadeInDown mb-0" style="animation-delay: 2s;">{{block.settings.content1}}</p><br> 
+                          <a href="{{block.settings.btn_link}}" class="primary-btn animate__animated animate__fadeInDown" style="animation-delay: 2s;">{{block.settings.btn_label}}</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                  {% if block.settings.image != blank%}
+                  <div class="col-md-6"> 
+                    <img class="img-fluid product" src="{{block.settings.image |img_url:'master' }}" alt="First slide">
+                    
+                  </div>
+                  {%endif%}
+                </div>
+              
+              </div>
+                <a href="{{block.settings.btn_link}}" class="primary-btn mt-spc">{{block.settings.btn_label}}</a>
+				</div>
+               {%endfor%}
+				
+			</div>
+        <div class="max-cont">
+            <div class="min-wd d-none">
+                <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+                <span class="" aria-hidden="true"><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+                <span class="" aria-hidden="true"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% schema %}
+  {
+    "name": "Slider",
+    "settings": [
+	 
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "bg_desktop",
+        "label": "Desktop Background Image",
+        "info": "1920 x1090px recommended"
+        },
+        {
+        "type": "image_picker",
+        "id": "bg_mobile",
+        "label": "Mobile Background Image",
+        "info": "375 x824px recommended"
+        },
+  		{
+        "type": "textarea",
+        "id": "main_heading",
+        "label": "Main Heading",
+        "default": "Cannabis <span>from  the </span> <b>other side</b>"
+      },
+	  {
+        "type": "textarea",
+        "id": "content1",
+        "label": "Content One",
+        "default": "<b>Ghost Drops</b> collaborates with award-winning legacy growers and cultivators, and supports them to do what they do best. We bring to the legal market exclusive strains of unique and potent small-batch, craft cannabis."
+      },
+      {
+        "type": "textarea",
+        "id": "content2",
+        "label": "Content Two",
+        "default": "Otherworldly cannabis from the legacy market."
+      },
+      
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Our Story"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Slider Image",
+        "info": "800x 700px recommended"
+      }
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Slider",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

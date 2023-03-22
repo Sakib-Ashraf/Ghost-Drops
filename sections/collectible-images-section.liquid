@@ -1,0 +1,33 @@
+<section class="three-sec">
+  <div class="container-fluid">
+    <ul class="three-imgs clearfix">
+      {% for block in section.blocks %}
+      <li><img src="{{block.settings.img | img_url:'master'}}" class="w-100 mb-4"></li>
+      {%endfor%}
+    </ul>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Hologram Image Block",
+    "settings": [
+        
+	],
+    "blocks": [  
+      {
+      "type": "image",
+      "name": "image",
+      "limit":3,
+      "settings": [
+        
+  		{
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image",
+        "info": "456x 618px recommended"
+        }
+      ]
+     }
+    ]
+  }
+{% endschema %}

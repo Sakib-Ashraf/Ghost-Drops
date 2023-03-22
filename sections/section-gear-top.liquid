@@ -1,0 +1,51 @@
+<style>
+section.ghost-cat.top-banner {
+  background-image:url('{{ section.settings.bg_img | img_url:'master' }}') !important;
+}
+
+</style>
+<style>
+@media (min-width: 320px) and (max-width: 767px) {
+  section.ghost-cat.top-banner {
+  background-image:url('none') !important;
+}
+}
+</style>
+<section class="ghost-videoss ghost-cat top-banner" >
+<!--   <video autoplay loop class="vid" src="https://cdn.shopify.com/s/files/1/0607/7104/1503/files/A002_A001_10208R_Converted.mp4?v=1636740683"></video> -->
+  <div class="h-cvr-mob"><h1 class="text-flicker-in-glow" style="animation-duration: 3s">
+    <img src="{{'fce-blk.svg' |asset_url}}" class="fce-blk"> {{section.settings.main_title}}</h1>
+    <p class="dsk-view">{{section.settings.content}}</p>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Gear top section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background Image",
+        "info": "1920 x502px recommended"
+      },
+	  {
+        "id":"main_title",
+        "type":"text",
+        "label":"Main Page Title",
+        "default":"Ghost <b>gear</b>"
+     },
+     {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"Interested in investing in Ghost Drops or learning more? <br class='dsk-view'> Fill out the form below to request access to our Investor Deck"
+     }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

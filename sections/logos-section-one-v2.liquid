@@ -1,0 +1,43 @@
+<ul class="lp-main-eight clearfix">
+  {% for block in section.blocks %}
+   <li><a href="{{block.settings.btn_link}}"><img src="{{block.settings.logo | img_url:'master'}}"></a></li>
+  {%endfor%}
+ </ul>
+{% schema %}
+  {
+    "name": "Ghostfarm  8 logos",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Genetics"
+      }  
+	],
+    "blocks": [  
+      {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        
+  		{
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logos",
+        "info": "680x 500px recommended"
+        },
+        {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Logo link"
+      }
+      ]
+     }
+    ],
+
+    "presets": [{
+      "name": "Ghostfarm  8 logos",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

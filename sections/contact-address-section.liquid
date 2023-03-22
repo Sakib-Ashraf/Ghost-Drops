@@ -1,0 +1,53 @@
+<section class="address-detail">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-lg-4 col-md-5">
+      <div class="address-spc">
+      {{section.settings.address}}
+      </div>
+      <div class="address-spc">  
+      {{section.settings.phone}}
+      </div>
+      </div>
+     <div class="col-lg-8 col-md-7">
+    
+       <div class="email-box">
+       {{section.settings.mail}}
+      </div></div>
+  </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Address Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "address",
+        "label": "Addess"
+        
+      },
+      {
+        "type": "textarea",
+        "id": "mail",
+        "label": "Mail"
+        
+      },
+      {
+        "type": "textarea",
+        "id": "phone",
+        "label": "Phone"
+      }
+      
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Address Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

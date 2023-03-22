@@ -1,0 +1,183 @@
+{{ 'new-register-member.css' | asset_url | stylesheet_tag }}
+
+
+<div class="resgister-member-section" id="register-member">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 col-md-7 col-12">
+                <div class="register-member-content">                    
+                    {% if section.settings.heading != '' %}
+                    <h2 class="colored-heading register-member-heading">{{ section.settings.heading | newline_to_br }}</h2>
+                    {% endif %}
+
+                    {% if section.settings.subheading != '' %}
+                    <div class="register-member-subheading">{{ section.settings.subheading }}</div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-5 col-12">
+                <div class="member-login-wrapper">
+                    <div class="member-login-area">
+                        <img class="register-login-img" 
+                            src="{{ 'rectangle-desktop.png' | asset_url }}" 
+                            alt="bg-img" 
+                            loading="lazy"
+                        >
+                        
+                        <div class="member-social-login">
+                            {% if section.settings.show_email %}
+                            <a href="{{ section.settings.link_email }}" class="member-login-btn btn-email">
+                                <span class="login-icon">{% render 'icon-login-email' %}</span>
+                                <span class="login-text">{{ section.settings.login_email }}</span>
+                            </a>
+                            {% endif %}
+
+                            {% if section.settings.show_facebook %}
+                            <a href="{{ section.settings.link_facebook }}" class="member-login-btn btn-facebook">
+                                <span class="login-icon">{% render 'icon-login-facebook' %}</span>
+                                <span class="login-text">{{ section.settings.login_facebook }}</span>
+                            </a>
+                            {% endif %}
+
+                            {% if section.settings.show_google %}
+                            <a href="{{ section.settings.link_google }}" class="member-login-btn btn-google">
+                                <span class="login-icon">{% render 'icon-login-google' %}</span>
+                                <span class="login-text">{{ section.settings.login_google }}</span>
+                            </a>
+                            {% endif %}
+
+                            {% if section.settings.show_apple %}
+                            <a href="{{ section.settings.link_apple }}" class="member-login-btn btn-apple">
+                                <span class="login-icon">{% render 'icon-login-apple' %}</span>
+                                <span class="login-text">{{ section.settings.login_apple }}</span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+  
+{% schema %}
+  {
+    "name": "Register - Member",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Become \na member",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "richtext",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "<p>No doctor visit or call required. Signup in under 1 minute for a <strong>FREE $50</strong> discount.</p>",
+            "info": "Make a text bold to colorize. Don't want? Keep blank."
+        },
+        {
+            "type": "header",
+            "content": "Login with Email"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_email",
+            "label": "Show email",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "login_email",
+            "label": "Button label",
+            "default": "Continue with Email",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "text",
+            "id": "link_email",
+            "label": "Button link"
+        },
+        {
+            "type": "header",
+            "content": "Login with Facebook"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_facebook",
+            "label": "Show facebook",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "login_facebook",
+            "label": "Button label",
+            "default": "Continue with Facebook",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "text",
+            "id": "link_facebook",
+            "label": "Button link"
+        },
+        {
+            "type": "header",
+            "content": "Login with Google"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_google",
+            "label": "Show google",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "login_google",
+            "label": "Button label",
+            "default": "Continue with Google",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "text",
+            "id": "link_googlek",
+            "label": "Button link"
+        },
+        {
+            "type": "header",
+            "content": "Login with Apple"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_apple",
+            "label": "Show apple",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "login_apple",
+            "label": "Button label",
+            "default": "Continue with Apple",
+            "info": "Don't want? Keep blank."
+        },
+        {
+            "type": "text",
+            "id": "link_apple",
+            "label": "Button link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Register - Member"
+        }
+    ]
+  }
+{% endschema %}
+  

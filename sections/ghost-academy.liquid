@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <h2 class="gst-sz text-center">{{section.settings.main_heading}}</h2>
+  <p class="txt-r">{{section.settings.content}}</p>
+  <div class="row">
+    {% for block in section.blocks%}
+    <div class="col-md-4 acad-marg-top">
+      <a href="{{block.settings.btn_link}}">
+        <img src="{{block.settings.img  | img_url:'master'}}" alt="" class="shpez">
+      </a>
+      <div class="para-text">
+        <a href="{{block.settings.btn_link}}"> <h6>{{block.settings.description}}</h6></a>
+        <p><a href="{{block.settings.btn_link}}" style="color: #000"><b>{{block.settings.btn_label}}</b></a>.</p>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Ghost Academy",
+    "settings": [
+     {
+        "type": "image_picker",
+        "id": "banner_logo",
+        "label": "Banner Logo",
+        "info": "1024 x595px recommended"
+        },
+	 {
+        "type": "text",
+        "id": "main_heading",
+        "label": "Main Heading",
+        "default": "Academy of Higher Education"
+      },
+	  {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "Your number one informational resource for all things related to cannabis and Ghost Drops. Educational and entertaining articles curated by the Ghost."
+      }
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        
+        {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Desktop Image",
+        "info": "420 x420px recommended"
+        },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "Get ready for Ghost Drops and its plans to bring its iconic brand to the legal market"
+      },
+      
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "Read More"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Ghost Academy",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

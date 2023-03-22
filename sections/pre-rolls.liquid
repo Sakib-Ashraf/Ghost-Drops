@@ -1,0 +1,208 @@
+<section class="pre-roll product-detail">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-lg-6 mob-view img-ipd">
+            <img src="{{section.settings.img_desktop | img_url:'680x915'}}" alt="" class="w-100" />
+         </div>
+         <div class="col-lg-6">
+            <div class="pre-roll prod-detail">
+              <div class="scp-breadcrumb mt-0 mb-5" style="margin-bottom:1rem !important; ">
+                <ul class="breadcrumb wht-bdd mt-0">
+                  <li><a href="/pages/products" style="cursor:pointer !important">Formats</a></li>
+                  <li class="active">{{ page.title }}</li>
+                </ul>
+              </div>
+              <h2> {{ section.settings.main_heading }}</h2>
+               <ul class="pre-roll data-ratio">
+                    <li><span>{{ section.settings.heading1 }}</span>
+                    <h4>{{ section.settings.content1 }}</h4>
+                    </li>
+                    <li><span>{{ section.settings.heading2 }}</span>
+                     <ul class="logo-sliderzx pre marg-top">
+                        <li>
+                          <a href="{{section.settings.img_11_link}}" target="_blank"> <img src="{{section.settings.img_11 | img_url:'original'}}"></a>
+                       </li>
+                        {% if section.settings.img_22 != blank-%}
+                       <li>
+                          <a href="{{section.settings.img_22_link}}" target="_blank"><img src="{{section.settings.img_22 | img_url:'original'}}"></a>
+                        </li>
+                        {% endif%}
+                        {% if section.settings.img_33 != blank-%}
+                        <li>
+                          <a href="{{section.settings.img_33_link}}" target="_blank"> <img src="{{section.settings.img_33 | img_url:'original'}}"></a>
+                        </li>
+                        {% endif%}
+                      </ul>
+                      
+                    </li>
+               </ul>
+                 <ul class="pre-roll data-ratio">
+                <li><span>{{ section.settings.heading3 }}</span></li>
+                </ul>
+            <p>{{ section.settings.content3 }}</p> 
+              <div class="partner-logos">
+                     <h2>{{ section.settings.partner_heading }}</h2>
+                       <ul class="logo-sliderzx prez marg-top">
+                        <li>
+                          <a href="{{section.settings.logo1_link}}" target="_blank"> <img src="{{section.settings.logo1 | img_url:'original'}}"></a>
+                        </li>
+                        {% if section.settings.logo2 != blank-%}
+                        <li>
+                          <a href="{{section.settings.logo2_link}}" target="_blank"><img src="{{section.settings.logo2 | img_url:'original'}}"></a>
+                       </li>
+                        {% endif%}
+                        {% if section.settings.logo3 != blank-%}
+                        <li>
+                          <a href="{{section.settings.logo3_link}}" target="_blank"> <img src="{{section.settings.logo3 | img_url:'original'}}"></a>
+                        </li>
+                        {% endif%}
+                      </ul>
+                  </div>
+               <a href="{{section.settings.strain_link}}" class="all-strains">See all strains</a>
+            </div>
+         </div>
+         <div class="col-lg-6 dsk-view img-ipd">
+            <img src="{{section.settings.img_desktop | img_url:'680x915'}}" alt="" class="w-100 stick-img" />
+         </div>
+      </div>
+   </div>
+</section>
+{% schema %}
+  {
+    "name": "Pre Roll Page",
+    "settings": [
+	    {
+        "type": "image_picker",
+        "id": "img_desktop",
+        "label": "Main Image",
+        "info": "680 x915px recommended"
+        },
+        {
+        "id":"main_heading",
+        "type":"textarea",
+        "label":"Heading",
+        "default":"Pre-Rolls"
+        },
+        {
+        "id":"heading1",
+        "type":"text",
+        "label":"heading One",
+        "default":"Product Size"
+        },
+        {
+        "id":"content1",
+        "type":"textarea",
+        "label":"content One",
+        "default":"1 x 0.5g"
+        },
+        {
+        "id":"heading2",
+        "type":"text",
+        "label":"heading 2",
+        "default":"Strains"
+        },
+         {
+        "type": "image_picker",
+        "id": "img_11",
+        "label": "logo first"
+        },
+        {
+        "type": "url",
+        "id": "img_11_link",
+        "label": "logo first link"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_22",
+        "label": "logo second"
+        },
+        {
+        "type": "url",
+        "id": "img_22_link",
+        "label": "logo second link"
+        },
+        {
+        "type": "image_picker",
+        "id": "img_33",
+        "label": "logo third"
+        },
+        {
+        "type": "url",
+        "id": "img_33_link",
+        "label": "logo third link"
+        },
+        {
+        "id":"heading3",
+        "type":"text",
+        "label":"Heading 3",
+        "default":"Description"
+        },
+        {
+        "id":"content3",
+        "type":"textarea",
+        "label":"Content 3",
+        "default":"Experience our award-winning cultivars in a convenient, ready-to-smoke format. Thoughtfully packaged in high quality glass tubes, ensuring optimal freshness. Our pre-rolls are half grams and our pre-rolled blunts are full grams."
+        },
+       
+         {
+        "id":"partner_heading",
+        "type":"textarea",
+        "label":"Partner Text",
+        "default":"Where to buy"
+        },
+
+        {
+        "type": "image_picker",
+        "id": "logo1",
+        "label": "Logo 1",
+        "info": "38 x44px recommended"
+        },
+        {
+        "id":"logo1_link",
+        "type":"url",
+        "label":"Logo 1 Link"
+        },
+
+        {
+        "type": "image_picker",
+        "id": "logo2",
+        "label": "Logo 2",
+        "info": "119 x42px recommended"
+        },
+        {
+        "id":"logo2_link",
+        "type":"url",
+        "label":"Logo 2 Link"
+        },
+        {
+        "type": "image_picker",
+        "id": "logo3",
+        "label": "Logo 3",
+        "info": "118 x42px recommended"
+        },
+        {
+        "id":"logo3_link",
+        "type":"url",
+        "label":"Logo 3 Link"
+        },
+        {
+        "id":"strain_link",
+        "type":"url",
+        "label":"View all strain link"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Pre Roll Page",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,42 @@
+<section class="ct-text insvtwa">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7">
+         
+        <h3>{{section.settings.heading}}</h3>
+      </div>
+      <div class="col-md-5">
+        <p>{{section.settings.content}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Investor Request Section",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "<span>Request access</span> <br class='dsk-view'> to the Ghost Drops <br class='dsk-view'> investor deck"
+      },
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content",
+        "default": "You can expect to hear back from us and receive access to download the investor deck within one business day."
+      }
+      
+	],
+    "blocks": [  
+      
+    ],
+
+    "presets": [{
+      "name": "Investor Request Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+

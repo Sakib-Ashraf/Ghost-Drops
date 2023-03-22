@@ -1,0 +1,87 @@
+<div class="container-fluid">
+		<div class="carousel-wrap">
+          <h2>Formats</h2>
+				<div class="owl-carousel owl-carousel-case">
+                    {% for block in section.blocks %}
+					<div class="item">
+						<div class="case-item">
+							
+        <div class="format-products">
+  
+        <a href="{{block.settings.btn_link}}" class="bk-url">
+         <img src="{{block.settings.image | img_url :'600x570'}}" alt="" class="prod" />
+        </a>
+         
+      </div>
+                 <a href="{{block.settings.btn_link}}" class="bk-url">
+               <h3>{{block.settings.heading}}</h3>
+              </a>
+            <p  class="lrg">{{block.settings.content}}</p>
+           <a href="{{block.settings.btn_link}}" class="see-more-link">{{block.settings.btn_label}}</a>
+           
+						</div>
+					</div>
+				 {%endfor%} 
+				</div>
+			</div>
+	
+ </div>
+{% schema %}
+  {
+    "name": "Format Products",
+    "settings": [
+	 
+	],
+    "blocks": [
+     {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "600x 570px recommended"
+        },
+  		{
+        "type": "textarea",
+        "id": "heading",
+        "label": "Heading",
+        "default": "First Class Funk"
+       },
+       {
+        "type": "textarea",
+        "id": "content",
+        "label": "Paragraph",
+        "default": "A powerhouse bud with a one-of-a-kind heavyweight high, <b>First Class Funk tastes as funky as it smells.</b>"
+       },
+
+ 
+	  {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Text",
+        "default": "See more"
+      },
+	  {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      }
+	  
+      ]
+     }
+    ],
+    "presets": [{
+      "name": "Format Products",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

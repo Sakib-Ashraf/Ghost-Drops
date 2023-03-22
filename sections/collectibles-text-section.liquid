@@ -1,0 +1,21 @@
+ <p>{{section.settings.text1}}</p>
+  <p>{{section.settings.text2}}</p>
+{% schema %}
+  {
+    "name": "Collectibles Text Section",
+    "settings": [
+	  {
+        "id":"text1",
+        "type":"textarea",
+        "label":"Upper text",
+        "default":"Ghost Drops has always been a platform for celebrating the all-stars of Canadian cannabis. Now you can collect those all-stars - your favourite strains, brands, breeders and hunters - with our baseball-style collectible cards. These cards contain information about our various cultivars and genetic partners."
+     },
+     {
+        "id":"text2",
+        "type":"textarea",
+        "label":"Lower text",
+        "default":"Every time we drop a new strain or brand, we release new cards. We also frequently update our existing card designs to keep things fresh. Collect this ever-expanding set - and keep an eye out for the extra-special, ultra-limited editions with the holographic strain name on the image-side of the card.  "
+     }
+	]
+  }
+{% endschema %}

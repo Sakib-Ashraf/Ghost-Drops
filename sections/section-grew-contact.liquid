@@ -1,0 +1,80 @@
+<section class="five-cr pt-0" >
+  <div class="container-fluid">
+<div class="row">
+      <div class="col-md-6 d-none"> 
+        <div class="gry-bxy">
+          <h3>{{section.settings.heading}}</h3>
+          <p>{{section.settings.content}}</p>
+          <a href="{{section.settings.btn_link}}" class="primary-btn">{{section.settings.btn_label}}</a>
+           <img src="{{'smily-cross.png' | asset_url}}" alt="" class="smill-wht" />
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="blk-str">
+          <h3>{{section.settings.heading1}}</h3>
+          <a href="{{section.settings.btn_link1}}" class="primary-btn">{{section.settings.btn_label1}}</a>
+          
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+</div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Contact Section",
+    "settings": [
+	    
+        {
+        "id":"heading",
+        "type":"textarea",
+        "label":"Work with us Heading",
+        "default":"Work with us"
+        },
+        {
+        "id":"content",
+        "type":"textarea",
+        "label":"Content",
+        "default":"We're growing. Check out current opportunities on our team."
+        },
+        
+        {
+        "id":"btn_label",
+        "type":"text",
+        "label":"Work us Button text",
+        "default":"Work with us"
+        },
+        {
+        "id":"btn_link",
+        "type":"url",
+        "label":"Button link"
+        },
+        {
+        "id":"heading1",
+        "type":"textarea",
+        "label":"Work with us Heading",
+        "default":"Contact Us"
+        },
+        
+        {
+        "id":"btn_label1",
+        "type":"text",
+        "label":"Contact us Button text",
+        "default":"Contact us"
+        },
+        {
+        "id":"btn_link1",
+        "type":"url",
+        "label":"Contact Button link"
+        }
+	],
+    "blocks": [
+     
+    ],
+    "presets": [{
+      "name": "Contact Section",
+      "category": "HOMEPAGE"
+    }]
+  }
+{% endschema %}

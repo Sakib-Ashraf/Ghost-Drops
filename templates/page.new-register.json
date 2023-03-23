@@ -3,7 +3,7 @@
     "hero": {
       "type": "new-register-hero",
       "settings": {
-        "img": "shopify:\/\/shop_images\/hero.png",
+        "img": "shopify:\/\/shop_images\/mom.png",
         "heading": "Members Only Mail-Order Premium Cannabis Club",
         "subheading": "Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.",
         "btn": "Sign Up",
@@ -19,8 +19,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/1.png",
             "heading": "$50 OFF + \nFree Gift",
-            "subheading": "Receive $50 of Ghost Drops products for free when you signup. You'll also receive a free, exclusive gift.",
-            "link": ""
+            "subheading": "Receive $50 of Ghost Drops products for free when you signup. You'll also receive a free, exclusive gift."
           }
         },
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-1": {
@@ -28,8 +27,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/2.png",
             "heading": "Exclusive \nDrops",
-            "subheading": "Access exclusive drops and pricing that can't be found anywhere else. New, small batch, limited edition strains and products.",
-            "link": ""
+            "subheading": "Access exclusive drops and pricing that can't be found anywhere else. New, small batch, limited edition strains and products."
           }
         },
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-2": {
@@ -37,8 +35,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/3.png",
             "heading": "GhostDots \nLoyalty",
-            "subheading": "Earn GhostDots loyalty points and redeem for discounts on cannabis purchases, merchandise items and more.",
-            "link": ""
+            "subheading": "Earn GhostDots loyalty points and redeem for discounts on cannabis purchases, merchandise items and more."
           }
         },
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-3": {
@@ -46,8 +43,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/4.png",
             "heading": "Free Fast \nShipping",
-            "subheading": "Free, fast and discreet shipping and delivery. Orders placed before 1pm on weekdays will be shipped out SAME DAY.",
-            "link": ""
+            "subheading": "Free, fast and discreet shipping and delivery. Orders placed before 1pm on weekdays will be shipped out SAME DAY."
           }
         },
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-4": {
@@ -55,8 +51,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/5.png",
             "heading": "Legal + Tax \nBenefits",
-            "subheading": "Members may legally carry up to 150 grams. Purchases are covered by some insurance providers and are also tax-deductible.",
-            "link": ""
+            "subheading": "Members may legally carry up to 150 grams. Purchases are covered by some insurance providers and are also tax-deductible."
           }
         },
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5": {
@@ -64,8 +59,7 @@
           "settings": {
             "img": "shopify:\/\/shop_images\/5.png",
             "heading": "Discounts, Deals \n+ Sales",
-            "subheading": "Access Members Only pricing with Ghost Drops MOM. Special discounts, deals and sales that can't be found anywhere else.",
-            "link": ""
+            "subheading": "Access Members Only pricing with Ghost Drops MOM. Special discounts, deals and sales that can't be found anywhere else."
           }
         }
       },

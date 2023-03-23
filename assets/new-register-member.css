@@ -39,6 +39,7 @@
 }
 .member-login-btn:not(:first-child) {
     margin-top: 25px;
+    margin-bottom: 20px;
 }
 .btn-facebook,
 .btn-facebook:hover {

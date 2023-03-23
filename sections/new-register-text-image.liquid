@@ -44,9 +44,9 @@
         </div>
     </div>
 
-    <div class="slick-progress-wrapper">
+    {% comment %} <div class="slick-progress-wrapper">
         <div class="slick-progress"></div>
-    </div>
+    </div> {% endcomment %}
 </div>
 
 
@@ -56,21 +56,45 @@
 <script>
     $(document).ready(function() {
         var $slider = $('.text-image-slider');
-        var $progressBar = $('.slick-progress');
+        //var $progressBar = $('.slick-progress-wrapper');
+        var $mainSlideCount = 0;
         var $slidesToShow = 3;        
 
-        $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-            var unit = 100 / slick.slideCount;            
-            var calc = (nextSlide + $slidesToShow) * unit;
-            $progressBar.css('background-size', calc + '% 100%');
+        /*$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+              $mainSlideCount = slick.slideCount - 1.2;
         });
-        
+            
+        // On before slide change
+        /*$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var unit = 412 / $mainSlideCount;            
+            var calc = (nextSlide) * unit;
+            var value = calc + 'px';
+            $('.slick-progress-wrapper .slick-active').css({left: value});
+        });
+
+        $progressBar.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            useTransform: false,
+            arrows: false,
+            touchMove: true,
+            swipe: true,
+            draggable: true,
+            asNavFor: $slider,
+            });*/
         $slider.slick({
+            //appendDots: $progressBar,
             dots: false,
             arrows: false,
             infinite: false,
             swipeToSlide: true,
             speed: 300,
+            useTransform: false,
+            draggable: false,
+            touchMove: true,
+            swipe: true,
+            //asNavFor: $progressBar,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -88,6 +112,18 @@
                 }
             ]
         });  
+        $slider.mCustomScrollbar({
+            axis: "x",
+            theme: "dark-3",
+            autoExpandScrollbar: false,
+            advanced: { autoExpandHorizontalScroll: false },
+            updateOnContentResize: true,
+            scrollbarPosition: 'outside',
+            scrollInertia: 10,
+            autoDraggerLength: false,
+            live: true,
+            setWidth: false,
+        });
     });
 </script>
 

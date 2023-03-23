@@ -99,11 +99,25 @@
         text-transform: none;
     }
     .register-hero-heading {
-        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.02em;
     }
     .register-hero-subheading {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
         font-size: 18px;
+        line-height: 150%;
+        color: #FFFFFF;
+        letter-spacing: 0.02em;
         margin: 18px 0 0;
+        max-width: 315px;
     }
 }
 

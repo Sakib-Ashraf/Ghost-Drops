@@ -6864,9 +6864,11 @@ footer.new-space {
     padding: 410px 0 100px;
 }
 footer {
-    background-image: url(footer-bg.png);
-    background-size: auto; background-size: auto;
-    width: 100%;  background-repeat: repeat;
+    /* background-image: url(footer-bg.png); */
+    background-size: auto;
+    background-size: auto;
+    width: 100%;
+    background-repeat: repeat;
     padding: 100px 0px;
 }
 

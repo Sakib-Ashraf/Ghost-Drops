@@ -27,7 +27,7 @@
                             <div class="text-image-block-content">
                                 {% if block.settings.heading != '' %}
                                 <h2 class="text-image-heading">
-                                    <a href="{{ block.settings.link }}">{{ block.settings.heading | newline_to_br }}</a>
+                                    {{ block.settings.heading | newline_to_br }}
                                 </h2>
                                 {% endif %}
 
@@ -144,11 +144,6 @@
                     "label": "Subheading",
                     "default": "Access exclusive drops and pricing that can't be found anywhere else. New, small batch, limited edition strains and products.",
                     "info": "Don't want? Keep blank."
-                },
-                {
-                    "type": "url",
-                    "id": "link",
-                    "label": "Link"
                 }
             ]
         }

@@ -112,13 +112,16 @@
         // swiper parameters
         const swiperParams = {
             direction: "horizontal",
-            freeMode: true,
+            freeMode: {
+                sticky: true,
+            },
             slidesPerView: 3.12,
             mousewheel: true,
             speed: 300,
             enabled: true,
             hide: false,
-            slidesOffsetAfter: 80,
+            slidesPerGroup: 1,
+            slidesOffsetAfter: 100,
             setWrapperSize: true,
             resizeObserver: true,
             scrollbar: {
@@ -134,13 +137,30 @@
                 }`,
             ],
             breakpoints: {
-                480: {
+                310: {
                     slidesPerView: 1,
+                    scrollbar: {
+                        draggable: true,
+                        dragSize: 43,
+                    },
                 },
-                1101: {
+                480: {
+                    slidesPerView: 1.5,
+                },
+                680: {
+                    slidesPerView: 1.6,
+                },
+                768: {
                     slidesPerView: 2,
                 },
-                1300: {
+                1101: {
+                    slidesPerView: 2.7,
+                    scrollbar: {
+                        draggable: true,
+                        dragSize: 78,
+                    },
+                },
+                1441: {
                     slidesPerView: 3.12,
                 }
             }

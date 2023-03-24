@@ -54,7 +54,6 @@
 .resgister-text-image-section {
     margin-top: 136px;
     overflow: hidden;
-    height: 841px;
 }
 .slick-progress {
     display: block;
@@ -142,7 +141,10 @@
 /* swiper css */
 
 /* responsive */
-@media (min-width: 768px) {  
+@media (min-width: 769px) {  
+    .resgister-text-image-section {
+        height: 841px;
+    }
     .text-image-slider.slick-initialized .slick-track {
         margin-left: -48px;
     }
@@ -165,7 +167,10 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+    .resgister-text-image-section {
+        height: 690px;
+    }
     .register-text-img-section-heading {
         margin-bottom: 40px;
     }
@@ -207,10 +212,36 @@
 }
 
 @media (max-width: 601px) {
+    :root {
+        --swiper-scrollbar-sides-offset: 13%;
+    }
+    .text-image-block {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .swiper, swiper-container {
+        padding-left: 9px;
+    }
     .register-text-img-section-heading {
         margin-bottom: 48px;
     }
     .slick-progress-wrapper {
         max-width: 60%;
+    }
+    .text-image-block {
+        height: 459px;
+    }
+    .text-image-block-content {
+        margin-top: 50px;
+        margin-bottom: 63px;
+        margin-left: 18px;
+    }
+}
+@media screen and (max-width: 325px) {
+    ..text-image-block-inner, .text-image-block-img {
+        width: calc(100vw - 100px);
+    }
+    .text-image-block {
+        height: 435px;
     }
 }

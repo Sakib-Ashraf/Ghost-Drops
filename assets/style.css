@@ -6385,7 +6385,7 @@ nav#dynamic {
     background: #000!important;
     transition: ease-in-out .5s;
 }
-.container-fluid{max-width:1300px;}
+.container-fluid{max-width: 1300px;}
 .carousel-inner .container {
     position: absolute;
     top: 6%;

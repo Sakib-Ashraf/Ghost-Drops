@@ -22,6 +22,8 @@
 }
 .register-hero-img {
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .register-hero-img-block .lottie_animation {
     width: 130px;

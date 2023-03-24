@@ -113,23 +113,21 @@
         const swiperParams = {
             direction: "horizontal",
             freeMode: {
-                enabled: true,
-                sticky: true,
+                enabled: false,
             },
             slidesPerView: 3.12,
             mousewheel: true,
             speed: 300,
             enabled: true,
             hide: false,
+            slidesOffsetAfter: 0,
             slidesPerGroup: 1,
-            slidesOffsetAfter: 100,
             setWrapperSize: true,
             resizeObserver: true,
             scrollbar: {
                 draggable: true,
                 dragSize: 78,
             },
-            snapOnRelease: true,
             injectStyles: [
                 `.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
                     left: 50%;
@@ -140,13 +138,12 @@
             breakpoints: {
                 310: {
                     slidesPerView: 1,
+                    spaceBetween: 30,
+                    centerSlides: true,
                     scrollbar: {
                         draggable: true,
                         dragSize: 43,
                     },
-                },
-                520: {
-                    slidesPerView: 1.5,
                 },
                 680: {
                     slidesPerView: 1.6,
@@ -156,6 +153,7 @@
                 },
                 1101: {
                     slidesPerView: 2.7,
+                    slidesOffsetAfter: 300,
                     scrollbar: {
                         draggable: true,
                         dragSize: 78,
@@ -163,6 +161,7 @@
                 },
                 1441: {
                     slidesPerView: 3.12,
+                    slidesOffsetAfter: 400,
                 }
             }
         };

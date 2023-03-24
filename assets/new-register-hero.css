@@ -77,6 +77,7 @@
 .register-hero-btn:hover .icon-signup-btn {
     transform: translateX(300px);
     margin: 0;
+    width: 0;
 }
 
 .resgister-hero-section {
@@ -175,3 +176,14 @@
         padding-top: 35px;
     }
 }
+@media (max-width: 480px) {
+    .text-image-container{
+        padding-left: 24px;
+        padding-right: 41px;
+    }
+    .register-text-img-section-heading{
+        margin-bottom: 0!important;
+        margin-inline: 9px;
+    }
+}
+

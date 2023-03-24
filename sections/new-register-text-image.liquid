@@ -12,9 +12,10 @@
     <div class="container-fluid text-image-container">
         <div class="text-image-absolute">
             <div class="text-image-area text-image-slider">
+                <swiper-container class="mySwiper" init="false">
                 {% for block in section.blocks %}
                     {% if block.type == 'block' %}
-                    <div class="text-image-block">
+                    <swiper-slide class="text-image-block">
                         <div class="text-image-block-inner">
                             <div class="text-image-block-img">
                                 <img src="{{ block.settings.img | img_url: 'x280' }}" 
@@ -37,16 +38,17 @@
                             </div>
                             {% endif %}
                         </div>
-                    </div>
+                    </swiper-slide>
                     {% endif %}
                 {% endfor %}
+                </swiper-container>
             </div>
         </div>
     </div>
 
-    <div class="slick-progress-wrapper">
+    {% comment %} <div class="slick-progress-wrapper">
         <div class="text-image-dots"></div>
-    </div>
+    </div> {% endcomment %}
 
     {% comment %} 
     <div class="slick-progress-wrapper">
@@ -60,10 +62,9 @@
 
 
 <script>
-    $(document).ready(function() {
+    /*$(document).ready(function() {
         var $slider = $('.text-image-slider');
 
-    {% comment %}
         var $progressBar = $('.slick-progress');
         var $slidesToShow = 3;         
         $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
@@ -71,7 +72,6 @@
             var calc = (nextSlide + $slidesToShow) * unit;
             $progressBar.css('background-size', calc + '% 100%');
         }); 
-    {% endcomment %}
         
         $slider.slick({
             dots: true,
@@ -103,6 +103,54 @@
         $(".text-image-dots .slick-dots li").on("mouseenter", function () {
             $(this).trigger('click');
         });
+    });*/
+    window.addEventListener("DOMContentLoaded", function (e) {
+
+        // swiper element
+        const swiperEl = document.querySelector('swiper-container');
+
+        // swiper parameters
+        const swiperParams = {
+            direction: "horizontal",
+            freeMode: true,
+            slidesPerView: 3.12,
+            mousewheel: true,
+            speed: 300,
+            enabled: true,
+            hide: false,
+            slidesOffsetAfter: 80,
+            setWrapperSize: true,
+            resizeObserver: true,
+            scrollbar: {
+                draggable: true,
+                dragSize: 78,
+            },
+            snapOnRelease: true,
+            injectStyles: [
+                `.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    cursor: pointer;
+                }`,
+            ],
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                },
+                1101: {
+                    slidesPerView: 2,
+                },
+                1300: {
+                    slidesPerView: 3.12,
+                }
+            }
+        };
+
+        // now we need to assign all parameters to Swiper element
+        Object.assign(swiperEl, swiperParams);
+
+        // and now initialize it
+        swiperEl.initialize();
     });
 </script>
 

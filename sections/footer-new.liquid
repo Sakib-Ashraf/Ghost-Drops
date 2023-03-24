@@ -37,8 +37,9 @@
 					<h5>{{linklists[section.settings.footer_menu4].title}}</h5>
 					<ul class="list-a">
                         {% for link in linklists[section.settings.footer_menu4].links %}
+                          
 				
-						<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+						<li><a href="{{ link.url }}">{%- if link.title == "Download Investor Deck" -%}Download <br>Investor Deck{%- else -%}{{ link.title | escape }}{%- endif -%}</a></li>
                        {% endfor %}
                       </ul>
 					</li>

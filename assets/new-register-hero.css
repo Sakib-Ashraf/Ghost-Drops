@@ -76,6 +76,7 @@
 }
 .register-hero-btn:hover .icon-signup-btn {
     transform: translateX(300px);
+    margin: 0;
 }
 
 .resgister-hero-section {

@@ -89,7 +89,7 @@
         "show_google": true,
         "login_google": "Continue with Google",
         "link_googlek": "",
-        "show_apple": true,
+        "show_apple": false,
         "login_apple": "Continue with Apple",
         "link_apple": ""
       }

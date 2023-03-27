@@ -72,7 +72,7 @@
 }
 .register-hero-btn:hover {
     transform: translate(7px, 7px);
-    box-shadow: 0 0 transparent;
+    box-shadow: 7px 7px transparent;
 }
 .register-hero-btn:hover .icon-signup-btn {
     transform: translateX(300px);

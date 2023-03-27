@@ -18,7 +18,7 @@
     margin: 0 auto;
 }
 .resgister-member-section {
-    padding-top: 180px;
+    padding-top: 139px;
     overflow: hidden;
 }
 .member-login-btn,
@@ -120,4 +120,8 @@
     }
 }
 
-@media (max-width: 601px) {}
+@media (max-width: 601px) {
+    .resgister-member-section {
+        padding-top: 86px;
+    }
+}

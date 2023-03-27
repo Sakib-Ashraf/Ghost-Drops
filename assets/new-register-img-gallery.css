@@ -3,6 +3,7 @@
     justify-content: center;
     overflow: hidden;
     overflow-x: auto;
+    flex-shrink: 1;
 }
 .gallery-scrollbar::-webkit-scrollbar {
     width: 20px;
@@ -14,9 +15,18 @@
     overflow: hidden;
 }
 
-
 /* responsive */
-@media (max-width: 1199px) {}
+@media (min-width: 1300px) {
+    .new_register_gallery .gallery-item {
+        margin-left: -38px;
+    }
+    .new_register_gallery .gallery-item img {
+        width: 186px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
 
 @media (max-width: 991px) {}
 

@@ -3,11 +3,10 @@
     line-height: 100px;
     height: 105px;
 }
-.text-image-heading,
-.text-image-heading a {
+.text-image-heading {
     font-family: 'RBNo3.1-Bold';
     font-weight: 450;
-    font-size: 38px;
+    font-size: 49px;
     line-height: 1.1;
     color: #FFFFFF;
     margin: 0;
@@ -20,7 +19,7 @@
     max-height: 666px;
 } */
 .text-image-subheading {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.8;    
@@ -34,17 +33,39 @@
     background-size: 100% 100%;
     height: 100%;
 }
+.swiper-horizontal {
+    height: 539px;
+}
 .text-image-block-inner {
-    padding: 49px 30px 42px;
+    padding: 49px 38px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 .text-image-block-img {
-    min-height: 280px;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    max-height: 185px;
+    height: 100%;
+    max-width: 300px;
+    width: 100%;
+}
+.text-image-block-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .text-image-block-img img {
-    width: auto;
+    height: 100%;
+    width: 290px;
     max-width: 100%;
+    object-fit: contain;
 }
 .resgister-text-image-section {
     margin-top: 136px;
@@ -129,9 +150,14 @@
 /* swiper css */
 
 /* responsive */
+@media (max-width: 1540px) {  
+    .text-image-heading {
+        font-size: 45px;
+    }
+}
 @media (min-width: 769px) {  
     .resgister-text-image-section {
-        height: 841px;
+        height: 755px;
     }
     .text-image-slider.slick-initialized .slick-track {
         margin-left: -48px;
@@ -167,10 +193,10 @@
         font-size: 36px;
     }
     .text-image-block-img {
-        min-height: 1px;
+        max-height: 142px;
     }
     .text-image-block-inner {
-        padding: 36px 20px 20px 20px;
+        padding: 36px 38px 20px 38px;
     }
     .resgister-text-image-section {
         margin-top: 0;
@@ -216,6 +242,9 @@
     .text-image-block {
         height: 459px;
     }
+    .resgister-text-image-section {
+        height: 600px;
+    }
 }
 @media screen and (max-width: 325px) {
     .text-image-block {
@@ -231,16 +260,21 @@
 }
 
 @media screen and (max-width: 768px) {
-    .text-image-block-img img{
-        height:204px;
-    }
     .text-image-block{
         height: 449px;
     }
     .text-image-block-content {
-        margin-top: 50px;
+        /* margin-top: 50px;
         margin-bottom: 63px;
-        margin-left: 18px;
+        margin-left: 18px; */
+        width: 100%;
+        justify-content: center;
+    }
+    .text-image-block-img {
+        margin-top: 30px;
+    }
+    .swiper-horizontal {
+        height: 410px;
     }
 
 }

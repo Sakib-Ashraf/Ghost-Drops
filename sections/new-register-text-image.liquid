@@ -18,7 +18,7 @@
                     <swiper-slide class="text-image-block">
                         <div class="text-image-block-inner">
                             <div class="text-image-block-img">
-                                <img src="{{ block.settings.img | img_url: 'x280' }}" 
+                                <img src="{{ block.settings.img | image_url: master }}" 
                                     alt="{{ block.settings.img.alt }}" 
                                     loading="lazy"
                                 >
@@ -115,14 +115,15 @@
             freeMode: {
                 enabled: false,
             },
-            slidesPerView: 3.12,
-            mousewheel: false,
+            slidesPerView: 3.409,
+            mousewheel: window.innerWidth > 900 ? true : false,
             speed: 300,
             enabled: true,
             hide: false,
             slidesPerGroup: 1,
             setWrapperSize: true,
             resizeObserver: true,
+            updateOnWindowResize: true,
             scrollbar: {
                 draggable: true,
                 dragSize: 78,
@@ -147,25 +148,25 @@
                 },
                 520: {
                     slidesPerView: 1.5,
-                    spaceBetween: 35,
+                    spaceBetween: 30,
                     snapGrid: 'auto',
                     snapToStart: true,
                 },
                 680: {
                     slidesPerView: 1.6,
-                    spaceBetween: 40,
+                    spaceBetween: 35,
                     snapGrid: 'auto',
                     snapToStart: true,
                 },
                 768: {
-                    slidesPerView: 2,
-                    spaceBetween: 45,
+                    slidesPerView: 2.5,
+                    spaceBetween: 40,
                     snapGrid: 'auto',
                     snapToStart: true,
                 },
                 1101: {
-                    slidesPerView: 2.7,
-                    spaceBetween: 48,
+                    slidesPerView: 3.1,
+                    spaceBetween: 45,
                     snapGrid: 'auto',
                     snapToStart: true,
                     scrollbar: {
@@ -174,8 +175,8 @@
                     },
                 },
                 1441: {
-                    slidesPerView: 3.12,
-                    spaceBetween: 48,
+                    slidesPerView: 3.409,
+                    spaceBetween: 45,
                     snapGrid: 'auto',
                     snapToStart: true,
                 }

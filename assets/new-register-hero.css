@@ -42,6 +42,8 @@
 }
 .register-hero-button-wrapper {
     margin-top: 55px;
+    height: 60px;
+    width: 213px;
 }
 .register-hero-btn,
 .label-signup-btn {
@@ -70,12 +72,18 @@
     margin-right: 19px;
     transition: ease .4s;
 }
-.register-hero-btn:hover {
+.register-hero-button-wrapper:hover {
+    width: 203px;
+    height: 53px;
+}
+.register-hero-button-wrapper:hover .register-hero-btn{
     transform: translate(7px, 7px);
+    transition: ease-in-out .2s;
     box-shadow: 7px 7px transparent;
 }
-.register-hero-btn:hover .icon-signup-btn {
+.register-hero-button-wrapper:hover .icon-signup-btn {
     transform: translateX(300px);
+    transition: ease-in-out .2s;
     margin: 0;
     width: 0;
 }

@@ -38,6 +38,14 @@
             "subheading": "Earn GhostDots loyalty points and redeem for discounts on cannabis purchases, merchandise items and more."
           }
         },
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/GDdiscountsr1_c94ad8fb-956d-4916-97aa-f8232c842e27.png",
+            "heading": "Discounts, \nDeals + Sales",
+            "subheading": "Access Members Only pricing with Ghost Drops MOM. Special discounts, deals and sales that can't be found anywhere else."
+          }
+        },
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-3": {
           "type": "block",
           "settings": {
@@ -53,26 +61,18 @@
             "heading": "Legal + Tax \nBenefits",
             "subheading": "Members may legally carry up to 150 grams. Purchases are covered by some insurance providers and are also tax-deductible."
           }
-        },
-        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5": {
-          "type": "block",
-          "settings": {
-            "img": "shopify:\/\/shop_images\/GDdiscountsr1_c94ad8fb-956d-4916-97aa-f8232c842e27.png",
-            "heading": "Discounts, \nDeals + Sales",
-            "subheading": "Access Members Only pricing with Ghost Drops MOM. Special discounts, deals and sales that can't be found anywhere else."
-          }
         }
       },
       "block_order": [
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-0",
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-1",
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-2",
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5",
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-3",
-        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-4",
-        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-5"
+        "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-4"
       ],
       "settings": {
-        "section_heading": "Benefits"
+        "section_heading": "Why Sign Up?"
       }
     },
     "3dfed172-02e6-48a1-ba1b-26dece74717a": {
@@ -89,7 +89,7 @@
         "show_google": true,
         "login_google": "Continue with Google",
         "link_googlek": "",
-        "show_apple": false,
+        "show_apple": true,
         "login_apple": "Continue with Apple",
         "link_apple": ""
       }
@@ -166,12 +166,88 @@
       ],
       "settings": {
       }
+    },
+    "1ec1f021-0372-491f-938f-1af099cb22e3": {
+      "type": "new-register-faq",
+      "blocks": {
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-0": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-1": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-2": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-3": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-4": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-5": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-6": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        },
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-7": {
+          "type": "faq",
+          "settings": {
+            "heading": "Do I need a medical document?",
+            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-0",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-1",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-2",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-3",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-4",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-5",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-6",
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-7"
+      ],
+      "settings": {
+        "section_heading": "FAQ",
+        "section_subheading": "You got questions,  we got answers"
+      }
     }
   },
   "order": [
     "hero",
     "88e28df5-9f62-4edd-b707-a6dec571e999",
     "3dfed172-02e6-48a1-ba1b-26dece74717a",
-    "dd8d111c-6067-42ba-87ac-8c7b992623e0"
+    "dd8d111c-6067-42ba-87ac-8c7b992623e0",
+    "1ec1f021-0372-491f-938f-1af099cb22e3"
   ]
 }

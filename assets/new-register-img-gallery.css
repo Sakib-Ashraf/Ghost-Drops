@@ -11,7 +11,7 @@
 }
 .resgister-gallery-section {
     margin-top: 155px;
-    margin-bottom: 22.5px;
+    /* margin-bottom: 22.5px; */
     overflow: hidden;
 }
 
@@ -38,8 +38,6 @@
     }
 
 }
-
-@media (max-width: 991px) {}
 
 @media (max-width: 767px) {
     .resgister-gallery-section {

@@ -1,0 +1,175 @@
+{{ 'new-register-faq.css' | asset_url | stylesheet_tag }}    
+
+<div class="resgister-faq-section">
+    <div class="resgister-faq-wrapper">
+        <div class="container-fluid">
+            {% if section.settings.section_heading != '' or section.settings.section_subheading != '' %}
+            <div class="resgister-section-header">
+                {% if section.settings.section_heading != '' %}
+                <h2 class="colored-heading register-faq-section-heading">{{ section.settings.section_heading }}</h2>
+                {% endif %}
+
+                {% if section.settings.section_subheading != '' %}
+                <p class="register-faq-section-subheading">{{ section.settings.section_subheading }}</p>
+                {% endif %}
+            </div>
+            {% endif %}
+
+
+
+            <div class="resgister-faq-area">
+                <div class="resgister-faq-warpper">
+                    <div class="accordion" id="accordion-{{ section.id }}">
+                        {% for block in section.blocks %}
+                        {% if block.type == 'faq' %}
+                            {% liquid
+                                assign active_class = 'collapse' 
+                                assign collapse_class = 'collapsed' 
+
+                                assign heading = block.settings.heading
+                                assign text = block.settings.text
+
+                                if forloop.first
+                                    assign active_class = 'collapse show'
+                                    assign collapse_class = ''
+                                endif
+                            %}
+
+                            <div class="register-faq-card">
+                                <div class="register-faq-card-header {{ collapse_class }}" 
+                                    id="heading-{{ block.id }}" 
+                                    data-toggle="collapse" 
+                                    data-target="#collapse-{{ block.id }}" 
+                                    aria-expanded="true" 
+                                    aria-controls="collapseOne"
+                                >
+                                    <h4 class="register-faq-heading">{{ heading }}</h4>
+                                    <span class="register-faq-icon faq-minus">{% render 'icon-minus-register' %}</span>
+                                    <span class="register-faq-icon faq-plus">{% render 'icon-plus-register' %}</span>
+                                </div>
+
+                                <div id="collapse-{{ block.id }}" 
+                                    class="{{ active_class }}" 
+                                    aria-labelledby="heading-{{ block.id }}" 
+                                    data-parent="#accordion-{{ section.id }}"
+                                >
+                                    <div class="register-faq-content">{{ text }}</div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% schema %}
+    {
+        "name": "Register - FAQ",
+        "settings": [
+            {
+                "type": "text",
+                "id": "section_heading",
+                "label": "Section heading",
+                "default": "FAQ"
+            },
+            {
+                "type": "textarea",
+                "id": "section_subheading",
+                "label": "Section subheading",
+                "default": "You got questions,  we got answers"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "faq",
+                "name": "faq",
+                "settings": [
+                    {
+                      "type": "textarea",
+                      "id": "heading",
+                      "label": "Heading",
+                      "default": "Do I need a medical document?"
+                    },
+                    {
+                      "type": "richtext",
+                      "id": "text",
+                      "label": "Text",
+                      "default": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Register - FAQ",
+                "blocks": [
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    },
+                    {
+                        "type": "faq",
+                        "settings": {
+                            "heading": "Do I need a medical document?",
+                            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.</p>"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

@@ -6872,6 +6872,7 @@ footer {
     width: 100%;
     background-repeat: repeat;
     padding: 100px 0px;
+    background-color: #000;
 }
 
 ul.footer-list.clearfix h5 {

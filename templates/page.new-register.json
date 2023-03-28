@@ -72,7 +72,7 @@
         "template--16703401099487__88e28df5-9f62-4edd-b707-a6dec571e999-16793956485f130ad5-4"
       ],
       "settings": {
-        "section_heading": "Why Sign Up?"
+        "section_heading": "Benefits"
       }
     },
     "3dfed172-02e6-48a1-ba1b-26dece74717a": {
@@ -173,57 +173,64 @@
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-0": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "What are the benefits of purchasing through Ghost Drops MOM?",
+            "text": "<p>There are numerous benefits from purchasing directly from our MOM platform vs the recreational market.<\/p><ol><li>Access to a larger selection of Ghost Drops and The League sub-brand products<\/li><li>Cannabis purchases made through our platform are 100% tax deductible<\/li><li>Fresher packaging dates with made-to-order shipments<\/li><li>Exclusive, limited drops that can’t be found anywhere else<\/li><li>Delivered directly to your door in a timely manner<\/li><li>Members-only perks, benefits and exclusive access<\/li><\/ol>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-1": {
           "type": "faq",
           "settings": {
             "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "text": "<p>Ghost Drops is a provider of medical cannabis products in Canada. As such, an approved medical document is required to gain membership. If you do not already have one, you can schedule an online consult with our nurse practitioners in the My Account page.<br\/>With a medical document, your cannabis purchases will be 100% tax deductible, you'll be able to place larger orders (up to 150 grams), and you'll have access to the best craft cannabis in Canada.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-2": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "What is the cost of membership?",
+            "text": "<p>Membership is free! There is no charge to join, acquire a medical document, or maintain your membership.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-3": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "Who is eligible to join?",
+            "text": "<p>Canadian residents who are of legal age are eligible to join. Must sign up through our formal registration process.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-4": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "What new brands or products can I expect to see in the future?",
+            "text": "<p>Through our direct-to-customer MOM platform, Ghost Drops is able to provide new strains and products on a frequent basis. OG classics and never-seen-before cultivars will be released at regular intervals on our website. Ghost Drops The League sub-brands’ product lines will all be launching on the platform.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-5": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "How many grams can I order at a time?",
+            "text": "<p>The majority of our members will receive a document authorizing them to purchase 3 to 5 grams per day (equivalent to 90 to 150 grams per month). Our members are limited to 150 gram per order, compared to the 30 gram purchase limit that recreational consumers are subject to. Gram limits are determined during your sign-up consultation.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-6": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "Can cannabis be covered\/claimed through my insurance provider?",
+            "text": "<p>Some insurance providers will cover the cost of medical cannabis or a portion of it. Ghost Drops can provide an invoice with all the needed details for your provider. Please reach out to your insurance company for more information and info@ghostdrops.com for any required documentation.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-7": {
           "type": "faq",
           "settings": {
-            "heading": "Do I need a medical document?",
-            "text": "<p>Like the old days; shop exclusive Ghost Drops products, earn and redeem GhostDots loyalty points and get product shipped straight to your door.<\/p>"
+            "heading": "How can I transfer a medical document from another provider?",
+            "text": "<p>Get $50 off your first order of $99 or more when you transfer your medical document from another provider. Simply email your LP and request that your document be transferred to:<\/p><p>Licensed Producer: Ghost Drops Fax Line (for receiving medical documents):<\/p><p>Need help or additional information? Contact us at info@ghostdrops.com<\/p><p>Upon receipt of your approved medical document, your account will be activated, a $50 coupon will be issued, and you will be notified of your approval via email.<\/p>"
+          }
+        },
+        "58ae9807-a0c4-4a88-945b-01b8da80efcf": {
+          "type": "faq",
+          "settings": {
+            "heading": "How do I contact customer service?",
+            "text": "<p>For inquiries that are not answered via our FAQ and 24\/7 chat assistance- please reach out to us at info@ghostdrops.com<\/p>"
           }
         }
       },
@@ -235,7 +242,8 @@
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-4",
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-5",
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-6",
-        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-7"
+        "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-7",
+        "58ae9807-a0c4-4a88-945b-01b8da80efcf"
       ],
       "settings": {
         "section_heading": "FAQ",

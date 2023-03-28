@@ -216,14 +216,14 @@
           "type": "faq",
           "settings": {
             "heading": "Can cannabis be covered\/claimed through my insurance provider?",
-            "text": "<p>Some insurance providers will cover the cost of medical cannabis or a portion of it. Ghost Drops can provide an invoice with all the needed details for your provider. Please reach out to your insurance company for more information and info@ghostdrops.com for any required documentation.<\/p>"
+            "text": "<p>Some insurance providers will cover the cost of medical cannabis or a portion of it. Ghost Drops can provide an invoice with all the needed details for your provider. Please reach out to your insurance company for more information and <a href=\"mailto:info@ghostdrops.com\" target=\"_blank\" title=\"mailto:info@ghostdrops.com\">info@ghostdrops.com<\/a> for any required documentation.<\/p>"
           }
         },
         "template--16703401099487__1ec1f021-0372-491f-938f-1af099cb22e3-16799844648098ffc0-7": {
           "type": "faq",
           "settings": {
             "heading": "How can I transfer a medical document from another provider?",
-            "text": "<p>Get $50 off your first order of $99 or more when you transfer your medical document from another provider. Simply email your LP and request that your document be transferred to:<\/p><p>Licensed Producer: Ghost Drops Fax Line (for receiving medical documents):<\/p><p>Need help or additional information? Contact us at info@ghostdrops.com<\/p><p>Upon receipt of your approved medical document, your account will be activated, a $50 coupon will be issued, and you will be notified of your approval via email.<\/p>"
+            "text": "<p>Get $50 off your first order of $99 or more when you transfer your medical document from another provider. Simply email your LP and request that your document be transferred to:<\/p><p>Licensed Producer: Ghost Drops Fax Line (for receiving medical documents):<\/p><p>Need help or additional information? Contact us at <a href=\"mailto:info@ghostdrops.com\" target=\"_blank\" title=\"mailto:info@ghostdrops.com\">info@ghostdrops.com<\/a><\/p><p>Upon receipt of your approved medical document, your account will be activated, a $50 coupon will be issued, and you will be notified of your approval via email.<\/p>"
           }
         },
         "58ae9807-a0c4-4a88-945b-01b8da80efcf": {

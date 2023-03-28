@@ -27,7 +27,7 @@
                                 assign collapse_class = 'collapsed' 
 
                                 assign heading = block.settings.heading
-                                assign text = block.settings.text
+                                assign text = block.settings.text | newline_to_br
 
                                 if forloop.first
                                     assign active_class = 'collapse show'

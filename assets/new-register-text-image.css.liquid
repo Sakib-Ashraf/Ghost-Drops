@@ -1,5 +1,5 @@
 .register-text-img-section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 53px;
     line-height: 100px;
     height: 105px;
 }
@@ -103,9 +103,13 @@
     .resgister-text-image-section {
         height: 755px;
     }
+    .text-image-block {
+        transition: transform 0.4s ease;
+    }
     .text-image-block:hover {
         transform: translateY(-30px) !important;
         transition: transform 0.4s ease;
+        filter: drop-shadow(-9px 8px 18px rgba(171, 171, 171, 0.2));
     }    
     .text-image-block-inner {
         padding: 36px 38px 20px 38px;
@@ -114,13 +118,21 @@
     }
     .text-image-subheading {
         display: none;
+        transition: 0.4s ease;
+        -webkit-animation: slide-in-bottom 0.4s ease;
+	        animation: slide-in-bottom 0.4s ease;
     }
-    .text-image-block-inner:hover .text-image-subheading {
+    .text-image-block:hover .text-image-subheading {
         display: block;
         height: 100%;
         margin-top: 20px;
+        -webkit-animation: slide-in-bottom 0.4s ease;
+	        animation: slide-in-bottom 0.4s ease;
     }
-    .text-image-block-inner:hover .text-image-heading {
+    .text-image-heading {
+        transition: 0.4s ease;
+    }
+    .text-image-block:hover .text-image-heading {
         -webkit-animation: slide-in-bottom 0.4s ease;
 	        animation: slide-in-bottom 0.4s ease;
     }

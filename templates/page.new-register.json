@@ -230,7 +230,7 @@
           "type": "faq",
           "settings": {
             "heading": "How do I contact customer service?",
-            "text": "<p>For inquiries that are not answered via our FAQ and 24\/7 chat assistance- please reach out to us at info@ghostdrops.com<\/p>"
+            "text": "<p>For inquiries that are not answered via our FAQ and 24\/7 chat assistance- please reach out to us at <a href=\"mailto:info@ghostdrops.com\" target=\"_blank\" title=\"mailto:info@ghostdrops.com\">info@ghostdrops.com<\/a><\/p>"
           }
         }
       },

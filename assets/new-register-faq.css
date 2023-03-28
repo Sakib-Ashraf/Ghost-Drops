@@ -32,6 +32,14 @@
     line-height: 1.4;
     color: #FFFFFF;
     margin: 0;
+    list-style: auto;
+}
+ol {
+    margin-left: 1.5em !important;
+}
+
+ol > ol {
+    margin-left: 1.5em !important;
 }
 .register-faq-card-header {
     display: flex;

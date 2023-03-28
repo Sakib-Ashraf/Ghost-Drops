@@ -15,7 +15,8 @@
                 <swiper-container class="mySwiper" init="false">
                 {% for block in section.blocks %}
                     {% if block.type == 'block' %}
-                    <swiper-slide class="text-image-block">
+                    <swiper-slide>
+                        <div class="text-image-block">
                         <div class="text-image-block-inner">
                             <div class="text-image-block-img">
                                 <img src="{{ block.settings.img | image_url: master }}" 
@@ -37,6 +38,7 @@
                                 {% endif %}
                             </div>
                             {% endif %}
+                        </div>
                         </div>
                     </swiper-slide>
                     {% endif %}

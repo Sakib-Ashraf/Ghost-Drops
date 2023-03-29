@@ -68,11 +68,6 @@
     margin-top: 136px;
     overflow: hidden;
 }
-.text-image-block-img {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    transition: 0.4s ease;
-}
 /* swiper css */
 :root {
     --swiper-scrollbar-border-radius: 10px;
@@ -103,23 +98,20 @@
         font-size: 45px;
     }
 }
-@media (min-width: 769px) {  
-    .resgister-text-image-section {
-        height: 785px;
-    }
+@media (min-width: 1101px) {
     .text-image-block {
         transition: transform 0.4s ease;
+    }
+    .text-image-block-img {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        transition: 0.4s ease;
     }
     swiper-slide:hover .text-image-block{
         transform: translateY(-30px) !important;
         transition: transform 0.4s ease;
         filter: drop-shadow(-9px 8px 18px rgba(171, 171, 171, 0.2));
-    }    
-    .text-image-block-inner {
-        padding: 36px 38px 20px 38px;
-        overflow: hidden;
-        transition: 0.4s ease;
-    }
+    } 
     .text-image-subheading {
         display: none;
         opacity: 0;
@@ -148,9 +140,29 @@
     }
     swiper-slide:hover .text-image-heading {
         transition: 0.4s ease;
-    }
+    } 
+    .text-image-block-inner {
+        padding: 36px 38px 20px 38px;
+        overflow: hidden;
+        transition: 0.4s ease;
+    } 
+}
+@media (min-width: 769px) and (max-width: 1100px) {  
+    .text-image-block-inner {
+        padding: 42px 35px;
+    }  
+}
+@media (min-width: 769px) {  
+    .resgister-text-image-section {
+        height: 785px;
+    }  
 }
 
+@media (max-width: 1100px) {
+    .text-image-subheading {
+        display: block;
+    }
+}
 @media (max-width: 991px) {
     .resgister-text-image-section {
         margin-top: 60px;
@@ -186,9 +198,6 @@
     }
     .text-image-heading, .text-image-subheading {
         margin-top: 10px;
-    }
-    .text-image-subheading {
-        display: block;
     }
     ul.list-a.footer_menu2{
         min-height: 212px;
@@ -237,6 +246,20 @@
 @media screen and (max-width: 380px) {
     .text-image-block {
         height: 435px;
+    }
+    .text-image-block-inner {
+        padding: 30px 37px 20px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .text-image-block-inner {
+        padding: 30px 30px 20px;
+    }
+    .swiper-horizontal {
+        height: 470px;
+    }
+    .text-image-block {
+        height: 500px;
     }
 }
 .slide-in-bottom {

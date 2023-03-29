@@ -9747,7 +9747,7 @@ function removeImageLoadingAnimation(image) {
 						snapToStart: true,
 					},
 					768: {
-						slidesPerView: 2.5,
+						slidesPerView: 2,
 						spaceBetween: 40,
 						snapGrid: 'auto',
 						snapToStart: true,
@@ -9775,7 +9775,7 @@ function removeImageLoadingAnimation(image) {
 
       this.swiperEl.initialize();
       this.bindEvents();
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1100) {
         this.isInViewPort();
       }
 		}

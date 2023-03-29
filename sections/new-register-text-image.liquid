@@ -12,136 +12,47 @@
     <div class="container-fluid text-image-container">
         <div class="text-image-absolute">
             <div class="text-image-area text-image-slider">
-                <swiper-container class="mySwiper" init="false">
-                {% for block in section.blocks %}
-                    {% if block.type == 'block' %}
-                    <swiper-slide>
-                        <div class="text-image-block">
-                        <div class="text-image-block-inner">
-                            <div class="text-image-block-img">
-                                <img src="{{ block.settings.img | image_url: master }}" 
-                                    alt="{{ block.settings.img.alt }}" 
-                                    loading="lazy"
-                                >
-                            </div>
+                <swiper-slider>
+                    <swiper-container class="Benefits_swiper" init="false">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'block' %}
+                        <swiper-slide>
+                            <div class="text-image-block">
+                            <div class="text-image-block-inner">
+                                <div class="text-image-block-img">
+                                    {% comment %} <img src="{{ block.settings.img | image_url: master }}" 
+                                        alt="{{ block.settings.img.alt }}" 
+                                        loading="lazy"
+                                    > {% endcomment %}
+                                    {% assign lottie_src = forloop.index | append: '.json' | prepend: 'card-' %}
+                                    <lottie-player class="lottie_animation benefits_lottie_player" 
+                                    src="{{ lottie_src | asset_url }}" background="transparent" speed="1" loop="true"></lottie-player>
+                                </div>
 
-                            {% if block.settings.heading != '' or block.settings.subheading != '' %}
-                            <div class="text-image-block-content">
-                                {% if block.settings.heading != '' %}
-                                <h2 class="text-image-heading">
-                                    {{ block.settings.heading | newline_to_br }}
-                                </h2>
-                                {% endif %}
+                                {% if block.settings.heading != '' or block.settings.subheading != '' %}
+                                <div class="text-image-block-content">
+                                    {% if block.settings.heading != '' %}
+                                    <h2 class="text-image-heading">
+                                        {{ block.settings.heading | newline_to_br }}
+                                    </h2>
+                                    {% endif %}
 
-                                {% if block.settings.subheading != '' %}
-                                <p class="text-image-subheading">{{ block.settings.subheading | newline_to_br }}</p>
+                                    {% if block.settings.subheading != '' %}
+                                    <p class="text-image-subheading">{{ block.settings.subheading | newline_to_br }}</p>
+                                    {% endif %}
+                                </div>
                                 {% endif %}
                             </div>
-                            {% endif %}
-                        </div>
-                        </div>
-                    </swiper-slide>
-                    {% endif %}
-                {% endfor %}
-                </swiper-container>
+                            </div>
+                        </swiper-slide>
+                        {% endif %}
+                    {% endfor %}
+                    </swiper-container>
+                </swiper-slider>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-<script>
-    window.addEventListener("DOMContentLoaded", function (e) {
-
-        // swiper element
-        const swiperEl = document.querySelector('swiper-container');
-
-        // swiper parameters
-        const swiperParams = {
-            direction: "horizontal",
-            freeMode: {
-                enabled: false,
-            },
-            slidesPerView: 3.409,
-            mousewheel: window.innerWidth > 900 ? true : false,
-            speed: 300,
-            enabled: true,
-            hide: false,
-            slidesPerGroup: 1,
-            setWrapperSize: true,
-            resizeObserver: true,
-            updateOnWindowResize: true,
-            scrollbar: {
-                draggable: true,
-                dragSize: 78,
-            },
-            injectStyles: [
-                `.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-                    left: 50%;
-                    transform: translateX(-50%);
-                    cursor: pointer;
-                }`,
-            ],
-            breakpoints: {
-                310: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    scrollbar: {
-                        draggable: true,
-                        dragSize: 43,
-                    },
-                    snapGrid: 'auto',
-                    snapToStart: true,
-                },
-                520: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 30,
-                    snapGrid: 'auto',
-                    snapToStart: true,
-                },
-                680: {
-                    slidesPerView: 1.6,
-                    spaceBetween: 35,
-                    snapGrid: 'auto',
-                    snapToStart: true,
-                },
-                768: {
-                    slidesPerView: 2.5,
-                    spaceBetween: 40,
-                    snapGrid: 'auto',
-                    snapToStart: true,
-                },
-                1101: {
-                    slidesPerView: 3.1,
-                    spaceBetween: 45,
-                    snapGrid: 'auto',
-                    snapToStart: true,
-                    scrollbar: {
-                        draggable: true,
-                        dragSize: 78,
-                    },
-                },
-                1441: {
-                    slidesPerView: 3.409,
-                    spaceBetween: 45,
-                    snapGrid: 'auto',
-                    snapToStart: true,
-                }
-            }
-        };
-
-        // now we need to assign all parameters to Swiper element
-        Object.assign(swiperEl, swiperParams);
-
-        // and now initialize it
-        swiperEl.initialize();
-    });
-</script>
-
-
 
   
 {% schema %}

@@ -9685,3 +9685,126 @@ function removeImageLoadingAnimation(image) {
     imageWrapper.removeAttribute('data-image-loading-animation');
   }
 }
+
+ class SwiperSlider extends HTMLElement {
+		constructor() {
+			super();
+			this.swiperEl = this.querySelector(
+				'swiper-container.Benefits_swiper'
+			);
+			this.slides = this.querySelectorAll('swiper-slide');
+			this.init();
+		}
+
+		init() {
+			// swiper parameters
+			const swiperParams = {
+				direction: 'horizontal',
+				freeMode: {
+					enabled: false,
+				},
+				slidesPerView: 3.409,
+				mousewheel: window.innerWidth > 900 ? true : false,
+				speed: 300,
+				enabled: true,
+				hide: false,
+				slidesPerGroup: 1,
+				setWrapperSize: true,
+				resizeObserver: true,
+				updateOnWindowResize: true,
+				scrollbar: {
+					draggable: true,
+					dragSize: 78,
+				},
+				injectStyles: [
+					`.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    cursor: pointer;
+                }`,
+				],
+				breakpoints: {
+					310: {
+						slidesPerView: 1,
+						spaceBetween: 30,
+						scrollbar: {
+							draggable: true,
+							dragSize: 43,
+						},
+						snapGrid: 'auto',
+						snapToStart: true,
+					},
+					520: {
+						slidesPerView: 1.5,
+						spaceBetween: 30,
+						snapGrid: 'auto',
+						snapToStart: true,
+					},
+					680: {
+						slidesPerView: 1.6,
+						spaceBetween: 35,
+						snapGrid: 'auto',
+						snapToStart: true,
+					},
+					768: {
+						slidesPerView: 2.5,
+						spaceBetween: 40,
+						snapGrid: 'auto',
+						snapToStart: true,
+					},
+					1101: {
+						slidesPerView: 3.1,
+						spaceBetween: 45,
+						snapGrid: 'auto',
+						snapToStart: true,
+						scrollbar: {
+							draggable: true,
+							dragSize: 78,
+						},
+					},
+					1441: {
+						slidesPerView: 3.409,
+						spaceBetween: 45,
+						snapGrid: 'auto',
+						snapToStart: true,
+					},
+				},
+			};
+
+			Object.assign(this.swiperEl, swiperParams);
+
+      this.swiperEl.initialize();
+      this.bindEvents();
+      if (window.innerWidth <= 768) {
+        this.isInViewPort();
+      }
+		}
+
+		bindEvents() {
+			this.slides.forEach((slide) => {
+				slide.addEventListener('mouseenter', function (e) {
+					slide.querySelector('lottie-player').play();
+				});
+				slide.addEventListener('mouseleave', function (e) {
+					slide.querySelector('lottie-player').pause();
+				});
+			});
+
+		}
+    
+   isInViewPort () {
+    this.observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.querySelector('lottie-player').play();
+        } else {
+         entry.target.querySelector('lottie-player').pause();
+        }
+      });
+      }, { threshold: 0.5 }); 
+      this.slides.forEach((slide) => {
+        this.observer.observe(slide);
+      });
+   }
+ }
+ customElements.define('swiper-slider', SwiperSlider);

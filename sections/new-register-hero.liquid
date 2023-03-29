@@ -17,7 +17,7 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="register-hero-content-block">                    
                     {% if section.settings.heading != '' %}
-                    <h2 class="register-hero-heading">{{ section.settings.heading | newline_to_br }}</h2>
+                    <h1 class="register-hero-heading">{{ section.settings.heading | newline_to_br }}</h1>
                     {% endif %}
 
                     {% if section.settings.subheading != '' %}
@@ -27,7 +27,7 @@
                     {% if section.settings.btn != '' %}
                     <div class="register-hero-button-wrapper">
                         <a class="register-hero-btn" href="{{ section.settings.link }}">
-                            <span class="icon-signup-btn">{% render 'icon-signup-btn' %}</span>
+                            <span class="icon-signup-btn">{% render 'icon-btn-ghost' %}</span>
                             <span class="label-signup-btn label-desktop">{{ section.settings.btn }}</span>
                             <span class="label-signup-btn label-mobile">{{ section.settings.btn_mobile }}</span>
                         </a>

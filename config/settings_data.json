@@ -205,215 +205,6 @@
           "footer_bottom": "footer-bottom"
         }
       },
-      "1635150072377fa3f2": {
-        "type": "section-left-img-right-text",
-        "settings": {
-          "img": "shopify:\/\/shop_images\/KingSherbSpinning_7.gif",
-          "main_heading": "<div class=\"h-outer\"><h2>Canada's Premium <span>Cannabis Brand House<\/span>\n<\/h2><\/div>",
-          "content": "Through exclusive partnerships with the most respected breeders and the most talented legal cultivators in the industry, our model delivers the very best in Canadian cannabis.",
-          "btn_label": "Read the Ghost Story",
-          "btn_link": "shopify:\/\/pages\/ghost-story"
-        }
-      },
-      "1635150889290ed599": {
-        "type": "section-best-in-biz",
-        "blocks": {
-          "9f24215c-2d41-4b9b-819d-235bdf099392": {
-            "type": "image",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/lgu-1.png",
-              "btn_link": "shopify:\/\/pages\/atlas-growers-licensed-producer"
-            }
-          },
-          "7c4047c4-1fd3-4307-82fc-86b7c0ee6cc5": {
-            "type": "image",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/61e98225f7b4971f65f35ac7_pf-badge_1_a9b9c131-134d-441d-a7fb-bf26c57ccf70.png",
-              "btn_link": "shopify:\/\/pages\/purple-farm-licensed-producer"
-            }
-          },
-          "12ce5161-99b8-42fd-9035-e997a09d7c06": {
-            "type": "image",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/lgu-5.png",
-              "btn_link": "shopify:\/\/pages\/unlicensed-producer-genetics"
-            }
-          },
-          "bf5e2d19-3f10-442c-8dc5-45d44971917d": {
-            "type": "image",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/lgu-4_d392224b-b0fd-4db4-9d25-1532ac59440a.png",
-              "btn_link": "shopify:\/\/pages\/cultivating-happiness-licensed-producer"
-            }
-          },
-          "5d2b676e-4fa4-4d0d-8cc9-536176f0e135": {
-            "type": "image",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/lgu-2_bd271cb7-c841-4a53-83c0-0f4a3bb2b668.png",
-              "btn_link": "shopify:\/\/pages\/mother-labs-nursery"
-            }
-          },
-          "faeab83b-243d-44b0-b1b6-15ca8dbdf1f1": {
-            "type": "image",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/logo_GreenKarat_noir_1_c30a904c-8dec-4a91-ab81-dc74250f2dba.png",
-              "btn_link": "https:\/\/ghostdrops.com\/pages\/green-karat-licnesed-producer"
-            }
-          }
-        },
-        "block_order": [
-          "9f24215c-2d41-4b9b-819d-235bdf099392",
-          "7c4047c4-1fd3-4307-82fc-86b7c0ee6cc5",
-          "12ce5161-99b8-42fd-9035-e997a09d7c06",
-          "bf5e2d19-3f10-442c-8dc5-45d44971917d",
-          "5d2b676e-4fa4-4d0d-8cc9-536176f0e135",
-          "faeab83b-243d-44b0-b1b6-15ca8dbdf1f1"
-        ],
-        "settings": {
-          "main_heading": "<h2><span>Our Partners<\/span><\/h2>",
-          "btn_label": "See our All-Star roster",
-          "btn_link": "shopify:\/\/pages\/all-stars"
-        }
-      },
-      "16351513434f1525d2": {
-        "type": "section-left-text-right-img",
-        "settings": {
-          "img": "shopify:\/\/shop_images\/GifCardWebsite_White_2.gif",
-          "main_heading": "<div class=\"h-outer\"><h2>Collectible Cards\n<\/h2><\/div>",
-          "content": "Ghost Drops has always been a platform for celebrating the all-stars of Canadian cannabis. Now you can collect those all-stars - your favourite strains, brands, breeders and hunters - with our baseball-style collectible cards.",
-          "btn_label": "Register your card",
-          "btn_link": "shopify:\/\/pages\/collectibles"
-        }
-      },
-      "16351524414b284a32": {
-        "type": "section-featured-strain",
-        "settings": {
-          "img": "shopify:\/\/shop_images\/CCAlpha.png",
-          "main_heading": "Featured <span>strain<\/span>",
-          "heading2": "C.R.E.A.M Cake",
-          "content": "C.R.E.A.M Cake is bred by Tiki Madman, hunted and grown exclusively for Ghost Drops by Purplefarm. A potent hybrid strain with a decadent fusion of lemon, lime, and cream flavours. C.R.E.A.M Cake offers an insanely delicious, sweet, fruity aroma with notes of old school dank kush. This unique cross of Creamsicle x Pancakes hails from a long lineage of heavy hitters like White Rhino, Blueberry, London Pound Cake and Kush Mints. Cake Rules Everything Around Me.",
-          "btn_label": "See all strains",
-          "btn_link": "shopify:\/\/pages\/products"
-        }
-      },
-      "1635153519331ca171": {
-        "type": "section-form",
-        "settings": {
-          "main_heading": "Join the Ghost Gang.<br>Sign up and never <span>miss a drop.<\/span>",
-          "heading2": "Join the Ghost Gang.<span>Sign up and never miss a drop.<\/span>",
-          "content": "Our signature strain. This funky number boasts a big, powerful flower with a taste as funky as its smell. Hunted by Cultivating Happiness and grown by several ultra-premium, hand-selected craft micro-producers, First Class Funk buds are typically large with dense diamond-like trichomes.",
-          "btn_label": "Sign up",
-          "btn_link": ""
-        }
-      },
-      "16351608795f260ecc": {
-        "type": "section-slider",
-        "blocks": {
-          "47ca4290-2e9a-46ab-8609-65c31f9f0627": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/GD-WhiteRuntz-banner-desktop-R2.png",
-              "bg_mobile": "shopify:\/\/shop_images\/GD-WhiteRuntz-banner-mobile-R2.png",
-              "main_heading": "Dropping Soon",
-              "content1": "",
-              "content2": "New Drop in Ontario",
-              "btn_label": "Learn More",
-              "btn_link": "shopify:\/\/pages\/white-rntzs1",
-              "image": "shopify:\/\/shop_images\/Untitled-4.png"
-            }
-          },
-          "7ccb8fa4-0467-4846-ab01-c3369415f911": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/GD-Baklava-banner-desktop-R2.png",
-              "bg_mobile": "shopify:\/\/shop_images\/GD-Baklava-banner-mobile-R2.png",
-              "main_heading": "Dropping Soon",
-              "content1": "",
-              "content2": "New Drop in Ontario",
-              "btn_label": "Learn More",
-              "btn_link": "shopify:\/\/pages\/baklava",
-              "image": "shopify:\/\/shop_images\/bacground_1453f3b7-c2b7-4e11-b485-d4246b23ae9b.png"
-            }
-          },
-          "0c91bb84-d094-49cf-9e53-364bd7a5f975": {
-            "type": "image",
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/Banner_Desktop_14.gif",
-              "bg_mobile": "shopify:\/\/shop_images\/Banner_Mobile_6.gif",
-              "main_heading": "New Drops <br>in Ontario",
-              "content1": "",
-              "content2": "C.R.E.A.M CAKE + KING SHERB ARE NOW AVAILABLE",
-              "btn_label": "Learn more",
-              "btn_link": "shopify:\/\/pages\/products",
-              "image": "shopify:\/\/shop_images\/bacground.png"
-            }
-          },
-          "c54737d8-e165-41a0-be27-67976e563d07": {
-            "type": "image",
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/GD-NewMerch-banner-desktop-R2.png",
-              "bg_mobile": "shopify:\/\/shop_images\/GD-NewMerch-banner-mobile-R2_1.png",
-              "main_heading": "GHOST GEAR",
-              "content1": "",
-              "content2": "New hats and clothing now available.",
-              "btn_label": "Shop Now",
-              "btn_link": "shopify:\/\/pages\/ghost-gear",
-              "image": "shopify:\/\/shop_images\/jar3-spacer-sq2.png"
-            }
-          },
-          "b2ae623c-218f-4057-a321-8b9fe6e87e75": {
-            "type": "image",
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/CC_Desktop_Banner_e03f3361-348a-4471-9f5c-e1771724fc15.gif",
-              "bg_mobile": "shopify:\/\/shop_images\/CC_Mobile_Banner_b1cfb2a7-84af-407f-8e8a-6ce661c49a27.gif",
-              "main_heading": "C.R.E.A.M Cake",
-              "content1": "",
-              "content2": "AVAILABLE NOW IN ONTARIO",
-              "btn_label": "Find Out More",
-              "btn_link": "shopify:\/\/pages\/cream-cake"
-            }
-          },
-          "8a19ebc5-9e80-492f-9f6e-fe7f6d31a0e0": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/GD-GhostAcademy-banner-desktop.png",
-              "bg_mobile": "shopify:\/\/shop_images\/GD-GhostAcademy-banner-mobile.png",
-              "main_heading": "Learn<span>with<\/span><br>Ghost Academy",
-              "content1": "Lessons and blogs covering in-depth, connoisseur, insider info on cannabis products and the industry.",
-              "content2": "EXPERT ARTICLES FROM <br>THE GHOST CREW",
-              "btn_label": "Explore now",
-              "btn_link": "shopify:\/\/pages\/ghost-academy",
-              "image": "shopify:\/\/shop_images\/AlphaCap-test_1.gif"
-            }
-          },
-          "5d4e41c8-e1ee-4019-b8fa-dc7398bd9131": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "bg_desktop": "shopify:\/\/shop_images\/GD-Toronto-animated-banner-desktop.gif",
-              "main_heading": "Cannabis <span>from  the <\/span> <b>other side<\/b>",
-              "content1": "<b>Ghost Drops<\/b> collaborates with award-winning legacy growers and cultivators, and supports them to do what they do best. We bring to the legal market exclusive strains of unique and potent small-batch, craft cannabis.",
-              "content2": "Otherworldly cannabis from the legacy market.",
-              "btn_label": "Our Story",
-              "btn_link": ""
-            }
-          }
-        },
-        "block_order": [
-          "47ca4290-2e9a-46ab-8609-65c31f9f0627",
-          "7ccb8fa4-0467-4846-ab01-c3369415f911",
-          "0c91bb84-d094-49cf-9e53-364bd7a5f975",
-          "c54737d8-e165-41a0-be27-67976e563d07",
-          "b2ae623c-218f-4057-a321-8b9fe6e87e75",
-          "8a19ebc5-9e80-492f-9f6e-fe7f6d31a0e0",
-          "5d4e41c8-e1ee-4019-b8fa-dc7398bd9131"
-        ],
-        "settings": {
-        }
-      },
       "ghost-gear-banner": {
         "type": "ghost-gear-banner",
         "settings": {
@@ -3092,15 +2883,6 @@
           "image": "shopify:\/\/shop_images\/NTLaunch_1_1.gif"
         }
       },
-      "1639635228ce4c3249": {
-        "type": "section-home-video",
-        "disabled": true,
-        "settings": {
-          "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0607\/7104\/1503\/files\/hoodie-hp_ulkJpzQ8.mp4?v=1639720933",
-          "main_heading": "This is  <b>the good<\/b> <span>shit <\/span>",
-          "content": "<h4>AWARD-WINNING STRAINS WITH BIG-TIME FLAVOUR<\/h4><p>We scour the country to bring you elite connoisseur Canadian cannabis <b>you simply can’t find anywhere else<\/b><\/p>"
-        }
-      },
       "section-topbar": {
         "type": "section-topbar",
         "settings": {
@@ -5736,16 +5518,6 @@
           "heading": "Frequently Asked <span>Questions<\/span>"
         }
       },
-      "866be42d-a1a1-408b-aa80-37f87e2d462c": {
-        "type": "home-leauge-section",
-        "settings": {
-          "img": "shopify:\/\/shop_images\/GDleaguePrepared.png",
-          "main_heading": "The League",
-          "content": "Ghost Drops presents The League, a brand platform that focuses on bringing iconic and innovative brands to the legal market. We’re bringing together heavyweight players from the illicit market alongside some new, exciting names.",
-          "btn_label": "Learn more",
-          "btn_link": "shopify:\/\/pages\/the-league-by-ghost-drops"
-        }
-      },
       "blog-detail-banner14": {
         "type": "blog-detail-banner14",
         "settings": {
@@ -5908,14 +5680,7 @@
       }
     },
     "content_for_index": [
-      "16351608795f260ecc",
-      "1639635228ce4c3249",
-      "1635150072377fa3f2",
-      "1635150889290ed599",
-      "866be42d-a1a1-408b-aa80-37f87e2d462c",
-      "16351513434f1525d2",
-      "16351524414b284a32",
-      "1635153519331ca171"
+
     ],
     "blocks": {
       "848591003871763955": {
